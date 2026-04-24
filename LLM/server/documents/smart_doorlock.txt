@@ -1,0 +1,5 @@
+Lock or unlock doors remotely using your phone.
+Set temporary codes for guests or cleaners.
+Receive alerts when door is unlocked unexpectedly.
+Automate door lock at 10 PM every night.
+Use voice command: 'Lock the front door'.

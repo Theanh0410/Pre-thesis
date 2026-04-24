@@ -1,0 +1,5 @@
+Morning routine: open blinds, turn on lights, start news briefing.
+Evening routine: dim lights, play soft music, lock doors.
+Use geolocation to trigger routines when you arrive home.
+Custom scenes can include multiple smart devices triggered at once.
+Weekend routine: disable weekday alarms, play relaxing music.

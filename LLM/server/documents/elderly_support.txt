@@ -1,0 +1,5 @@
+Send daily medication reminders at 9 AM and 9 PM.
+Enable fall detection in the bathroom and hallway.
+Remind elderly to drink water every two hours.
+Turn on gentle lighting at night to assist bathroom visits.
+Enable voice call function with emergency contact.

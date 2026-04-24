@@ -1,0 +1,5 @@
+Start the coffee machine in the morning using smart plugs.
+Schedule brewing time at 7 AM every weekday.
+Enable notification when the coffee is ready.
+Voice command: 'Turn on the coffee machine'.
+Set up a routine: when kitchen motion is detected, start coffee.

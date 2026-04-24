@@ -1,0 +1,14 @@
+langchain-community
+beautifulsoup4
+PyPDF2
+python-docx
+langchain-ollama
+tiktoken
+chromadb
+sentence-transformers
+fastapi
+uvicorn
+nltk
+flask-cors
+spacy
+

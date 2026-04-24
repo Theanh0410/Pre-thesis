@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - Smart Home</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+</head>
+<body>
+  <div class="register-container">
+
+    <!-- Logo and Smart Home Text Inside the Register Container -->
+    <div class="header-left">
+      <div class="header-icon">
+        <i class="fas fa-home"></i>
+      </div>
+      <div class="header-text">
+        <h1>Smart Home</h1>
+        <h2>Register</h2>
+      </div>
+    </div>
+
+    <form id="registerForm" action="/register" method="POST">
+      <div class="input-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required />
+        <div id="fullnameError" class="error-message"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required />
+        <div id="usernameError" class="error-message"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        <div id="emailError" class="error-message"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <div class="password-container">
+          <input type="password" id="password" name="password" required />
+          <i class="fas fa-eye" id="togglePassword"></i> <!-- Eye icon -->
+        </div>
+        <div id="passwordError" class="error-message"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="confirm_password">Confirm Password</label>
+        <div class="password-container">
+          <input type="password" id="confirm_password" name="confirm_password" required />
+          <i class="fas fa-eye" id="toggleConfirmPassword"></i> <!-- Eye icon -->
+        </div>
+        <div id="confirmPasswordError" class="error-message"></div>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+
+    <div class="login-container-link">
+      <p>Already have an account? <a href="/login" class="login-link">Login here</a></p>
+    </div>
+  </div>
+
+  <script>
+    // Check if the username already exists (AJAX request)
+    function checkUsernameAvailability(username) {
+      return new Promise((resolve, reject) => {
+        fetch('/check-username', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username: username })
+        })
+        .then(response => response.json())
+        .then(data => {
+          resolve(data.available);  // True if available, False if already exists
+        })
+        .catch(error => reject(error));
+      });
+    }
+
+    // Check if the email already exists (AJAX request)
+    function checkEmailAvailability(email) {
+      return new Promise((resolve, reject) => {
+        fetch('/check-email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email })
+        })
+        .then(response => response.json())
+        .then(data => {
+          resolve(data.available);  // True if available, False if already exists
+        })
+        .catch(error => reject(error));
+      });
+    }
+
+    // Validation Functions
+    function validateFullName(fullname) {
+      return fullname.trim() !== '';  // Simple check for non-empty fullname
+    }
+
+    function validateUsername(username) {
+      const regex = /^[a-zA-Z0-9]{4,20}$/;  // Alphanumeric, 4-20 characters
+      return regex.test(username);
+    }
+
+    function validateEmail(email) {
+      const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;  // Simple email regex
+      return regex.test(email);
+    }
+
+    function validatePassword(password) {
+      const regex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;  // Min 8 chars, 1 uppercase, 1 number
+      return regex.test(password);
+    }
+
+    function validatePasswordMatch(pass1, pass2) {
+      return pass1 === pass2;
+    }
+
+    // Validate the entire form
+    function validateForm(event) {
+      let isValid = true;
+
+      // Get form data
+      const fullname = document.getElementById('fullname').value;
+      const username = document.getElementById('username').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm_password').value;
+
+      // Clear previous error messages
+      document.getElementById('usernameError').textContent = '';
+      document.getElementById('emailError').textContent = '';
+      document.getElementById('fullnameError').textContent = '';
+      document.getElementById('passwordError').textContent = '';
+      document.getElementById('confirmPasswordError').textContent = '';
+
+      // Validate Full Name
+      const fullnameError = document.getElementById('fullnameError');
+      if (!validateFullName(fullname)) {
+        fullnameError.textContent = 'Full Name is required.';
+        document.getElementById('fullname').classList.add('error');
+        isValid = false;
+      } else {
+        document.getElementById('fullname').classList.remove('error');
+      }
+
+      // Validate Username (client-side)
+      const usernameError = document.getElementById('usernameError');
+      if (!validateUsername(username)) {
+        usernameError.textContent = 'Username must be 4-20 characters and alphanumeric.';
+        document.getElementById('username').classList.add('error');
+        isValid = false;
+      } else {
+        document.getElementById('username').classList.remove('error');
+      }
+
+      // Check if username already exists
+      if (username) {
+        checkUsernameAvailability(username).then(isAvailable => {
+          if (!isAvailable) {
+            usernameError.textContent = 'Username already exists. Please choose another.';
+            document.getElementById('username').classList.add('error');
+            isValid = false;
+          }
+        });
+      }
+
+      // Validate Email
+      const emailError = document.getElementById('emailError');
+      if (!validateEmail(email)) {
+        emailError.textContent = 'Please enter a valid email address.';
+        document.getElementById('email').classList.add('error');
+        isValid = false;
+      } else {
+        document.getElementById('email').classList.remove('error');
+      }
+
+      // Check if email already exists
+      if (email) {
+        checkEmailAvailability(email).then(isAvailable => {
+          if (!isAvailable) {
+            emailError.textContent = 'Email already exists. Please choose another.';
+            document.getElementById('email').classList.add('error');
+            isValid = false;
+          }
+        });
+      }
+
+      // Validate Password
+      const passwordError = document.getElementById('passwordError');
+      if (!validatePassword(password)) {
+        passwordError.textContent = 'Password must be at least 8 characters, include 1 uppercase and 1 number.';
+        document.getElementById('password').classList.add('error');
+        isValid = false;
+      } else {
+        document.getElementById('password').classList.remove('error');
+      }
+
+      // Validate Password Match
+      const confirmPasswordError = document.getElementById('confirmPasswordError');
+      if (!validatePasswordMatch(password, confirmPassword)) {
+        confirmPasswordError.textContent = 'Passwords do not match.';
+        document.getElementById('confirm_password').classList.add('error');
+        isValid = false;
+      } else {
+        document.getElementById('confirm_password').classList.remove('error');
+      }
+
+      // If the form is invalid, prevent submission
+      if (!isValid) {
+        event.preventDefault();
+      }
+    }
+
+    // Toggle password visibility
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordField = document.getElementById('password');
+
+    togglePassword.addEventListener('click', function() {
+      const type = passwordField.type === 'password' ? 'text' : 'password';
+      passwordField.type = type;
+      this.classList.toggle('fa-eye-slash'); // Toggle between open/closed eye icon
+    });
+
+    // Toggle confirm password visibility
+    const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+    const confirmPasswordField = document.getElementById('confirm_password');
+
+    toggleConfirmPassword.addEventListener('click', function() {
+      const type = confirmPasswordField.type === 'password' ? 'text' : 'password';
+      confirmPasswordField.type = type;
+      this.classList.toggle('fa-eye-slash'); // Toggle between open/closed eye icon
+    });
+
+    // Attach validation on form submit
+    document.getElementById('registerForm').addEventListener('submit', validateForm);
+  </script>
+</body>
+</html>

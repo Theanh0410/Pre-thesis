@@ -1,0 +1,71 @@
+9 in 10 Teachers Need More Resources to Care for Students' Mental Health
+Menu
+Mental Health in the Classroom
+Search
+9 in 10 Teachers Need More Resources to Care for Students' Mental Health
+Verywell Mind survey shows teachers are eager to provide support
+By
+Sarah Fielding is a writer covering a range of topics with a focus on mental health and women's issues.
+Learn about our
+Published on August 15, 2023
+Another school year is here, and to mark the occasion Verywell Mind surveyed 1,000 middle and high school teachers in the U.S. for our Mental Health in the Classroom Study. Teachers reported on their experiences handling mental health issues, strategies that work, and the kind of resources they need to support their students even more.
+The survey found that 81% say teachers feel responsible for their students' mental health, and another 77% believe it’s also their duty to teach students about mental health and relevant self-care strategies.
+A vast majority of respondents (89%) agree that they don't have enough resources at their disposal to help students deal with mental health issues.
+Teachers have long had a role in society that goes well beyond educating our kids, and a big part of that stems from how much they care about their students.
+The past few years have tested teachers’ resolve even further, leaving them trying to guide classrooms of kids through a global pandemic, the deleterious effects of social media, and a world that is increasingly complicated and often cruel.
+“There is so much pressure put on teachers today. They are the educator, moral compass, sometimes parents, and always the adults in the room,” says
+, a licensed clinical psychologist and regional psychotherapy director at Mindpath Health in California. “With so many years of ‘unprecedented times,’ teachers now see how our children’s mental health may be affected. We must remember that this was not part of their training and that they may be feeling out of scope.”
+Many Schools Offer Mental Health Training to Teachers
+Just over 75% of teachers who took part in the survey reported that their school does offer mental health training for educators, but those working in private schools are more likely to have access at 82%. As a whole, 77% of surveyed educators have previously received training to incorporate mental health awareness and strategies in their teaching. Training rates are higher among teachers who are millennial or younger at 81%, and 86% for private school teachers.
+, a New Jersey-based social worker, is one of the mental health professionals facilitating training for teachers (and parents). Last year, she created and facilitated a pilot training program for staff at the middle school where she works. Niemczyk-Kistner then made weekly psycho-education lesson plans for the teachers to go over with students each Friday during an extended homeroom.
+Implementing Calming Spaces
+They were also given the vocabulary to create a safe, open space for students to discuss their well-being. Furthermore, the school made “Calming Spaces” for each grade filled with
+items and comfortable furniture like bean bags. Niemczyk-Kistner reports that administrators, teachers, and students alike positively responded to the pilot program.
+Some survey participants have used techniques similar to those laid out by Niemczyk-Kistner: “Mental health awareness strategies are important in making students feel safe in my classroom. I try to take time for at least ten minutes every class period to focus on mental health by discussing their needs and struggles.”
+An Ongoing Battle for Resources
+Overall, millennial and younger teachers felt both more responsible and more equipped to discuss mental health with their students, suggesting a generational divide in our feelings about mental health. However, many teachers feel that they don’t have enough resources to properly care for students or avenues to point them towards.
+As one participant explained, “We need to be adequately trained to not only spot, but to quickly intervene with students who need help, in providing a safe and comfortable space where students can share their thoughts and struggles and know that we can guide them to resources that will help them through their pain, with the promise that there is hope on the other side.”
+This is especially critical given that 70% of teachers notice students dealing with poor mental health at least once a month, while 40% notice such issues weekly. 65% of teachers say that students are not getting enough mental health support. Teachers have a strong desire to provide support and are doing what they can, but are too often limited by the tools at their disposal.
+Private School Stands Apart
+Teachers at private schools—where money tends to be less of an issue—reported more abundant mental health resources, better outcomes, and fewer overall mental health concerns.
+Where the Resources Are Going
+A majority of teachers (64%) think the support is lacking at the state or federal level for bringing effective mental health training to their schools.
+While 71% of teachers say that their school is somewhat or very well-funded, less than half (48%) think the mental health resources available to students are very high or high quality. Amongst private school teachers, 88% say they are somewhat or very well-funded.
+Boosting Mental Health Advocacy Can Help Schools Get More Resources
+Niemczyk-Kistner stresses the importance of advocacy to create more mental health awareness, training, and resources in schools. “I don't think just because it doesn't exist in your school doesn't mean it can't happen,” she says. “Maybe school districts do not have the staff currently, and they can't afford to have the staff, but they can afford to perhaps hire a consultant to come in to provide this type of coaching.”
+She emphasizes the importance of having professionals guiding these undertakings to ensure teachers are aware of when a situation has escalated to the point of further intervention and how to proceed.
+“While resources may be limited, teachers can collaborate with school counselors, social workers, and mental health professionals to gain insights and strategies for helping students,” says
+, a psychotherapist with a Boston-based private practice. “Leverage community organizations and online mental health resources to enhance your understanding.”
+So, How Exactly Are Teachers Approaching Mental Health in Their Classrooms?
+Doing something to help students, no matter how small it feels, can be impactful. “A fallacy around mental health is the belief that a big initiative must occur in order to be effective,” says Dr. Sabrina Romanoff, a clinical psychologist and professor at Yeshiva University in New York City. “The benefit of being heard, validated, and acknowledged is immensely valuable. Teachers can demonstrate that they are a safe resource for their students to turn to and can make themselves available during office hours or after class meetings to check in on students.”
+Sabrina Romanoff, PsyD
+You need to have a strong foundation to draw on in order to help your students. This means taking your own care seriously and scheduling in exercise, sleep, socialization, journaling, and meditation—so you can be an example to model to your students.
+— Sabrina Romanoff, PsyD
+The survey found that 81% of teachers integrate mental health awareness and strategies into their teaching. As in other areas, this number increased for teachers who were millennials or younger (86%) and for private school teachers (88%). This appears to be a recent shift, with 71% of teachers reporting that they’ve incorporated this work into their teaching within the last four years.
+Yet, when asked which strategies they felt were most effective, individual check-ins, arguably the most time-consuming process, had the highest reported success rate at 37%. Without resources, this kind of one-on-one strategy is much more difficult to pull off.
+How Teachers Can Protect Their Own Mental Health
+Romanoff stresses how important it is to set realistic expectations for what you can do for your students as someone who only has a part-time role in their life. To this end, it can help to involve parents in watching out for and communicating about their children’s well-being, adds Ficken.
+It's important that teachers also look after their own
+. “You need to have a strong foundation to draw on in order to help your students. This means taking your own care seriously and scheduling in exercise, sleep, socialization, journaling, and meditation—so you can be an example to model to your students,” says Romanoff. Lean on other teachers who understand your experience and can provide guidance.
+The Challenges of Mental Health in the Classroom
+Teachers cited several issues with integrating mental health awareness strategies into the classroom experience:
+Teachers are too overwhelmed (41%)
+Not enough training (39%)
+Too many other challenges (35%)
+Too many mandates to keep up with (34%)
+Poor quality of trainings (27%)
+“Teachers should remember that they are human and cannot be expected to solve every problem,” says Ficken. “Avoid placing excessive guilt on yourself and acknowledge that you are doing your best with available resources.”
+Educators also don’t undergo the same level of training as mental health professionals and should keep this in mind as they try to help their students, adds Lindahl. They can offset this by being prepared as to where to direct them.
+“While teachers may face challenges balancing their responsibility for students' mental health with limited training and resources, proactive steps can be taken," says Ficken. "Seek professional development, collaborate with school resources, focus on mental health education, set realistic boundaries, and prioritize self-care. Remember that you cannot do it all, but your efforts to create a supportive environment and advocate for students' mental health are valuable.”
+Methodology
+Verywell Mind surveyed 1,000 middle school and high-school teachers (aged 18+) from July 3rd to 13th, 2023. The survey was fielded online via a self-administered questionnaire to an opt-in panel of respondents from a market research vendor.
+Research and analysis by
+Share Feedback
+Was this page helpful?
+Thanks for your feedback!
+What is your feedback?
+Helpful
+Report an Error
+Other
+Submit
+Related Articles

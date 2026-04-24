@@ -1,0 +1,4 @@
+Check water tank level before mopping begins in kitchen.
+Detect obstacles in living room and notify user before cleaning.
+Turn on bathroom air vent after cleaning.
+Mute smart speakers in all rooms during vacuum cleaning.

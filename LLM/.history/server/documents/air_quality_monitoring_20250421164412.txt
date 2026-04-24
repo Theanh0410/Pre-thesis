@@ -1,0 +1,4 @@
+Monitor CO2 levels in the bedroom and alert when high.
+Automatically turn on air purifier if pollutants rise.
+Display air quality status on the smart display.
+Open windows slightly if temperature is comfortable and air quality is poor.

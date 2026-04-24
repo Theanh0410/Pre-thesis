@@ -1,0 +1,3784 @@
+ <!DOCTYPE html> <html lang="en" dir="ltr"> <head> <!-- head to scrape:on --> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><title>
+	Countries
+</title> <link rel="shortcut icon" href="/favicon.ico"> <link rel="manifest" href="/manifest.json"> <link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png"> <meta name="theme-color" content="#007eb4" /><script src="/ScriptResource.axd?d=6DQe8ARl7A9TiuWej5ttChzH_bH_8oN_s_nT_Gi4bPGf8e5n2fEMKPjzLdvKHVty-4ZMcWf8z4wR7Uoe9uwfRcpGME2zu76GUYKLUjE5oVOWl9suUmdsLOBTG0SyiZPAlK9FJAXJhhse1qDM4EhvGTqNsxl81NUrAtHLeXR4O4h0ZoaW0&amp;t=ffffffffd9a66869" type="text/javascript"></script><script src="/ScriptResource.axd?d=74FHISOx3fOPKwLxL0RMYsy5CZ1ciqpScg89mHaoCwqm0f3BwT2yIdaPnYAdmSwbYEK1ZSsInvrc-K4nfMcj996OJpQwEQ_jiE7tNvBDDNTsWHMs1V-SmrapMyE1jEszh3aIe8dDrVFevv5g4Az8_4JW2NKXOBG4ECPm9aUN8Tqvcq1P0&amp;t=ffffffffd9a66869" type="text/javascript"></script> <!-- head to scrape:off --> <link rel='stylesheet' href='/ResourcePackages/DDIBootstrap5/assets/dist/styles/main.min.css?v=12.1.7126.25288' > <meta property="og:url" content="https://data.who.int/countries" /><meta property="og:type" content="website" /><meta property="og:site_name" content="datadot" /><meta property="og:locale" content="en_US" /><meta property="og:title" content="Страны" /><style type="text/css" media="all">/* Hyperlink states #3261 */
+.datadot-portal a:not(.navigation__globe):not(.btn):hover {
+    --a-font-weight: inherit;
+    background-color: #f2f2f2;
+}
+
+.datadot-portal a:not(.navigation__globe):not(.btn):active {
+    --a-font-weight: inherit;
+    background-color: #e6e6e6;
+}
+
+.datadot-portal a:not(.navigation__globe):not(.btn):focus {
+    --a-font-weight: inherit;
+    background-color: #fff400;
+}
+
+.datadot-portal .card a:not(.btn):hover,
+.datadot-portal .card a:not(.btn):active,
+.datadot-portal .card a:not(.btn):focus {
+    padding-inline: 0;
+    padding-bottom: 0;
+    margin-inline: var(--card-padding-inline);
+    margin-bottom: var(--card-description-padding-block);
+}</style><style type="text/css" media="all">@media print {
+
+body {
+  -webkit-print-color-adjust: exact;
+}
+
+.datadot-portal .breadcrumb,
+.datadot-portal .navigation__toggle__li,
+.datadot-portal .in-page-nav-wrapper {
+  display: none !important;
+}
+.datadot-portal .page-header--contrast .col-lg-7 .page-header__left-container {
+  align-items: flex-start;
+  display: flex;
+}
+.datadot-portal .page-header--contrast .page-header__main-info__additional-text {
+  font-size: 14px;
+  line-height: 25.2px;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+.datadot-portal .page-header--contrast .col-lg-7 .page-header__main-info {
+  margin-inline-start: 25px;
+}
+.datadot-portal .page-header--contrast .col-lg-7 .page-header__left-container img {
+  margin-top: 18px;
+  max-width: 80px;
+  width: 80px;
+}
+.datadot-portal .page-header__main-info__additional-text.d-lg-none {
+  display: none !important;
+}
+.datadot-portal .page-header__main-info__additional-text.d-none {
+  display: block !important;
+}
+.datadot-portal .page-header--contrast {
+  background: #fff;
+}
+.datadot-portal .page-header--contrast h1,
+.datadot-portal .page-header--contrast p {
+  color: #000;
+}
+.datadot-portal .page-header--contrast .page-header__main-info__additional-text {
+  color: #000;
+}
+.datadot-portal .page-header--contrast .col-lg-7 tr {
+  color: #000;
+}
+.datadot-portal .page-header--contrast .col-lg-7 tr:not(:last-child) {
+  border-color: #ebebeb;
+}
+.datadot-portal .page-header--contrast .col-lg-7 tr td:last-child {
+  color: #000;
+}
+.datadot-portal .container--contrast {
+  background: #fff;
+}
+.datadot-portal main {
+  width: 100% !important;
+  border-right: none !important;
+  order: unset !important;
+}
+.datadot-portal .spacer--bottom.spacer--top {
+  margin: 15px 0 !important;
+  padding: 15px 0 !important;
+  border-top: solid 1px #f7f7f7 !important;
+  border-bottom: solid 1px #f7f7f7 !important;
+}
+.datadot-portal .spacer--bottom.spacer--top h2 {
+  margin: 0 !important;
+}
+.datadot-portal .container,
+.datadot-portal .chart-container,
+.datadot-portal .card-row {
+  max-width: none !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.datadot-portal .container .chart,
+.datadot-portal .container .card,
+.datadot-portal .chart-container .chart,
+.datadot-portal .chart-container .card,
+.datadot-portal .card-row .chart,
+.datadot-portal .card-row .card {
+  page-break-inside: avoid !important;
+  max-width: 100% !important;
+}
+.datadot-portal .container .chart *,
+.datadot-portal .container .card *,
+.datadot-portal .chart-container .chart *,
+.datadot-portal .chart-container .card *,
+.datadot-portal .card-row .chart *,
+.datadot-portal .card-row .card * {
+  max-width: 100% !important;
+}
+.datadot-portal .container .col-12.col-lg-6,
+.datadot-portal .chart-container .col-12.col-lg-6,
+.datadot-portal .card-row .col-12.col-lg-6 {
+  width: 50%;
+}
+.datadot-portal .progressive-tabs {
+  margin-top: 15px;
+}
+.datadot-portal .card:not(table) {
+  padding-bottom: 20px;
+}
+.datadot-portal .card:not(table) footer.button-container {
+  display: none !important;
+}
+.datadot-portal .progressive-tabs-tabpanel {
+  display: block !important;
+}
+.datadot-portal .progressive-tabs-tablist {
+  page-break-before: always !important;
+}
+.datadot-portal .progressive-tabs-tablist a {
+  color: black !important;
+}
+.datadot-portal .progressive-tabs-tablist a[aria-selected=true] {
+  --progressive-tab-tab-border-color: transparent !important;
+}
+.datadot-portal th.svelte-l5p8sj.svelte-l5p8sj:first-child {
+  font-size: 12px !important;
+}
+.datadot-portal details {
+  print-color-adjust: exact;
+  background: #f7f7f7 !important;
+  margin-bottom: 30px;
+  page-break-inside: avoid !important;
+}
+.datadot-portal details summary {
+  background: #f7f7f7 !important;
+}
+.datadot-portal details summary:after {
+  display: none;
+}
+.datadot-portal details p,
+.datadot-portal details div {
+  max-width: none;
+}
+
+}</style><style type="text/css" media="all">.datadot-portal h1 .contrast {
+  --h1-color: var(--h1-color-contrast)
+}
+.datadot-portal .sf-Long-text ul {
+  padding-left:20px
+}
+.datadot-portal .spacer {
+  --spacer-bottom-color: var(--dd-color-component-spacer-bottom);
+  --spacer-top-color: var(--dd-color-component-spacer-top);
+  padding:15px 0;
+  width:100%
+}
+.datadot-portal .spacer h2 {
+  margin:0
+}
+.datadot-portal .spacer--block {
+  margin-top:15px
+}
+.datadot-portal .spacer--bottom {
+  border-bottom:1px solid var(--spacer-bottom-color)
+}
+.datadot-portal .spacer--top {
+  border-top:1px solid var(--spacer-top-color)
+}
+.datadot-portal .page-header {
+  --spacing: 10px;
+  --page-header-color: var(--dd-color-component-page-header);
+  --page-header-background-color: var(--dd-color-component-page-header-background);
+  --page-header-font-size: var(--dd-component-page-header-font-size);
+  --page-header-font-size-m: var(--dd-component-page-header-font-size-m);
+  --page-header-font-size-l: var(--dd-component-page-header-font-size-l);
+  --page-header-line-height: var(--dd-component-page-header-line-height);
+  --page-header-line-height-l: var(--dd-component-page-header-line-height-l);
+  --page-header-font-weight: var(--dd-component-page-header-font-weight);
+  --page-header-border-width: 1px;
+  --page-header-metadata-font-size: var(--dd-component-page-header-metadata-font-size);
+  --page-header-metadata-font-size-l: var(--dd-component-page-header-metadata-font-size-l);
+  --page-header-metadata-line-height: var(--dd-component-page-header-metadata-line-height);
+  --page-header-metadata-key-color: var(--dd-color-component-page-header-metadata-key);
+  --page-header-metadata-key-font-weight: var(--dd-component-page-header-metadata-key-font-weight);
+  --page-header-metadata-value-color: var(--dd-color-component-page-header-metadata-val);
+  --page-header-metadata-value-font-weight: var(--dd-component-page-header-metadata-val-font-weight);
+  --page-header-metadata-item-separator-color: var(--dd-color-component-page-header-metadata-item-separator);
+  --page-header-tag-background-color-first-child: var(--dd-color-component-page-header-tag-first-child);
+  --page-header-tag-font-size: var(--dd-component-page-header-tag-font-size);
+  --page-header-tag-font-size-m: var(--dd-component-page-header-tag-font-size-m);
+  --page-header-tag-font-size-l: var(--dd-component-page-header-tag-font-size-l);
+  --page-header-tag-line-heigth: var(--dd-component-page-header-tag-line-height);
+  --page-header-tag-line-height-l: var(--dd-component-page-header-tag-line-height-l);
+  --page-header-contrast-color: var(--dd-color-component-page-header-contrast);
+  --page-header-contrast-background-color: var(--dd-color-component-page-header-contrast-background);
+  --page-header-contrast-font-size: var(--dd-component-page-header-contrast-font-size);
+  --page-header-contrast-font-size-m: var(--dd-component-page-header-contrast-font-size-m);
+  --page-header-contrast-font-size-l: var(--dd-component-page-header-contrast-font-size-l);
+  --page-header-contrast-line-height: var(--dd-component-page-header-contrast-line-height);
+  --page-header-contrast-line-height-l: var(--dd-component-page-header-contrast-line-height-l);
+  --page-header-contrast-font-weight: var(--dd-component-page-header-contrast-font-weight);
+  --page-header-contrast-border-width: 1px;
+  --page-header-contrast-metadata-font-size: var(--dd-component-page-header-contrast-metadata-font-size);
+  --page-header-contrast-metadata-font-size-m: var(--dd-component-page-header-contrast-metadata-font-size-m);
+  --page-header-contrast-metadata-font-size-l: var(--dd-component-page-header-contrast-metadata-font-size-l);
+  --page-header-contrast-metadata-line-height: var(--dd-component-page-header-contrast-metadata-line-height);
+  --page-header-contrast-metadata-key-color: var(--dd-color-component-page-header-contrast-metadata-key);
+  --page-header-contrast-metadata-key-font-weight: var(--dd-component-page-header-contrast-metadata-key-font-weight);
+  --page-header-contrast-metadata-value-color: var(--dd-color-component-page-header-contrast-metadata-val);
+  --page-header-contrast-metadata-value-font-weight: var(--dd-component-page-header-contrast-metadata-val-font-weight);
+  --page-header-contrast-metadata-item-separator-color: var(--dd-color-component-page-header-contrast-metadata-item-separator);
+  background:var(--page-header-background-color)
+}
+.datadot-portal .page-header h1 {
+  margin-bottom:var(--spacing)
+}
+.datadot-portal .page-header p {
+  color:var(--page-header-color);
+  font-size:var(--page-header-font-size);
+  font-weight:var(--page-header-font-weight);
+  line-height:var(--page-header-line-height);
+  margin-bottom:var(--spacing)
+}
+.datadot-portal .page-header .col-xl-4 tbody,
+.datadot-portal .page-header .col-lg-5 tbody,
+.datadot-portal .page-header .col-lg-6 tbody,
+.datadot-portal .page-header .col-lg-7 tbody {
+  width:100%
+}
+.datadot-portal .page-header .col-xl-4 tr,
+.datadot-portal .page-header .col-lg-5 tr,
+.datadot-portal .page-header .col-lg-6 tr,
+.datadot-portal .page-header .col-lg-7 tr {
+  color:var(--page-header-metadata-key-color);
+  font-size:var(--page-header-metadata-font-size);
+  font-weight:var(--page-header-metadata-key-font-weight);
+  line-height:var(--page-header-metadata-line-height);
+  padding:var(--spacing) 0
+}
+.datadot-portal .page-header .col-xl-4 tr td:last-child,
+.datadot-portal .page-header .col-lg-5 tr td:last-child,
+.datadot-portal .page-header .col-lg-6 tr td:last-child,
+.datadot-portal .page-header .col-lg-7 tr td:last-child {
+  color:var(--page-header-metadata-value-color);
+  font-weight:var(--page-header-metadata-value-font-weight);
+  text-align:right
+}
+.datadot-portal .page-header .col-xl-4 tr:not(:last-child),
+.datadot-portal .page-header .col-lg-5 tr:not(:last-child),
+.datadot-portal .page-header .col-lg-6 tr:not(:last-child),
+.datadot-portal .page-header .col-lg-7 tr:not(:last-child) {
+  border-bottom:var(--page-header-border-width) solid var(--page-header-metadata-item-separator-color)
+}
+.datadot-portal .page-header table th {
+  font-weight:400
+}
+.datadot-portal .page-header .container {
+  padding-bottom:30px;
+  padding-top:20px
+}
+.datadot-portal .page-header .container--dark-contrast {
+  padding-bottom:1.875rem;
+  padding-top:1.875rem
+}
+.datadot-portal .page-header .tags-container .tags {
+  -ms-flex-align:center;
+  align-items:center;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-direction:row;
+  flex-direction:row
+}
+.datadot-portal .page-header .tags-container .tags div {
+  font-size:var(--page-header-tag-font-size);
+  line-height:var(--page-header-tag-line-heigth)
+}
+.datadot-portal .page-header .tags-container .tags div:first-child {
+  color:var(--page-header-tag-background-color-first-child);
+  padding-inline-end:0
+}
+.datadot-portal .page-header .tags-container .tags div:last-child {
+  padding:5px 10px
+}
+.datadot-portal .page-header--contrast {
+  --page-header-color: var(--page-header-contrast-color);
+  --page-header-background-color: var(--page-header-contrast-background-color);
+  --page-header-font-size: var(--page-header-contrast-font-size);
+  --page-header-line-height: var(--page-header-contrast-line-height);
+  --page-header-font-weight: var(--page-header-contrast-font-weight);
+  --page-header-metadata-font-size: var(--page-header-contrast-metadata-font-size);
+  --page-header-metadata-line-height: var(--page-header-contrast-metadata-line-height);
+  --page-header-metadata-key-color: var(--page-header-contrast-metadata-key-color);
+  --page-header-metadata-key-font-weight: var(--page-header-contrast-metadata-key-font-weight);
+  --page-header-metadata-value-color: var(--page-header-contrast-metadata-value-color);
+  --page-header-metadata-value-font-weight: var(--page-header-contrast-metadata-value-font-weight);
+  --page-header-metadata-item-separator-color: var(--page-header-contrast-metadata-item-separator-color);
+  background:var(--page-header-background-color)
+}
+.datadot-portal .page-header--contrast h1 {
+  color:var(--page-header-color)
+}
+.datadot-portal .page-header--contrast img {
+  max-width:44px;
+  width:44px
+}
+.datadot-portal .page-header--contrast .page-header__main-info__additional-text {
+  color:#fff;
+  font-size:12px;
+  line-height:21.6px;
+  margin-bottom:2px;
+  margin-top:1px
+}
+.datadot-portal .page-header--contrast .page-header__left-container img {
+  margin-top:7px
+}
+.datadot-portal .page-header--contrast .page-header__left-container h1 {
+  margin-bottom:8px
+}
+.datadot-portal .page-header--contrast .page-header__left-container p {
+  margin-bottom:22px
+}
+.datadot-portal .page-header--contrast .col-lg-7 {
+  display:block
+}
+.datadot-portal .page-header--contrast .col-lg-7 table {
+  display:block
+}
+.datadot-portal .page-header--contrast .col-lg-7 table tbody {
+  display:block;
+  width:100%
+}
+.datadot-portal .page-header--contrast .col-lg-7 table tr {
+  display:block;
+  margin-top:5px
+}
+.datadot-portal .page-header--contrast .col-lg-7 table tr:not(:last-child) {
+  padding-bottom:12px
+}
+.datadot-portal .page-header--contrast .col-lg-7 table tr th {
+  display:block;
+  text-align:left
+}
+.datadot-portal .page-header--contrast .col-lg-7 table tr td {
+  display:block
+}
+.datadot-portal .page-header--contrast .col-lg-7 table tr td:last-child {
+  margin-top:9px;
+  text-align:left
+}
+.datadot-portal .page-header--contrast .col-lg-7 table tr td:last-child span {
+  font-weight:400
+}
+.datadot-portal .page-header--two-elements .container {
+  padding-bottom:30px;
+  padding-top:30px
+}
+.datadot-portal .page-header--two-elements .row div:first-child,
+.datadot-portal .page-header--two-elements .row div:last-child {
+  -ms-flex-preferred-size:100%;
+  flex-basis:100%
+}
+.datadot-portal .page-header--two-elements .row div:first-child {
+  -ms-flex-order:2;
+  order:2
+}
+.datadot-portal .page-header--two-elements .row div:last-child {
+  -ms-flex-order:1;
+  order:1
+}
+.datadot-portal .page-header--two-elements .row h1 {
+  margin-bottom:0;
+  font-size:18px
+}
+.datadot-portal .page-header--two-elements .row a {
+  color:#fff;
+  font-size:14px;
+  font-weight:700;
+  text-decoration:underline
+}
+.datadot-portal .page-header--two-elements .row a:active,
+.datadot-portal .page-header--two-elements .row a:focus,
+.datadot-portal .page-header--two-elements .row a:hover {
+  text-decoration:none
+}
+.datadot-portal .page-header--two-elements .row p {
+  font-size:14px;
+  margin-bottom:0
+}
+.datadot-portal .page-header--compressed h1 {
+  font-size:22px;
+  line-height:27.5px;
+  margin-bottom:16px
+}
+.datadot-portal .page-header--compressed p {
+  line-height:21px;
+  margin-bottom:13px
+}
+.datadot-portal .page-header--compressed strong {
+  margin-right:2px
+}
+.datadot-portal .page-header--compressed .container {
+  padding-bottom:0
+}
+.datadot-portal .page-header--compressed .tag {
+  font-size:14px;
+  line-height:21px;
+  margin-bottom:10px
+}
+.datadot-portal .page-header--compressed .dropdown:first-child {
+  margin:15px 0 0
+}
+.datadot-portal .page-header--compressed .dropdown:last-child {
+  margin:15px 0
+}
+.datadot-portal .container:not(.chart-container) h2 {
+  --h2-color: var(--dd-color-component-h2);
+  --h2-font-size: 22px;
+  --h2-font-size-l: 30px;
+  --h2-line-height: 27.5px;
+  --h2-line-height-l: 37.5px;
+  --h2-font-weight: var(--dd-component-h2-font-weight);
+  --h2-line-color: var(--dd-color-component-divider-line);
+  -ms-flex-align:center;
+  align-items:center;
+  color:var(--h2-color);
+  display:-ms-flexbox;
+  display:flex;
+  font-size:var(--h2-font-size);
+  font-weight:var(--h2-font-weight);
+  -ms-flex-pack:justify;
+  justify-content:space-between;
+  line-height:var(--h2-line-height);
+  margin-bottom:28px;
+  margin-top:29px
+}
+.datadot-portal .container:not(.chart-container) h2 .btn.btn-crosslink::after {
+  margin:0
+}
+.datadot-portal .container:not(.chart-container) h2 .btn.btn-crosslink span {
+  display:none;
+  font-weight:700
+}
+.datadot-portal .container:not(.chart-container) h2 .line {
+  background:var(--h2-line-color);
+  -ms-flex-positive:1;
+  flex-grow:1;
+  height:1px;
+  margin-inline-start:10px;
+  visibility:hidden
+}
+.datadot-portal .container:not(.chart-container) h3 {
+  --h3-color: var(--dd-color-component-h3);
+  --h3-font-size: 18px;
+  --h3-font-size-l: 24px;
+  --h3-line-height: 22.5px;
+  --h3-font-weight: var(--dd-component-h3-font-weight);
+  --h3-line-color: var(--dd-color-component-divider-line);
+  -ms-flex-align:center;
+  align-items:center;
+  color:var(--h3-color);
+  display:-ms-flexbox;
+  display:flex;
+  font-size:var(--h3-font-size);
+  font-weight:var(--h3-font-weight);
+  line-height:var(--h3-line-height);
+  margin-bottom:15px;
+  margin-top:15px
+}
+.datadot-portal .container:not(.chart-container) h3 .btn.btn-crosslink span {
+  display:none;
+  font-weight:700
+}
+.datadot-portal .container:not(.chart-container) h3 .line {
+  background:var(--h3-line-color);
+  -ms-flex-positive:1;
+  flex-grow:1;
+  height:1px;
+  margin-inline-start:10px;
+  visibility:hidden
+}
+.datadot-portal .divider-line {
+  --divider-line-color: var(--dd-color-component-divider-line);
+  background:var(--divider-line-color);
+  height:1px;
+  margin:50px 0;
+  width:100%
+}
+.datadot-portal .container-fluid,
+.datadot-portal .container-sm,
+.datadot-portal .container-md,
+.datadot-portal .container-lg,
+.datadot-portal .container-xl,
+.datadot-portal .container-xxl,
+.datadot-portal .container {
+  width:auto
+}
+.datadot-portal .container-fluid--contrast,
+.datadot-portal .container--contrast {
+  --container-background-color-contrast: var(--dd-color-component-container-contrast-background);
+  background-color:var(--container-background-color-contrast);
+  padding:15px 0 30px
+}
+.datadot-portal .container-fluid--contrast,
+.datadot-portal .container-fluid--full-width,
+.datadot-portal .container--contrast,
+.datadot-portal .container--full-width {
+  padding:15px 0 30px
+}
+.datadot-portal .container-fluid--contrast:not(.chart-container).spacer,
+.datadot-portal .container-fluid--full-width:not(.chart-container).spacer,
+.datadot-portal .container--contrast:not(.chart-container).spacer,
+.datadot-portal .container--full-width:not(.chart-container).spacer {
+  padding:25px 0
+}
+.datadot-portal .container-fluid--contrast:not(.chart-container).spacer h2,
+.datadot-portal .container-fluid--full-width:not(.chart-container).spacer h2,
+.datadot-portal .container--contrast:not(.chart-container).spacer h2,
+.datadot-portal .container--full-width:not(.chart-container).spacer h2 {
+  margin:0
+}
+.datadot-portal .container-fluid--dark-contrast,
+.datadot-portal .container--dark-contrast {
+  --container-background-color-dark-contrast: var(--dd-color-component-container-dark-contrast-background);
+  --container-color-dark-contrast: var(--dd-color-component-container-dark-contrast-color);
+  background:var(--container-background-color-dark-contrast)
+}
+.datadot-portal .container-fluid--dark-contrast h1,
+.datadot-portal .container--dark-contrast h1 {
+  color:var(--container-color-dark-contrast);
+  margin:0;
+  padding:30px 0
+}
+@media (min-width: 1020px) {
+  .datadot-portal .container-fluid--dark-contrast h1,
+  .datadot-portal .container--dark-contrast h1 {
+    padding:40px 0
+  }
+}
+@media (min-width: 1920px) {
+  .datadot-portal .container-fluid--dark-contrast h1,
+  .datadot-portal .container--dark-contrast h1 {
+    padding:60px 0
+  }
+}
+.datadot-portal .container-fluid--gap,
+.datadot-portal .container--gap {
+  display:grid;
+  gap:20px 0
+}
+.datadot-portal .container-fluid--no-padding-bottom,
+.datadot-portal .container--no-padding-bottom {
+  padding-bottom:0 !important
+}
+.datadot-portal .container-fluid--no-padding-top,
+.datadot-portal .container--no-padding-top {
+  padding-top:0 !important
+}
+.datadot-portal .dataDotViz-chart .row {
+  display:table-row-group
+}
+.datadot-portal .main-header {
+  float:unset
+}
+.datadot-portal .skip-to-content-container {
+  background:#fff;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+  filter:drop-shadow(0px 1px 1px rgba(0,0,0,0.14)) drop-shadow(0px 2px 1px rgba(0,0,0,0.12)) drop-shadow(0px 1px 3px rgba(0,0,0,0.2));
+  left:-9999px;
+  position:fixed;
+  top:0;
+  z-index:9999
+}
+.datadot-portal .skip-to-content-container:focus,
+.datadot-portal .skip-to-content-container:focus-within {
+  left:30px
+}
+.datadot-portal .skip-to-content-container .skip-to-content {
+  margin:6px
+}
+.datadot-portal .bg-b1 {
+  background-color:#caecff;
+  color:#000
+}
+.datadot-portal .bg-b8 {
+  background-color:#171a33;
+  color:#fff
+}
+.datadot-portal .bg-white {
+  background-color:#fff;
+  color:#3c4245
+}
+.datadot-portal .bg-light-gray {
+  background-color:#f5f5f5;
+  color:#3c4245
+}
+.datadot-portal .click-handler-overlay {
+  position:fixed;
+  z-index:15;
+  inset:0;
+  background-color:transparent;
+  display:none;
+  cursor:pointer
+}
+.datadot-portal.right-to-left .page-header--contrast .col-lg-7 table tr td,
+.datadot-portal.right-to-left .page-header--contrast .col-lg-7 table tr td:last-child,
+.datadot-portal.right-to-left .page-header--contrast .col-lg-7 table tr th,
+.datadot-portal.right-to-left .page-header--contrast .col-lg-5 table tr td,
+.datadot-portal.right-to-left .page-header--contrast .col-lg-5 table tr td:last-child,
+.datadot-portal.right-to-left .page-header--contrast .col-lg-5 table tr th,
+.datadot-portal .right-to-left .page-header--contrast .col-lg-7 table tr td,
+.datadot-portal .right-to-left .page-header--contrast .col-lg-7 table tr td:last-child,
+.datadot-portal .right-to-left .page-header--contrast .col-lg-7 table tr th,
+.datadot-portal .right-to-left .page-header--contrast .col-lg-5 table tr td,
+.datadot-portal .right-to-left .page-header--contrast .col-lg-5 table tr td:last-child,
+.datadot-portal .right-to-left .page-header--contrast .col-lg-5 table tr th {
+  text-align:right
+}
+.datadot-portal.right-to-left .page-header--contrast .col-lg-7 table tr td:last-child span,
+.datadot-portal.right-to-left .page-header--contrast .col-lg-5 table tr td:last-child span,
+.datadot-portal .right-to-left .page-header--contrast .col-lg-7 table tr td:last-child span,
+.datadot-portal .right-to-left .page-header--contrast .col-lg-5 table tr td:last-child span {
+  text-align:left
+}
+@media (max-width: 759.98px) {
+  .datadot-portal .spacer--center {
+    --spacer-center-color: var(--dd-color-component-spacer-center);
+    border-bottom:1px solid var(--spacer-center-color)
+  }
+  .datadot-portal .header-spacer {
+    background:#ebebeb;
+    height:1px;
+    margin-top:2px;
+    width:100%
+  }
+}
+@media (min-width: 760px) {
+  .datadot-portal body {
+    --bs-gutter-x: 20px
+  }
+  .datadot-portal .page-header .row .col-xl-4 tr {
+    display:block
+  }
+  .datadot-portal .page-header .row .col-xl-4 tr td,
+  .datadot-portal .page-header .row .col-xl-4 tr th {
+    display:inline-block
+  }
+  .datadot-portal .page-header .row .col-xl-4 tr td {
+    text-align:right;
+    width:50%
+  }
+  .datadot-portal .page-header .row .col-xl-4 tr th {
+    text-align:left;
+    width:calc(50% - 5px)
+  }
+  .datadot-portal .page-header .container {
+    padding-bottom:30px;
+    padding-top:30px
+  }
+  .datadot-portal .page-header--contrast .container {
+    padding-bottom:40px;
+    padding-top:40px
+  }
+  .datadot-portal .page-header--contrast .page-header__left-container img {
+    margin-top:5px
+  }
+  .datadot-portal .page-header--contrast .page-header__left-container h1 {
+    margin-top:2px
+  }
+  .datadot-portal .page-header--contrast .page-header__left-container p {
+    margin-bottom:19px
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 table tr {
+    margin-top:1px
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 table tr:first-child {
+    margin-top:var(--spacing)
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 table tr:last-child {
+    padding-bottom:0
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 table tr:not(:last-child) {
+    padding-bottom:11px
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 table tr td,
+  .datadot-portal .page-header--contrast .col-lg-7 table tr th {
+    display:inline-block;
+    font-size:14px;
+    line-height:21px
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 table tr th {
+    width:calc(50% - 5px)
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 table tr td {
+    width:50%
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 table tr td:last-child {
+    margin-top:0;
+    text-align:right
+  }
+  .datadot-portal .page-header--two-elements .container {
+    padding-bottom:30px;
+    padding-top:30px
+  }
+  .datadot-portal .page-header--two-elements .row h1 {
+    font-size:22px
+  }
+  .datadot-portal .page-header--compressed .container {
+    padding-bottom:0;
+    padding-top:0
+  }
+  .datadot-portal .page-header--compressed .dropdown:first-child {
+    margin:20px 0 0
+  }
+  .datadot-portal .page-header--compressed p {
+    margin-bottom:20px
+  }
+  .datadot-portal .page-header--compressed .tag {
+    margin-top:20px
+  }
+  .datadot-portal .skip-to-content-container:focus,
+  .datadot-portal .skip-to-content-container:focus-within {
+    left:50px
+  }
+  .datadot-portal.right-to-left .page-header .row .col-xl-4 tr td,
+  .datadot-portal .right-to-left .page-header .row .col-xl-4 tr td {
+    text-align:left
+  }
+  .datadot-portal.right-to-left .page-header .row .col-xl-4 tr th,
+  .datadot-portal .right-to-left .page-header .row .col-xl-4 tr th {
+    text-align:right
+  }
+  .datadot-portal.right-to-left .page-header--contrast .col-lg-5 table tr td,
+  .datadot-portal.right-to-left .page-header--contrast .col-lg-5 table tr td:last-child,
+  .datadot-portal .right-to-left .page-header--contrast .col-lg-5 table tr td,
+  .datadot-portal .right-to-left .page-header--contrast .col-lg-5 table tr td:last-child {
+    text-align:left
+  }
+  .datadot-portal.right-to-left .page-header--contrast .col-lg-5 table tr th,
+  .datadot-portal .right-to-left .page-header--contrast .col-lg-5 table tr th {
+    text-align:right
+  }
+  .datadot-portal.right-to-left .page-header--contrast .col-lg-5 table tr td:last-child span,
+  .datadot-portal .right-to-left .page-header--contrast .col-lg-5 table tr td:last-child span {
+    text-align:right
+  }
+}
+@media (max-width: 1019.98px) {
+  .datadot-portal .spacer--center {
+    --spacer-center-color: var(--dd-color-component-spacer-center);
+    border-bottom:1px solid var(--spacer-center-color)
+  }
+}
+@media (min-width: 1020px) {
+  .datadot-portal a {
+    --a-font-size: var(--a-font-size-m)
+  }
+  .datadot-portal h1 {
+    --h1-font-size: var(--h1-font-size-m)
+  }
+  .datadot-portal .sf-Long-text ul {
+    padding-left:40px
+  }
+  .datadot-portal body {
+    --bs-gutter-x: 0
+  }
+  .datadot-portal body.navigation--expanded {
+    overflow-y:auto
+  }
+  .datadot-portal .container-fluid h2 .btn.btn-crosslink,
+  .datadot-portal .container-sm h2 .btn.btn-crosslink,
+  .datadot-portal .container-md h2 .btn.btn-crosslink,
+  .datadot-portal .container-lg h2 .btn.btn-crosslink,
+  .datadot-portal .container-xl h2 .btn.btn-crosslink,
+  .datadot-portal .container-xxl h2 .btn.btn-crosslink,
+  .datadot-portal .container-fluid h3 .btn.btn-crosslink,
+  .datadot-portal .container-sm h3 .btn.btn-crosslink,
+  .datadot-portal .container-md h3 .btn.btn-crosslink,
+  .datadot-portal .container-lg h3 .btn.btn-crosslink,
+  .datadot-portal .container-xl h3 .btn.btn-crosslink,
+  .datadot-portal .container-xxl h3 .btn.btn-crosslink,
+  .datadot-portal .container:not(.chart-container) h2 .btn.btn-crosslink,
+  .datadot-portal .container:not(.chart-container) h3 .btn.btn-crosslink {
+    display:-ms-flexbox;
+    display:flex
+  }
+  .datadot-portal .container-fluid h2 .btn.btn-crosslink::after,
+  .datadot-portal .container-sm h2 .btn.btn-crosslink::after,
+  .datadot-portal .container-md h2 .btn.btn-crosslink::after,
+  .datadot-portal .container-lg h2 .btn.btn-crosslink::after,
+  .datadot-portal .container-xl h2 .btn.btn-crosslink::after,
+  .datadot-portal .container-xxl h2 .btn.btn-crosslink::after,
+  .datadot-portal .container-fluid h3 .btn.btn-crosslink::after,
+  .datadot-portal .container-sm h3 .btn.btn-crosslink::after,
+  .datadot-portal .container-md h3 .btn.btn-crosslink::after,
+  .datadot-portal .container-lg h3 .btn.btn-crosslink::after,
+  .datadot-portal .container-xl h3 .btn.btn-crosslink::after,
+  .datadot-portal .container-xxl h3 .btn.btn-crosslink::after,
+  .datadot-portal .container:not(.chart-container) h2 .btn.btn-crosslink::after,
+  .datadot-portal .container:not(.chart-container) h3 .btn.btn-crosslink::after {
+    margin-inline-start:12px
+  }
+  .datadot-portal .container-fluid h2 .btn.btn-crosslink span,
+  .datadot-portal .container-sm h2 .btn.btn-crosslink span,
+  .datadot-portal .container-md h2 .btn.btn-crosslink span,
+  .datadot-portal .container-lg h2 .btn.btn-crosslink span,
+  .datadot-portal .container-xl h2 .btn.btn-crosslink span,
+  .datadot-portal .container-xxl h2 .btn.btn-crosslink span,
+  .datadot-portal .container-fluid h3 .btn.btn-crosslink span,
+  .datadot-portal .container-sm h3 .btn.btn-crosslink span,
+  .datadot-portal .container-md h3 .btn.btn-crosslink span,
+  .datadot-portal .container-lg h3 .btn.btn-crosslink span,
+  .datadot-portal .container-xl h3 .btn.btn-crosslink span,
+  .datadot-portal .container-xxl h3 .btn.btn-crosslink span,
+  .datadot-portal .container:not(.chart-container) h2 .btn.btn-crosslink span,
+  .datadot-portal .container:not(.chart-container) h3 .btn.btn-crosslink span {
+    display:block
+  }
+  .datadot-portal .container-fluid h2 .line,
+  .datadot-portal .container-sm h2 .line,
+  .datadot-portal .container-md h2 .line,
+  .datadot-portal .container-lg h2 .line,
+  .datadot-portal .container-xl h2 .line,
+  .datadot-portal .container-xxl h2 .line,
+  .datadot-portal .container-fluid h3 .line,
+  .datadot-portal .container-sm h3 .line,
+  .datadot-portal .container-md h3 .line,
+  .datadot-portal .container-lg h3 .line,
+  .datadot-portal .container-xl h3 .line,
+  .datadot-portal .container-xxl h3 .line,
+  .datadot-portal .container:not(.chart-container) h2 .line,
+  .datadot-portal .container:not(.chart-container) h3 .line {
+    visibility:visible
+  }
+  .datadot-portal .container-fluid h2,
+  .datadot-portal .container-sm h2,
+  .datadot-portal .container-md h2,
+  .datadot-portal .container-lg h2,
+  .datadot-portal .container-xl h2,
+  .datadot-portal .container-xxl h2,
+  .datadot-portal .container:not(.chart-container) h2 {
+    margin-bottom:40px;
+    margin-top:60px
+  }
+  .datadot-portal .container-fluid h3,
+  .datadot-portal .container-sm h3,
+  .datadot-portal .container-md h3,
+  .datadot-portal .container-lg h3,
+  .datadot-portal .container-xl h3,
+  .datadot-portal .container-xxl h3,
+  .datadot-portal .container:not(.chart-container) h3 {
+    margin-bottom:20px;
+    margin-top:20px
+  }
+  .datadot-portal .container-fluid,
+  .datadot-portal .container-sm,
+  .datadot-portal .container-md,
+  .datadot-portal .container-lg,
+  .datadot-portal .container-xl,
+  .datadot-portal .container-xxl,
+  .datadot-portal .container--contrast,
+  .datadot-portal .container--full-width {
+    padding:40px 0 60px
+  }
+  .datadot-portal .container-fluid:not(.chart-container).spacer,
+  .datadot-portal .container-sm:not(.chart-container).spacer,
+  .datadot-portal .container-md:not(.chart-container).spacer,
+  .datadot-portal .container-lg:not(.chart-container).spacer,
+  .datadot-portal .container-xl:not(.chart-container).spacer,
+  .datadot-portal .container-xxl:not(.chart-container).spacer,
+  .datadot-portal .container--contrast:not(.chart-container).spacer,
+  .datadot-portal .container--full-width:not(.chart-container).spacer {
+    padding:20px 0
+  }
+  .datadot-portal .container-fluid:not(.chart-container).spacer h2,
+  .datadot-portal .container-sm:not(.chart-container).spacer h2,
+  .datadot-portal .container-md:not(.chart-container).spacer h2,
+  .datadot-portal .container-lg:not(.chart-container).spacer h2,
+  .datadot-portal .container-xl:not(.chart-container).spacer h2,
+  .datadot-portal .container-xxl:not(.chart-container).spacer h2,
+  .datadot-portal .container--contrast:not(.chart-container).spacer h2,
+  .datadot-portal .container--full-width:not(.chart-container).spacer h2 {
+    margin:0
+  }
+  .datadot-portal .container--gap {
+    gap:30px 0
+  }
+  .datadot-portal .spacer--block {
+    margin-top:20px
+  }
+  .datadot-portal .page-header {
+    --page-header-tag-font-size: var(--page-header-tag-font-size-m)
+  }
+  .datadot-portal .page-header .container .row {
+    -ms-flex-align:center;
+    align-items:center;
+    display:-ms-flexbox;
+    display:flex
+  }
+  .datadot-portal .page-header .col-xl-4 {
+    display:block
+  }
+  .datadot-portal .page-header .col-xl-4 table {
+    width:100%
+  }
+  .datadot-portal .page-header .tags-container .tags div {
+    font-size:14px;
+    line-height:20px
+  }
+  .datadot-portal .page-header .tags-container .tags div:last-child {
+    padding:.313rem .938rem
+  }
+  .datadot-portal .page-header--contrast {
+    --page-header-font-size: var(--page-header-contrast-font-size-m);
+    --page-header-metadata-font-size: var(--page-header-contrast-metadata-font-size-m)
+  }
+  .datadot-portal .page-header--contrast .page-header__main-info__additional-text {
+    font-size:14px;
+    line-height:25.2px;
+    margin-bottom:0;
+    margin-top:5px
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 {
+    -ms-flex-align:center;
+    align-items:center;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-direction:row;
+    flex-direction:row;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 table {
+    width:100%
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 table tr {
+    margin-top:-1px
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 table tr:first-child {
+    margin-top:0
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 table tr:not(:last-child) {
+    padding-bottom:10px
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 .page-header__left-container {
+    -ms-flex-align:start;
+    align-items:flex-start;
+    display:-ms-flexbox;
+    display:flex
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 .page-header__left-container img {
+    margin-top:18px;
+    max-width:80px;
+    width:80px
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 .page-header__left-container p {
+    line-height:25.2px
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 .page-header__main-info {
+    margin-inline-start:25px
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 .page-header__main-info h1 {
+    font-size:28px;
+    line-height:35px;
+    margin-bottom:1px;
+    margin-top:-1px
+  }
+  .datadot-portal .page-header--contrast .locator-image-container {
+    text-align:right
+  }
+  .datadot-portal .page-header--contrast .locator-image-container img {
+    max-width:230px;
+    width:230px
+  }
+  .datadot-portal .page-header--two-elements h1,
+  .datadot-portal .page-header--two-elements p {
+    margin-bottom:0
+  }
+  .datadot-portal .page-header--two-elements p {
+    font-weight:700;
+    text-align:right
+  }
+  .datadot-portal .page-header--two-elements .container {
+    padding-bottom:41px;
+    padding-top:41px
+  }
+  .datadot-portal .page-header--two-elements .row div:first-child,
+  .datadot-portal .page-header--two-elements .row div:last-child {
+    -ms-flex-preferred-size:auto;
+    flex-basis:auto
+  }
+  .datadot-portal .page-header--two-elements .row div:first-child {
+    -ms-flex-order:1;
+    order:1
+  }
+  .datadot-portal .page-header--two-elements .row div:last-child {
+    -ms-flex-order:2;
+    order:2
+  }
+  .datadot-portal .page-header--compressed .container {
+    padding-bottom:20px;
+    padding-top:30px
+  }
+  .datadot-portal .page-header--compressed .container .row {
+    -ms-flex-align:start;
+    align-items:flex-start
+  }
+  .datadot-portal .page-header--compressed .tag {
+    font-size:16px;
+    margin-bottom:12px;
+    margin-top:11px
+  }
+  .datadot-portal .page-header--compressed h1 {
+    line-height:27.8px;
+    margin-bottom:20px
+  }
+  .datadot-portal .page-header--compressed .dropdown:first-child {
+    margin:10px 0 0
+  }
+  .datadot-portal .page-header--compressed .dropdown:last-child {
+    margin:10px 0
+  }
+  .datadot-portal .page-header .col-lg-5 table tr:first-child {
+    margin-top:0;
+    padding-top:0
+  }
+  .datadot-portal .page-header .col-lg-5 table tr td:last-child {
+    text-align:right
+  }
+  .datadot-portal .row {
+    --bs-gutter-x: 30px
+  }
+  .datadot-portal .skip-to-content-container:focus,
+  .datadot-portal .skip-to-content-container:focus-within {
+    left:60px
+  }
+  .datadot-portal.right-to-left .page-header--contrast .locator-image-container,
+  .datadot-portal .right-to-left .page-header--contrast .locator-image-container {
+    text-align:left
+  }
+}
+@media (min-width: 1440px) {
+  .datadot-portal .page-header--compressed h1 {
+    font-size:28px;
+    line-height:35px
+  }
+  .datadot-portal .page-header--compressed .tag {
+    font-size:16px;
+    line-height:24px;
+    margin-bottom:8px
+  }
+  .datadot-portal .page-header--contrast .container {
+    padding-bottom:70px;
+    padding-top:70px
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 {
+    display:block
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 .page-header__left-container h1 {
+    margin-bottom:0;
+    margin-top:-2px
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 .page-header__left-container img {
+    margin-top:8px
+  }
+  .datadot-portal .page-header--contrast .page-header__main-info__additional-text {
+    margin-top:-4px
+  }
+  .datadot-portal .page-header--contrast .locator-image-container img {
+    max-width:260px;
+    width:260px
+  }
+  .datadot-portal .in-page-nav-container .in-page-nav-wrapper .in-page-nav {
+    max-height: calc(100vh - 20px);
+    overflow-y: auto;
+  }
+}
+@media (min-width: 1920px) {
+  .datadot-portal a {
+    --a-font-size: var(--a-font-size-l)
+  }
+  .datadot-portal h1 {
+    --h1-font-size: var(--h1-font-size-l)
+  }
+  .datadot-portal .container-fluid h2,
+  .datadot-portal .container-sm h2,
+  .datadot-portal .container-md h2,
+  .datadot-portal .container-lg h2,
+  .datadot-portal .container-xl h2,
+  .datadot-portal .container-xxl h2,
+  .datadot-portal .container:not(.chart-container) h2 {
+    --h2-font-size: var(--h2-font-size-l);
+    --h2-line-height: var(--h2-line-height-l);
+    margin-bottom:60px;
+    margin-top:80px
+  }
+  .datadot-portal .container-fluid h3,
+  .datadot-portal .container-sm h3,
+  .datadot-portal .container-md h3,
+  .datadot-portal .container-lg h3,
+  .datadot-portal .container-xl h3,
+  .datadot-portal .container-xxl h3,
+  .datadot-portal .container:not(.chart-container) h3 {
+    --h3-font-size: var(--h3-font-size-l);
+    margin-bottom:30px;
+    margin-top:30px
+  }
+  .datadot-portal .container--gap {
+    gap:40px 0
+  }
+  .datadot-portal .spacer--block {
+    margin-top:30px
+  }
+  .datadot-portal .page-header {
+    --spacing: 15px;
+    --page-header-font-size: var(--page-header-font-size-l);
+    --page-header-line-height: var(--page-header-line-height-l);
+    --page-header-metadata-font-size: var(--page-header-metadata-font-size-l);
+    --page-header-tag-font-size: var(--page-header-tag-font-size-l);
+    --page-header-tag-line-height: var(--page-header-tag-line-height-l)
+  }
+  .datadot-portal .page-header h1 {
+    margin-bottom:1.875rem
+  }
+  .datadot-portal .page-header p {
+    margin-bottom:1.125rem;
+    max-width:770px
+  }
+  .datadot-portal .page-header .col-xl-4 div {
+    padding:.938rem 0
+  }
+  .datadot-portal .page-header .container {
+    padding-bottom:60px;
+    padding-top:60px
+  }
+  .datadot-portal .page-header .container--dark-contrast {
+    padding-bottom:3.75rem;
+    padding-top:3.75rem
+  }
+  .datadot-portal .page-header .tags-container .tags div {
+    font-size:16px;
+    line-height:22px
+  }
+  .datadot-portal .page-header--contrast {
+    --page-header-font-size: var(--page-header-contrast-font-size-l);
+    --page-header-metadata-font-size: var(--page-header-contrast-metadata-font-size-l)
+  }
+  .datadot-portal .page-header--contrast .page-header__main-info__additional-text {
+    font-size:16px;
+    line-height:28.8px;
+    margin-top:-28px
+  }
+  .datadot-portal .page-header--contrast .container {
+    padding-bottom:88px;
+    padding-top:88px
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 .page-header__left-container {
+    -ms-flex-align:center;
+    align-items:center
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 .page-header__left-container img {
+    margin-top:-22px;
+    max-width:120px;
+    width:120px
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 .page-header__main-info {
+    margin-inline-start:30px
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 .page-header__main-info h1 {
+    font-size:36px;
+    line-height:45px;
+    margin-bottom:0
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 .page-header__main-info p {
+    font-size:16px;
+    line-height:28.8px;
+    margin-bottom:0
+  }
+  .datadot-portal .page-header--contrast .col-lg-7 table tr th,
+  .datadot-portal .page-header--contrast .col-lg-7 table tr td {
+    font-size:16px;
+    line-height:22.4px
+  }
+  .datadot-portal .page-header--contrast .locator-image-container img {
+    max-width:330px;
+    width:330px
+  }
+  .datadot-portal .page-header--two-elements h1,
+  .datadot-portal .page-header--two-elements p {
+    margin-bottom:0
+  }
+  .datadot-portal .page-header--two-elements .container {
+    padding-bottom:51px;
+    padding-top:51px
+  }
+  .datadot-portal .page-header--two-elements .row h1 {
+    font-size:30px
+  }
+  .datadot-portal .page-header--two-elements .row a,
+  .datadot-portal .page-header--two-elements .row p {
+    font-size:16px
+  }
+  .datadot-portal .page-header--compressed .container {
+    padding-bottom:40px;
+    padding-top:50px
+  }
+  .datadot-portal .page-header--compressed h1 {
+    font-size:36px;
+    line-height:45px;
+    margin-bottom:25px
+  }
+  .datadot-portal .page-header--compressed p {
+    font-size:16px;
+    line-height:22.4px
+  }
+  .datadot-portal .page-header--compressed .tag {
+    font-size:18px;
+    line-height:27px;
+    margin-bottom:15px;
+    margin-top:10px
+  }
+  .datadot-portal .page-header--compressed .dropdown button .btn__left {
+    margin:11.5px 0 11.5px 15px
+  }
+  .datadot-portal .row {
+    --bs-gutter-x: 40px
+  }
+  .datadot-portal .skip-to-content-container:focus,
+  .datadot-portal .skip-to-content-container:focus-within {
+    left:100px
+  }
+}
+
+.datadot-portal .in-page-nav-container .in-page-nav summary:first-of-type {
+  list-style-type: none;
+}
+
+.datadot-portal .in-page-nav-container .in-page-nav summary::-webkit-details-marker {
+  display: none;
+}
+
+.datadot-portal .health-target-progress-section .chart > header span {
+  display: none;
+}
+
+.datadot-portal .health-target-progress-section .chart-subtitle {
+  color: var(--chart-subtitle-color);
+  font-size: var(--chart-subtitle-font-size);
+  font-weight: var(--chart-subtitle-font-weight);
+  line-height: var(--chart-subtitle-line-height);
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.datadot-portal .chart > footer {
+  padding: 15px;
+}
+
+.datadot-portal .chart > footer a:not(:first-child) {
+  margin-inline-start: 20px;
+}
+
+.datadot-portal .chart > footer a {
+  padding: 9px 12px 9px 7px;
+}
+
+.datadot-portal details p,
+.datadot-portal details div {
+  max-width: calc(100% - 40px);
+}
+
+@media (min-width: 760px) {
+  .datadot-portal details p,
+  .datadot-portal details div {
+    max-width: 280px;
+  }
+}
+
+@media (min-width: 1020px) {
+  .datadot-portal .health-target-progress-section .charts-wrapper {
+    display: flex;
+  }
+  
+  .datadot-portal .health-target-progress-section .dataDotViz-ChartRenderer {
+    width: 50%;
+  }
+
+  .datadot-portal .health-target-progress-section .chart-subtitle {
+    display: none;
+  }
+
+  .datadot-portal .health-target-progress-section .chart > header span {
+    display: block;
+  }
+
+  .datadot-portal .health-target-progress-section .chart-subtitle {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .datadot-portal .chart > footer {
+    padding: 20px;
+  }
+
+  .datadot-portal .chart > footer a {
+    padding: 3px 9px 3px 2px;
+  }
+  
+  .datadot-portal details p,
+  .datadot-portal details div {
+    max-width: 619px;
+  }
+
+  .datadot-portal .in-page-nav-container .in-page-nav summary::before {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .datadot-portal .container-fluid,
+  .datadot-portal .container-sm,
+  .datadot-portal .container-md,
+  .datadot-portal .container-lg,
+  .datadot-portal .container-xl,
+  .datadot-portal .container-xxl,
+  .datadot-portal .container,
+  .datadot-portal .breadcrumb .container {
+    width: calc(100vw - 130px);
+  }
+  
+  .datadot-portal .container {
+    max-width: unset;
+  }
+
+  .datadot-portal .in-page-nav-container .container {
+    margin-right: 65px;
+    min-width: calc(100vw - 327px - 160px);
+    max-width: calc(100vw - 327px - 160px);
+    width: calc(100vw - 327px - 160px);
+  }
+
+  .datadot-portal .in-page-nav-container .in-page-nav-wrapper .in-page-nav .in-page-nav__inner__headline {
+    margin-bottom: 23px;
+    margin-top: 10px;
+  }
+
+  .datadot-portal .chart {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 20px);
+  }
+
+  .datadot-portal .life-expectancy-section .chart {
+    height: auto;
+  }
+
+  .datadot-portal.country-pages .dataDotViz-ChartRenderer,
+  .datadot-portal .country-pages .dataDotViz-ChartRenderer {
+    display: flex;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: 1920px) {
+  .datadot-portal .container-fluid,
+  .datadot-portal .container-sm,
+  .datadot-portal .container-md,
+  .datadot-portal .container-lg,
+  .datadot-portal .container-xl,
+  .datadot-portal .container-xxl,
+  .datadot-portal .container,
+  .datadot-portal .breadcrumb .container {
+    width: auto;
+  }
+
+  .datadot-portal .container {
+    max-width: 1660px;
+  }
+  
+  .datadot-portal .in-page-nav-container .container {
+    margin-right: 130px;
+    min-width: 1235px;
+    max-width: 1235px;
+    width: 1235px;
+  }
+
+  .datadot-portal .in-page-nav-container .in-page-nav-wrapper .in-page-nav .in-page-nav__inner__headline {
+    margin-bottom: 27px;
+    margin-top: 15px;
+  }
+
+  .datadot-portal .health-target-progress-section .charts-wrapper {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .datadot-portal .chart {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 30px);
+  }
+
+  .datadot-portal .health-target-progress-section .chart-subtitle {
+    display: block;
+  }
+
+  .datadot-portal .health-target-progress-section .chart > header span {
+    display: none;
+  }
+
+  .datadot-portal .health-target-progress-section .charts-wrapper .dataDotViz-ChartRenderer {
+    width: 100%;
+  }
+
+  .datadot-portal .health-target-progress-section .charts-wrapper .dataDotViz-ChartRenderer:last-child {
+    flex-grow: 0;
+  }
+
+  .datadot-portal .health-target-progress-section .chart-subtitle {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .datadot-portal .chart > footer {
+    padding: 30px;
+  }
+
+  .datadot-portal .chart > footer a {
+    padding: 5px 9px 5px 2px;
+  }
+}
+</style><style type="text/css" media="all">/* Center text charts #3262 */
+@media (min-width: 1440px) {
+    .datadot-portal.country-pages .dataDotViz-ChartRenderer.chart-vertical-center .dataDotViz-ChartRenderer-chartContainer,
+    .datadot-portal .country-pages .dataDotViz-ChartRenderer.chart-vertical-center .dataDotViz-ChartRenderer-chartContainer {
+        display: flex;
+    }
+}
+
+.disease-burden-section div > ol {
+    margin-left: 20px;
+}
+
+.right-to-left .disease-burden-section div > ol {
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+/* Dashboards/Links long titles handling #3287 */
+body:not(.sfPageEditor) .datadot-portal .list-menu a {
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap;
+}
+
+body:not(.sfPageEditor) .datadot-portal .list-menu a::after {
+    margin-left: 10px;
+    flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+}
+
+body:not(.sfPageEditor).right-to-left .datadot-portal .list-menu a::after {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+/* Mobile behavior upon swipe #3294 */
+.reference-metadata-section,
+.table-container table[aria-labelledby="copyright-and-licensing"] {
+    word-break: break-word;
+}</style><script type="text/javascript">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T7PBMZX');
+</script><meta name="twitter:card" content="summary_large_image" /><link rel="canonical" href="https://data.who.int/countries" /></head> <body class="sf-body datadot-portal " data-bs-theme="light"> <div class="click-handler-overlay"></div> <div class="datadot-portal "> <div class="skip-to-content-container"> <a href="#main" class="btn btn-primary skip-to-content">Skip to content</a> </div> </div>  <!-- header:on --> <!--noindex--><!--stopindex--> <div class="container navigation-container datadot-portal "> <div class="row"> <div class="col"> <nav class="navigation"> <header> 
+
+<div class="navigation__logo"><a class="navigation__globe" href="/"><img src="/ResourcePackages/DDIBootstrap5/assets/src/images/icons/navigation/who-logo.svg" alt="WHO Logo" title="WHO Logo" /></a>
+    <div class="navigation__title"><span class="link__brand"><span>World Health Organization</span><abbr>WHO</abbr></span>
+        <span class="link__site">Data</span>
+    </div>
+</div>
+<link href="https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/dataDotViz-base-Dg-rvz0R.css" rel="stylesheet" type="text/css" />
+
+<!-- START data.dot.viz import code -->
+<!-- Code for all browsers-->
+<script>
+    window.dataDotVizLegacyPolyfillSrc =
+        'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/polyfills-legacy-Dlof3glI.js';
+    window.dataDotVizChartsSrc = 'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/data-dot-viz-charts-DAM00NYp.js';
+    window.dataDotVizChartsLegacySrc =
+        'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/data-dot-viz-charts-legacy-DzQoSxtP.js';
+    window.dataDotVizWidgetsSrc = 'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/data-dot-viz-widgets-COSG-bJl.js';
+    window.dataDotVizWidgetsLegacySrc =
+        'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/data-dot-viz-widgets-legacy-D3PDejOc.js';
+    window.dataDotVizCovid19WidgetsSrc =
+        'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/data-dot-viz-covid19-widgets-BSjFjt44.js';
+    window.dataDotVizCovid19WidgetsLegacySrc =
+        'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/data-dot-viz-covid19-widgets-legacy-s_JIqcVl.js';
+</script>
+ <div class="navigation__header-items"> <div class="navigation__header-items__top"> 
+
+<ul class="navigation--accent">
+                <li class="navigation__item--heading">More from WHO</li>
+                <li class="website-icon"><a href="https://www.who.int/" target="_blank">WHO Global<i></i></a></li>
+              </ul> 
+
+
+
+<ul>
+    <li class="navigation__item--heading">Settings</li>
+    <li>
+        <button class="navigation__language-toggle">Language</button>
+        <ul class="navigation__language navigation__ul--collapsible">
+            <li class="navigation__language-toggle"><a href="#void">Language<i></i></a></li>
+                <li aria-selected="true"><a data-language="en">English<i></i></a></li>
+        </ul>
+    </li>
+</ul>
+
+ 
+ </div> <div class="navigation__header-items__bottom"> 
+
+
+
+<ul>
+        <li>
+            <a href="/indicators" target="_self">Indicators</a>
+        </li>
+        <li>
+            <a href="/countries" target="_self">Countries</a>
+        </li>
+        <li>
+            <a href="/dashboards" target="_self">Dashboards</a>
+        </li>
+        <li>
+            <a href="/about" target="_self">About</a>
+        </li>
+    <li class="navigation__toggle__li">
+        <button class="navigation__toggle">
+            <span class="close-label">Close</span>
+            <span class="menu-label">Menu</span>
+        </button>
+    </li>
+</ul>
+ </div> </div> </header> </nav> </div> </div> </div> <!--/noindex--><!--startindex--> <!-- header:off --> 
+ <div class="in-page-nav-container datadot-portal "> <main id="main" class="sf-main-site main-site main datadot-portal "> <section class="sf-content content"> 
+
+
+<div data-hide-in-page-nav="true">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="alphabetical-list">
+
+
+<div class="nav-letter">
+            <a href='#' class="disabled">_</a>
+            <a href='#letter-0'>A</a>
+            <a href='#letter-1'>B</a>
+            <a href='#letter-2'>C</a>
+            <a href='#letter-3'>D</a>
+            <a href='#letter-4'>E</a>
+            <a href='#letter-5'>F</a>
+            <a href='#letter-6'>G</a>
+            <a href='#letter-7'>H</a>
+            <a href='#letter-8'>I</a>
+            <a href='#letter-9'>J</a>
+            <a href='#letter-10'>K</a>
+            <a href='#letter-11'>L</a>
+            <a href='#letter-12'>M</a>
+            <a href='#letter-13'>N</a>
+            <a href='#letter-14'>O</a>
+            <a href='#letter-15'>P</a>
+            <a href='#letter-16'>Q</a>
+            <a href='#letter-17'>R</a>
+            <a href='#letter-18'>S</a>
+            <a href='#letter-19'>T</a>
+            <a href='#letter-20'>U</a>
+            <a href='#letter-21'>V</a>
+            <a href='#' class="disabled">W</a>
+            <a href='#' class="disabled">X</a>
+            <a href='#letter-22'>Y</a>
+            <a href='#letter-23'>Z</a>
+</div>
+<script type='text/javascript' src='/ResourcePackages/DDIBootstrap5/assets/dist/scripts/alphabetical-list.min.js?v=12.1.7126.25288'></script>
+<script type="text/javascript">
+    var options ={
+        allText: 'All'
+    };
+    AlphabeticalList.init(options);
+</script>
+
+                    <div class="alphabetical-group">
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-0'>A</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/004">
+                                                Afghanistan
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/008">
+                                                Albania
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/012">
+                                                Algeria
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/020">
+                                                Andorra
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/024">
+                                                Angola
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/028">
+                                                Antigua and Barbuda
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/032">
+                                                Argentina
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/051">
+                                                Armenia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/036">
+                                                Australia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/040">
+                                                Austria
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/031">
+                                                Azerbaijan
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-1'>B</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/044">
+                                                Bahamas
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/048">
+                                                Bahrain
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/050">
+                                                Bangladesh
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/052">
+                                                Barbados
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/112">
+                                                Belarus
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/056">
+                                                Belgium
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/084">
+                                                Belize
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/204">
+                                                Benin
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/064">
+                                                Bhutan
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/068">
+                                                Bolivia (Plurinational State of)
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/070">
+                                                Bosnia and Herzegovina
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/072">
+                                                Botswana
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/076">
+                                                Brazil
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/096">
+                                                Brunei Darussalam
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/100">
+                                                Bulgaria
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/854">
+                                                Burkina Faso
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/108">
+                                                Burundi
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-2'>C</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/132">
+                                                Cabo Verde
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/116">
+                                                Cambodia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/120">
+                                                Cameroon
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/124">
+                                                Canada
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/140">
+                                                Central African Republic
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/148">
+                                                Chad
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/152">
+                                                Chile
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/156">
+                                                China
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/170">
+                                                Colombia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/174">
+                                                Comoros
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/178">
+                                                Congo
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/184">
+                                                Cook Islands
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/188">
+                                                Costa Rica
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/384">
+                                                C&#244;te d&#39;Ivoire
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/191">
+                                                Croatia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/192">
+                                                Cuba
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/196">
+                                                Cyprus
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/203">
+                                                Czechia
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-3'>D</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/408">
+                                                Democratic People&#39;s Republic of Korea
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/180">
+                                                Democratic Republic of the Congo
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/208">
+                                                Denmark
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/262">
+                                                Djibouti
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/212">
+                                                Dominica
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/214">
+                                                Dominican Republic
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-4'>E</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/218">
+                                                Ecuador
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/818">
+                                                Egypt
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/222">
+                                                El Salvador
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/226">
+                                                Equatorial Guinea
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/232">
+                                                Eritrea
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/233">
+                                                Estonia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/748">
+                                                Eswatini
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/231">
+                                                Ethiopia
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-5'>F</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/242">
+                                                Fiji
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/246">
+                                                Finland
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/250">
+                                                France
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-6'>G</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/266">
+                                                Gabon
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/270">
+                                                Gambia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/268">
+                                                Georgia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/276">
+                                                Germany
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/288">
+                                                Ghana
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/300">
+                                                Greece
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/308">
+                                                Grenada
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/320">
+                                                Guatemala
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/324">
+                                                Guinea
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/624">
+                                                Guinea-Bissau
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/328">
+                                                Guyana
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-7'>H</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/332">
+                                                Haiti
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/340">
+                                                Honduras
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/348">
+                                                Hungary
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-8'>I</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/352">
+                                                Iceland
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/356">
+                                                India
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/360">
+                                                Indonesia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/364">
+                                                Iran (Islamic Republic of)
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/368">
+                                                Iraq
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/372">
+                                                Ireland
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/376">
+                                                Israel
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/380">
+                                                Italy
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-9'>J</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/388">
+                                                Jamaica
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/392">
+                                                Japan
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/400">
+                                                Jordan
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-10'>K</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/398">
+                                                Kazakhstan
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/404">
+                                                Kenya
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/296">
+                                                Kiribati
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/414">
+                                                Kuwait
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/417">
+                                                Kyrgyzstan
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-11'>L</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/418">
+                                                Lao People&#39;s Democratic Republic
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/428">
+                                                Latvia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/422">
+                                                Lebanon
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/426">
+                                                Lesotho
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/430">
+                                                Liberia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/434">
+                                                Libya
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/440">
+                                                Lithuania
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/442">
+                                                Luxembourg
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-12'>M</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/450">
+                                                Madagascar
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/454">
+                                                Malawi
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/458">
+                                                Malaysia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/462">
+                                                Maldives
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/466">
+                                                Mali
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/470">
+                                                Malta
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/584">
+                                                Marshall Islands
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/478">
+                                                Mauritania
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/480">
+                                                Mauritius
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/484">
+                                                Mexico
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/583">
+                                                Micronesia (Federated States of)
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/492">
+                                                Monaco
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/496">
+                                                Mongolia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/499">
+                                                Montenegro
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/504">
+                                                Morocco
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/508">
+                                                Mozambique
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/104">
+                                                Myanmar
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-13'>N</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/516">
+                                                Namibia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/520">
+                                                Nauru
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/524">
+                                                Nepal
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/528">
+                                                Netherlands
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/554">
+                                                New Zealand
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/558">
+                                                Nicaragua
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/562">
+                                                Niger
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/566">
+                                                Nigeria
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/570">
+                                                Niue
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/807">
+                                                North Macedonia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/578">
+                                                Norway
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-14'>O</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/512">
+                                                Oman
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-15'>P</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/586">
+                                                Pakistan
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/585">
+                                                Palau
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/591">
+                                                Panama
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/598">
+                                                Papua New Guinea
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/600">
+                                                Paraguay
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/604">
+                                                Peru
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/608">
+                                                Philippines
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/616">
+                                                Poland
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/620">
+                                                Portugal
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-16'>Q</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/634">
+                                                Qatar
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-17'>R</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/410">
+                                                Republic of Korea
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/498">
+                                                Republic of Moldova
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/642">
+                                                Romania
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/643">
+                                                Russian Federation
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/646">
+                                                Rwanda
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-18'>S</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/659">
+                                                Saint Kitts and Nevis
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/662">
+                                                Saint Lucia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/670">
+                                                Saint Vincent and the Grenadines
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/882">
+                                                Samoa
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/674">
+                                                San Marino
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/678">
+                                                Sao Tome and Principe
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/682">
+                                                Saudi Arabia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/686">
+                                                Senegal
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/688">
+                                                Serbia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/690">
+                                                Seychelles
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/694">
+                                                Sierra Leone
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/702">
+                                                Singapore
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/703">
+                                                Slovakia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/705">
+                                                Slovenia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/090">
+                                                Solomon Islands
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/706">
+                                                Somalia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/710">
+                                                South Africa
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/728">
+                                                South Sudan
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/724">
+                                                Spain
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/144">
+                                                Sri Lanka
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/729">
+                                                Sudan
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/740">
+                                                Suriname
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/752">
+                                                Sweden
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/756">
+                                                Switzerland
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/760">
+                                                Syrian Arab Republic
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-19'>T</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/762">
+                                                Tajikistan
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/764">
+                                                Thailand
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/626">
+                                                Timor-Leste
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/768">
+                                                Togo
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/776">
+                                                Tonga
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/780">
+                                                Trinidad and Tobago
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/788">
+                                                Tunisia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/792">
+                                                T&#252;rkiye
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/795">
+                                                Turkmenistan
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/798">
+                                                Tuvalu
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-20'>U</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/800">
+                                                Uganda
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/804">
+                                                Ukraine
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/784">
+                                                United Arab Emirates
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/826">
+                                                United Kingdom of Great Britain and Northern Ireland
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/834">
+                                                United Republic of Tanzania
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/840">
+                                                United States of America
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/858">
+                                                Uruguay
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/860">
+                                                Uzbekistan
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-21'>V</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/548">
+                                                Vanuatu
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/862">
+                                                Venezuela (Bolivarian Republic of)
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/704">
+                                                Viet Nam
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-22'>Y</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/887">
+                                                Yemen
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="alphabetical-box">
+                                    <div class="box-letter" id='letter-23'>Z</div>
+
+                                <ul>
+                                        <li>
+                                            <a href="https://data.who.int/countries/894">
+                                                Zambia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://data.who.int/countries/716">
+                                                Zimbabwe
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- START data.dot.viz import code -->
+<!-- Code for all browsers-->
+<script>
+    // Cross-browser init functions
+    function dataDotVizInitCharts() {
+        // Init charts from embedded HTML config
+        window.dataDotViz.renderCharts(
+            window.dataDotViz.defaultEngineConfig,
+            document.body
+        );
+
+        const regionConfig = [
+            ["Africa","المنطقة الأفريقية","Région africaine","Región Africana","Африканский регион","非洲地区","953"],
+            ["Americas","منطقة الأمريكتين","Région des Amériques","Región de las Américas","Регион Америки","美洲地区","954"],
+            ["South East Asia", "منطقة جنوب شرق آسيا","Région Asie du Sud-Est","Región de Asia Sudoriental","Регион юго-восточной Азии","东南亚区域","955"],
+            ["Europe","المنطقة الأوروبية","Région européenne","Región Europea","Европейский регион","欧洲地区","956"],
+            ["Eastern Mediterranean","منطقة شرق البحر الأبيض المتوسط","Région de la Méditerranée orientale","Región del Mediterráneo Oriental","Регион Восточного Средиземноморья","东地中海区域","957"],
+            ["Western Pacific","منطقة غرب المحيط الهادئ","Région du Pacifique occidental","Región del Pacífico Occidental","Западно-Тихоокеанский регион","西太平洋地区","958"]
+        ];
+        const countryInfoTable = document.querySelector('[aria-labelledby="country-name"]');
+        let regionM49Code = '001';
+        if (countryInfoTable !== null) {
+            const whoRegionTr = countryInfoTable.querySelector('tr:nth-child(3)');
+            const whoRegion = whoRegionTr.querySelector('td').innerHTML;
+            regionConfig.forEach((rc) => {
+                rc.forEach((r) => {
+                    if (r === whoRegion) {
+                        regionM49Code = rc[6];
+                    }
+                });
+            });
+        }
+
+        // Init charts from embedded JSON config
+        Array.prototype.slice
+            .call(document.querySelectorAll('.dataDotViz-jsonChartConfig'))
+            .forEach(
+                function(element) {
+                    var json = element.getAttribute('data-data-dot-viz-json-config');
+                    if (!json) return;
+                    var config;
+                    try {
+                        config = JSON.parse(json);
+                        config.dimensions.forEach((d) => {
+                            if (d.type === 'COUNTRY' && d.value === '%%REGION_M49_CODE%%') {
+                                d.value = regionM49Code;
+                            }
+                        });
+                    } catch (error) {
+                        console.error('Could not parse chart config:', json);
+                        return;
+                    }
+                    window.dataDotViz.renderChartFromConfig(
+                        window.dataDotViz.defaultEngineConfig,
+                        element,
+                        config
+                    );
+                    element.classList.remove('dataDotViz-jsonChartConfig');
+                }
+            );
+    }
+
+    function dataDotVizInitWidgets() {
+        dataDotVizInitCountryPageWidgets();
+
+        var element = document.getElementById('data-visualization');
+        if (!element) return;
+        var elementDataSet = element.dataset;
+        var dataWidgetConfig = elementDataSet.widgetConfig,
+            dataWidgetConfigOverride = elementDataSet.widgetConfigOverride,
+            dataWidgetType = elementDataSet.widgetType,
+            config = {
+                element: element
+            };
+        if (typeof dataWidgetConfig === 'undefined') {
+            return;
+        }
+        if (typeof dataWidgetConfigOverride !== 'undefined') {
+            config = Object.assign(config, JSON.parse(dataWidgetConfig), JSON.parse(dataWidgetConfigOverride));
+        } else {
+            config = Object.assign(config, JSON.parse(dataWidgetConfig));
+        }
+
+        if (dataWidgetType === 'country-explorer') {
+            // Country explorer configuration
+            window.dataDotVizWidgets.renderSimpleIndicatorCountryExplorer(config);
+            return;
+        }
+        // Category explorer configuration
+        window.dataDotVizWidgets.renderCategoryExplorer(config);
+    }
+
+    function dataDotVizInitCountryPageWidgets() {
+        const m49CodeElement = document.querySelector('[data-m49-code]');
+        const m49Code = m49CodeElement ? m49CodeElement.getAttribute('data-m49-code') : '004';
+        const iso3CodeElement = document.querySelector('[data-iso3-code]');
+        const iso3Code = m49CodeElement ? m49CodeElement.getAttribute('data-iso3-code') : 'AFG';
+        const dimensions = [
+          // ghecausesofdeath expects ISO3 codes
+          { dim: 'spatial', type: 'COUNTRY', value: iso3Code },
+          // Infectious and parasitic diseases
+          { dim: 'disaggregating', type: 'DIM_GHECAUSE_CODE', value: '20' },
+          { dim: 'disaggregating', type: 'DIM_SEX_CODE', value: 'BTSX' },
+          { dim: 'disaggregating', type: 'DIM_AGEGROUP_CODE', value: 'ALLAges' },
+        ];
+
+        const $lifeExpectancyOverview = document.getElementById('life-expectancy-overview');
+        if ($lifeExpectancyOverview) {
+            window.dataDotVizWidgets.renderLifeExpectancyOverview({
+                element: $lifeExpectancyOverview,
+                m49Code: m49Code
+            });
+        }
+
+        const $multipleEpi = document.getElementById('multiple-epi');
+        if ($multipleEpi) {
+            const lang = document.querySelector('html').getAttribute('lang');
+            let title = 'Deaths per 100\u202F000 populations';
+            if (lang === 'ar') {
+                title = 'الوفيات لكل 100 000 نسمة';
+            } else if (lang === 'fr') {
+                title = 'Décès pour 100 000 habitants';
+            } else if (lang === 'es') {
+                title = 'Muertes por 100 000 habitantes';
+            } else if (lang === 'ru') {
+                title = 'Смертей на 100 000 населения';
+            } else if (lang === 'zh') {
+                title = '每10万人的死亡人数';
+            }
+            window.dataDotVizWidgets.renderMultipleEpi({
+                element: $multipleEpi,
+                showSeparator: true,
+                titles: [title],
+                  configs: [
+                    {
+                      type: 'epi',
+                      dataSource: 'ghecausesofdeath',
+                      dataSourceFlags: ['unrankable'],
+                      indicator: 'VAL_DEATHS_RATE100K_NUMERIC',
+                      dimensions,
+                      topCausesTableMaxRows: 1000,
+                      epiMarkType: 'line',
+                    },
+                    {
+                      type: 'epi',
+                      dataSource: 'ghecausesofdeath',
+                      dataSourceFlags: ['unrankable'],
+                      indicator: 'VAL_DALY_RATE100K_NUMERIC',
+                      dimensions,
+                      topCausesTableMaxRows: 1000,
+                      epiMarkType: 'line',
+                    },
+                    {
+                      type: 'epi',
+                      dataSource: 'ghecausesofdeath',
+                      dataSourceFlags: ['unrankable'],
+                      indicator: 'VAL_YLL_RATE100K_NUMERIC',
+                      dimensions,
+                      topCausesTableMaxRows: 1000,
+                      epiMarkType: 'line',
+                    },
+                    {
+                      type: 'epi',
+                      dataSource: 'ghecausesofdeath',
+                      dataSourceFlags: ['unrankable'],
+                      indicator: 'VAL_YLD_RATE100K_NUMERIC',
+                      dimensions,
+                      topCausesTableMaxRows: 1000,
+                      epiMarkType: 'line',
+                    },
+                  ],
+            });
+        }
+    }
+
+    function dataDotVizInitLegacy() {
+        System.import(dataDotVizWidgetsLegacySrc).then(dataDotVizInitWidgets);
+        System.import(dataDotVizChartsLegacySrc).then(dataDotVizInitCharts);
+    }
+
+    function dataDotVizLoadLegacyPolyfill() {
+        if (window.System) {
+            dataDotVizInitLegacy();
+        } else if (!window.dataDotVizIsLoadingLegacyPolyfill) {
+            window.dataDotVizIsLoadingLegacyPolyfill = true;
+            var script = document.createElement('script');
+            script.src = dataDotVizLegacyPolyfillSrc;
+            script.onload = dataDotVizInitLegacy;
+            document.body.appendChild(script);
+        }
+    }
+</script>
+<!-- ESM -->
+<script type="module">
+    // Use dynamic import. This causes a syntax error in browsers that don't, stopping the script.
+    import(dataDotVizChartsSrc).then(dataDotVizInitCharts);
+    import(dataDotVizWidgetsSrc).then(dataDotVizInitWidgets);
+    window.dataDotVizDynamicImportSupported = true;
+</script>
+<!--
+  Fall back to legacy build when dynamic import is unsupported
+  (Chrome 61-62, Firefox 60-66, Edge 16-78 and Safari 10.3-11.0).
+-->
+<script type="module">
+    if (!window.dataDotVizDynamicImportSupported) {
+        dataDotVizLoadLegacyPolyfill();
+    }
+</script>
+<!-- Non-ESM -->
+<script nomodule>
+    dataDotVizLoadLegacyPolyfill();
+</script>
+<!-- END data.dot.viz import code -->
+<script type="text/javascript">
+window.addEventListener('load', () => {
+      window.matchMedia("print").addEventListener("change", evt => {
+        if (evt.matches) {
+          elms = document.body.querySelectorAll("details:not([open])");
+          for (e of elms) {
+            e.setAttribute("open", "");
+            e.dataset.wasclosed = "";
+            e.style.backgroundColor = "#ccc !important";
+          }
+        } else {
+          elms = document.body.querySelectorAll("details[data-wasclosed]");
+          for (e of elms) {
+            e.removeAttribute("open");
+            delete e.dataset.wasclosed;
+            e.style.backgroundColor = "";
+          }
+        }
+      })
+    })
+</script>
+
+
+ </section> </main> <div class="in-page-nav-wrapper"> 
+
+<details class="in-page-nav"
+             data-title="On this page"
+             data-print-to-pdf="true"
+             data-print-to-pdf-text="Print to PDF"
+             data-bg-striped="true"
+             data-additional-links='[
+                  {
+                      "href": "https://data.who.int/countries/",
+                      "text": "All countries",
+                      "target": "_self"
+                  }
+              ]'>
+      <summary></summary>
+      <div class="in-page-nav__inner">
+        <div class="in-page-nav__inner__headline"><img alt="In Page Nav Icon" /><span></span></div>
+        <div class="in-page-nav__inner__spacer d-none d-xl-block"></div>
+        <div class="in-page-nav__inner__subheadline"></div>
+        <div class="in-page-nav__inner__spacer d-block d-xl-none"></div>
+        <ul class="in-page-nav__inner__main-links"></ul>
+        <div class="in-page-nav__inner__spacer"></div>
+        <ul></ul>
+      </div>
+    </details> </div> </div> <!-- footer:on --> <!--noindex--><!--stopindex--> <div class="datadot-portal"> <footer class="footer"> <div class="footer__top"> <div class="container"> <div class="row"> <div class="col-12"> 
+
+<div class="footer__desktop">
+    <div class="footer__row">
+        <h3>Datadot</h3>
+            <ul>
+                    <li><a href="/redirect-pages/footer/datadot/home" target="_self">Home</a></li>
+                    <li><a href="/redirect-pages/footer/datadot/indicators" target="_self">Indicators</a></li>
+                    <li><a href="/redirect-pages/footer/datadot/products" target="_self">Countries</a></li>
+                    <li><a href="/redirect-pages/footer/datadot/about" target="_self">About</a></li>
+            </ul>
+    </div>
+    <div class="footer__row">
+        <h3>More data from WHO</h3>
+            <ul>
+                    <li><a href="/redirect-pages/footer/more-data/who.int-data" target="_blank">who.int/data</a></li>
+                    <li><a href="/redirect-pages/footer/more-data/triple-billion-dashboard" target="_blank">Global Health Estimates</a></li>
+                    <li><a href="/redirect-pages/footer/more-data/ddi" target="_blank">Health Inequality Monitor</a></li>
+                    <li><a href="/redirect-pages/footer/more-data/covid-19-dashboard" target="_blank">COVID-19 dashboard</a></li>
+            </ul>
+    </div>
+    <div class="footer__row">
+        <h3>Learn more</h3>
+            <ul>
+                    <li><a href="/redirect-pages/footer/learn-more/data-principles" target="_self">WHO data principles</a></li>
+                    <li><a href="/redirect-pages/footer/learn-more/who-data-policy" target="_self">WHO data policy</a></li>
+                    <li><a href="/redirect-pages/footer/learn-more/terms-and-conditions" target="_self">Terms and conditions</a></li>
+                    <li><a href="/redirect-pages/footer/learn-more/language-translations" target="_self">Language translations</a></li>
+            </ul>
+    </div>
+</div>
+<div class="footer__mobile">
+    <div class="footer__row">
+        <details>
+            <summary>Datadot</summary>
+                <ul>
+                        <li><a href="/redirect-pages/footer/datadot/home" target="_self">Home</a></li>
+                        <li><a href="/redirect-pages/footer/datadot/indicators" target="_self">Indicators</a></li>
+                        <li><a href="/redirect-pages/footer/datadot/products" target="_self">Countries</a></li>
+                        <li><a href="/redirect-pages/footer/datadot/about" target="_self">About</a></li>
+                </ul>
+        </details>
+    </div>
+    <div class="footer__row">
+        <details>
+            <summary>More data from WHO</summary>
+                <ul>
+                        <li><a href="/redirect-pages/footer/more-data/who.int-data" target="_blank">who.int/data</a></li>
+                        <li><a href="/redirect-pages/footer/more-data/triple-billion-dashboard" target="_blank">Global Health Estimates</a></li>
+                        <li><a href="/redirect-pages/footer/more-data/ddi" target="_blank">Health Inequality Monitor</a></li>
+                        <li><a href="/redirect-pages/footer/more-data/covid-19-dashboard" target="_blank">COVID-19 dashboard</a></li>
+                </ul>
+        </details>
+    </div>
+    <div class="footer__row">
+        <details>
+            <summary>Learn more</summary>
+                <ul>
+                        <li><a href="/redirect-pages/footer/learn-more/data-principles" target="_self">WHO data principles</a></li>
+                        <li><a href="/redirect-pages/footer/learn-more/who-data-policy" target="_self">WHO data policy</a></li>
+                        <li><a href="/redirect-pages/footer/learn-more/terms-and-conditions" target="_self">Terms and conditions</a></li>
+                        <li><a href="/redirect-pages/footer/learn-more/language-translations" target="_self">Language translations</a></li>
+                </ul>
+        </details>
+    </div>
+</div>
+
+
+ </div> </div> </div> </div> <div class="container"> <div class="row"> <div class="col-12"> <div class="footer__bottom"> 
+
+
+
+
+
+
+
+
+
+
+
+<a href="/">
+    <img src="/ResourcePackages/DDIBootstrap5/assets/src/images/icons/navigation/who-logo.svg" alt="WHO Logo" />
+</a>
+<ul>
+    <li><a href="/">Privacy legal notice</a></li>
+    <li>&copy;2024 WHO</li>
+</ul>
+
+ </div> </div> </div> </div> </footer> </div> <!--/noindex--><!--startindex--> <!-- footer:off --> <!-- js to scrape:on --> <script type='text/javascript' src='/ResourcePackages/DDIBootstrap5/assets/src/scripts/components/navigation.js?v=12.1.7126.25288'></script> <!-- js to scrape:off --> <script>
+        var navigation;
+        (function () {
+            navigation = new Navigation();
+            navigation.init();
+        })();
+    </script> <script type="application/json" id="PersonalizationTracker">
+	{"IsPagePersonalizationTarget":false,"IsUrlPersonalizationTarget":false,"PageId":"715f6795-f016-4c32-9392-a1bac7b92e1a"}
+</script><script type="text/javascript" src="/WebResource.axd?d=NjxTqR2bqTw1rewxxlkHPuVWylniiuH85dElS4-sTWByH4RE8E5E1AceaaoCFAJqZaJ0XO7-0paGWvgZTYHK6HfSMq7_7jIhS9QthTeHBDUU0pberHuOZvwLatBEXp3F8dWshLi8dFLqd-R5ePILXLxt9fP0bczWzQjlYINayIOpB5YnfTHc2ZyRpWOgtz7dNZw0Q5MPTr0UAPNLDUP5XStYynM1&amp;t=638745473720000000">
+
+</script><input data-sf-role='en' type='hidden' value='https://data.who.int/countries'><script type="text/javascript">
+(function () {
+    // Add M49 code to the URL of the health statistics pages #3268
+    const countryPage = document.querySelector('.country-pages[data-m49-code]');
+    if (countryPage !== null) {
+        const m49Code = countryPage.getAttribute('data-m49-code');
+        if (m49Code !== null) {
+            const healthStatisticsSection = document.querySelector('.health-statistics-section');
+            if (healthStatisticsSection !== null) {
+                const indicatorLinks = healthStatisticsSection.querySelectorAll('.progressive-tabs-tabpanel footer a:first-child');
+                if (indicatorLinks.length > 0) {
+                    for (const element of indicatorLinks) {
+                        element.href += '?m49=' + m49Code;
+                    }
+                }
+            }
+                      // m49 appending in emergency dashboard #3291
+            const emergencyDashboardSection = document.querySelector('.emergency-dashboards-section');
+            if (emergencyDashboardSection !== null) {
+                const links = emergencyDashboardSection.querySelectorAll('.list-menu a');
+                if (links.length > 0) {
+                    for (const link of links) {
+                        if (link.href.indexOf('covid19') !== -1) {
+                            link.href += '?m49=' + m49Code;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Center text charts #3262
+    const allCharts = document.querySelectorAll('.chart > div');
+    if (allCharts.length > 0) {
+        for (const chart of allCharts) {
+            const dataDataDotVizJsonConfig = chart.getAttribute('data-data-dot-viz-json-config');
+            if (dataDataDotVizJsonConfig !== null && dataDataDotVizJsonConfig.indexOf('populationProjectionText') !== -1) {
+                chart.classList.add('chart-vertical-center');
+            }
+        }
+    }
+
+    // Replace %%COUNTRY%% with the country name in the emergency dashboards #3259
+    const countryName = document.querySelector('#country-name');
+    if (countryName !== null) {
+        const emergencyDashboard = document.querySelector('.emergency-dashboards-section');
+        if (emergencyDashboard !== null) {
+            const emergencyDashboardLinks = emergencyDashboard.querySelectorAll('a');
+            if (emergencyDashboardLinks.length > 0) {
+                for (const links of emergencyDashboardLinks) {
+                    if (links.innerText.indexOf('%%COUNTRY%%') !== -1) {
+                        links.innerText = links.innerText.replace('%%COUNTRY%%', countryName.innerText);
+                    }
+                }
+            }
+        }
+    }
+
+    // 3B Chart group container alignment #3263
+    let resizeTimeout;
+    window.addEventListener('resize', resizeEventHandler);
+    alignChartHeaders();
+
+    function resizeEventHandler() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(alignChartHeaders, 300);
+    }
+    
+    function alignChartHeaders() {
+        let MIN_WIDTH = 1920;
+        let currentWidth = window.innerWidth;
+        if (currentWidth < MIN_WIDTH) {
+            return;
+        }
+
+        const HealthTargetProcessSection = document.querySelector('.health-target-progress-section');
+        if (HealthTargetProcessSection !== null) {
+            const chartHeaders = HealthTargetProcessSection.querySelectorAll('.chart header');
+            if (chartHeaders.length > 0) {
+                let height = -1;
+                for (const chartHeader of chartHeaders) {
+                    if (height < chartHeader.offsetHeight) {
+                        height = chartHeader.offsetHeight;
+                    }
+                }
+
+                if (height > -1) {
+                    const style = document.createElement("style");
+                    style.textContent = "@media (min-width: 1920px) { .health-target-progress-section .chart header { min-height: " + height + "px; } }";
+                    document.head.appendChild(style);
+
+                    // remove event handler
+                    window.removeEventListener('resize', resizeEventHandler);
+                }
+            }
+        }
+    }
+
+    // Charting style issues #3295
+    const allCharts2 = document.querySelectorAll('.chart > div');
+    if (allCharts2.length > 0) {
+        for (const chart of allCharts2) {
+            chart.classList.add('dataDotViz-theme');
+            chart.classList.add('dataDotViz-theme-light');
+
+            const dataDataDotVizJsonConfig = chart.getAttribute('data-data-dot-viz-json-config');
+            if (dataDataDotVizJsonConfig !== null && dataDataDotVizJsonConfig.indexOf('factoid') !== -1) {
+                chart.removeAttribute('style');
+            }
+        }
+    }
+})();
+
+</script><script type="text/javascript">
+var pageUrl= window.location.href;
+let result = pageUrl.includes("/countries/356");
+if(result)
+{
+  const images = document.querySelectorAll('.locator-image');
+
+// Loop through each image and hide it
+images.forEach(image => {
+  image.style.display = 'none';
+});
+}
+</script><script type="text/javascript">
+(function () {
+    const dataSourcesContainer = document.querySelector('[aria-labelledby="data-sources"] tbody');
+    if (dataSourcesContainer === null) {
+        return;
+    }
+
+    const lang = document.querySelector('html').getAttribute('lang');
+    let populationDataTh = 'Population data';
+    let populationDataTd =
+        `<a href="https://population.un.org/wpp/" target="_blank">UNDESA population division, World Population Prospects 2022</a>, Extracted: 15 May 2024`;
+    let currentHealthExpenditureTh = 'Current Health Expenditure (CHE) as % of GDP';
+    let currentHealthExpenditureTd =
+        `<a href="https://apps.who.int/nha/database" target="_blank">World Health Organization, Global Health Expenditure database</a>, Extracted: 8 January 2024`;
+    let lifeExpectancyTh = 'Life expectancy and Healthy life expectancy (HALE)';
+    let lifeExpectancyTd =
+        `<a href="https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-life-expectancy-and-healthy-life-expectancy" target="_blank">World Health Organization, Global Health Estimates</a>, Extracted: 8 January 2024`;
+    let causesOfDeathTh = 'Causes of death';
+    let causesOfDeathTd =
+        `<a href="https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-leading-causes-of-death" target="_blank">World Health Organization, Global Health Estimates</a>, Extracted: 22 November 2022`;
+        `<a href="https://data.who.int/indicators">World Health Organization, Health indicators</a>`;
+        `<a href="https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/global-health-estimates-leading-causes-of-dalys" target="_blank">World Health Organization, Global Health Estimates, Burden of Disease</a>, Extracted: 22 November 2022`;
+    let tripleBillionTh = 'Triple Billion';
+    let tripleBillionTd =
+        `<a href="https://data.who.int/dashboards/global-progress/triple-billion" target="_blank">World Health Organization, Global Progress Dashboard, Triple Billion targets</a>`;
+        `<a href="https://unstats.un.org/unsd/demographic-social/crvs/" target="_blank">United Nations Statistics Division, 2023, Quality of vital statistics obtained from civil registration page on the United Nations Demographic Yearbook Vital Statistics Questionnaire.</a> Extracted: 15 May 2024`;
+        `<a href="https://unstats.un.org/unsd/demographic-social/crvs/" target="_blank">United Nations Statistics Division, 2023, Quality of vital statistics obtained from civil registration page on the United Nations Demographic Yearbook Vital Statistics Questionnaire.</a> Extracted: 15 May 2024`;
+
+    if (lang === 'fr') {
+        populationDataTh = 'Données de population';
+        populationDataTd = `<a href="https://population.un.org/wpp/" target="_blank"> Division de la population de l'UNDESA, Perspectives de la population mondiale 2022</a>, Extrait: 15 mai 2024`;
+        currentHealthExpenditureTh = 'Dépenses de santé actuelles (CHE) en % du PIB';
+        currentHealthExpenditureTd = `<a href="https://apps.who.int/nha/database" target="_blank"> Organisation mondiale de la Santé, Base de données des dépenses de santé mondiales</a>, Extrait: 8 janvier 2024`;
+        lifeExpectancyTh = 'Espérance de vie et espérance de vie en bonne santé (HALE)';
+        lifeExpectancyTd = `<a href="https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-life-expectancy-and-healthy-life-expectancy" target="_blank">Organisation mondiale de la Santé, Estimations mondiales de la santé</a>, Extrait: 8 janvier 2024`;
+        causesOfDeathTh = 'Causes de décès';
+        causesOfDeathTd = `<a href="https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-leading-causes-of-death" target="_blank">Organisation mondiale de la Santé, Estimations mondiales de la santé</a>, Extrait: 22 novembre 2022`;
+        tripleBillionTh = 'Triple Milliard';
+        tripleBillionTd = `<a href="https://data.who.int/dashboards/global-progress/triple-billion" target="_blank"> Organisation mondiale de la Santé, Tableau de bord des progrès mondiaux, Objectifs du Triple milliard</a>`;
+    } else if (lang === 'es') {
+        populationDataTh = 'Datos de población';
+        populationDataTd = `<a href="https://population.un.org/wpp/" target="_blank">División de Población de la UNDESA, Perspectivas de la Población Mundial 2022</a>, Extraído: 15 de mayo de 2024`;
+        currentHealthExpenditureTh = 'Gasto sanitario actual (CHE) como % del PIB';
+        currentHealthExpenditureTd = `<a href="https://apps.who.int/nha/database" target="_blank">Organización Mundial de la Salud, Base de datos de gasto sanitario global</a>, Extraído: 8 de enero de 2024`;
+        lifeExpectancyTh = 'Esperanza de vida y esperanza de vida saludable (HALE)';
+        lifeExpectancyTd = `<a href="https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-life-expectancy-and-healthy-life-expectancy" target="_blank">Organización Mundial de la Salud, Estimaciones mundiales de salud</a>, Extraído: 8 de enero de 2024`;
+        causesOfDeathTh = 'Causas de muerte';
+        causesOfDeathTd = `<a href="https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-leading-causes-of-death" target="_blank">Organización Mundial de la Salud, Estimaciones mundiales de salud</a>, Extraído: 22 de noviembre de 2022`;
+        tripleBillionTh = 'Triple Mil millones';
+        tripleBillionTd = `<a href="https://data.who.int/dashboards/global-progress/triple-billion" target="_blank">Organización Mundial de la Salud, Tablero de Progreso Global, Objetivos del Triple Mil millones</a>`;
+    } else if (lang === 'ru') {
+        populationDataTh = 'Данные о населении';
+        populationDataTd = `<a href="https://population.un.org/wpp/" target="_blank">Департамент по народонаселению ООН, Прогнозы мирового населения на 2022 год</a>, Извлечено: 15 мая 2024`;
+        currentHealthExpenditureTh = 'Текущие расходы на здравоохранение (CHE) в % от ВВП';
+        currentHealthExpenditureTd = `<a href="https://apps.who.int/nha/database" target="_blank">Всемирная организация здравоохранения, База данных глобальных расходов на здравоохранение</a>, Извлечено: 8 января 2024`;
+        lifeExpectancyTh = 'Ожидаемая продолжительность жизни и ожидаемая продолжительность здоровой жизни (HALE)';
+        lifeExpectancyTd = `<a href="https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-life-expectancy-and-healthy-life-expectancy" target="_blank">Всемирная организация здравоохранения, Глобальные оценки здоровья</a>, Извлечено: 8 января 2024`;
+        causesOfDeathTh = 'Причины смерти';
+        causesOfDeathTd = `<a href="https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-leading-causes-of-death" target="_blank">Всемирная организация здравоохранения, Глобальные оценки здоровья</a>, Извлечено: 22 ноября 2022`;
+        tripleBillionTh = 'Тройной миллиард';
+        tripleBillionTd = `<a href="https://data.who.int/dashboards/global-progress/triple-billion" target="_blank">Всемирная организация здравоохранения, Панель глобального прогресса, Цели "Тройного миллиарда"</a>`;
+    } else if (lang === 'ar') {
+        populationDataTh = 'بيانات السكان';
+        populationDataTd = `<a href="https://population.un.org/wpp/" target="_blank">قسم السكان بالأمم المتحدة، توقعات السكان العالمية 2022،</a> تم الاستخراج: 15 مايو 2024`;
+        currentHealthExpenditureTh = 'الإنفاق الصحي الحالي (CHE) كنسبة مئوية من الناتج المحلي الإجمالي';
+        currentHealthExpenditureTd = `<a href="https://apps.who.int/nha/database" target="_blank">منظمة الصحة العالمية، قاعدة بيانات الإنفاق الصحي العالمي،</a> تم الاستخراج: 8 يناير 2024`;
+        lifeExpectancyTh = 'متوسط العمر المتوقع ومتوسط العمر المتوقع الصحي (HALE)';
+        lifeExpectancyTd = `<a href="https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-life-expectancy-and-healthy-life-expectancy" target="_blank">منظمة الصحة العالمية، تقديرات الصحة العالمية،</a> تم الاستخراج: 8 يناير 2024`;
+        causesOfDeathTh = 'أسباب الوفاة';
+        causesOfDeathTd = `<a href="https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-leading-causes-of-death" target="_blank">منظمة الصحة العالمية، تقديرات الصحة العالمية،</a> تم الاستخراج: 22 نوفمبر 2022`;
+
+        tripleBillionTh = 'ثلاثة مليارات';
+        tripleBillionTd = `<a href="https://data.who.int/dashboards/global-progress/triple-billion" target="_blank"> منظمة الصحة العالمية، لوحة تقدم العالمية، أهداف المليار الثلاثة</a>`;
+    } if (lang === 'zh') {
+        populationDataTh = '人口数据';
+        populationDataTd = `<a href="https://population.un.org/wpp/" target="_blank">联合国经济和社会事务部人口司，2022年世界人口展望</a>, 提取日期：2024年5月15日`;
+        currentHealthExpenditureTh = '卫生总支出 (CHE) 占 GDP 的百分比';
+        currentHealthExpenditureTd = `<a href="https://apps.who.int/nha/database" target="_blank">世界卫生组织，全球卫生支出数据库</a>, 提取日期：2024年1月8日`;
+        lifeExpectancyTh = '预期寿命和健康预期寿命 (HALE)';
+        lifeExpectancyTd = `<a href="https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-life-expectancy-and-healthy-life-expectancy" target="_blank">世界卫生组织，全球健康估算</a>, 提取日期：2024年1月8日`;
+        causesOfDeathTh = '死因';
+        causesOfDeathTd = `<a href="https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-leading-causes-of-death" target="_blank">世界卫生组织，全球健康估算</a>, 提取日期：2022年11月22日`;
+        tripleBillionTh = '三个十亿';
+        tripleBillionTd = `<a href="https://data.who.int/dashboards/global-progress/triple-billion" target="_blank">世界卫生组织，全球进展仪表板，三十亿目标</a>`;
+    }
+
+    dataSourcesContainer.innerHTML =
+    `
+        <tr><th>${populationDataTh}</th><td>${populationDataTd}</td></tr>
+        <tr><th>${currentHealthExpenditureTh}</th><td>${currentHealthExpenditureTd}</td></tr>
+        <tr><th>${lifeExpectancyTh}</th><td>${lifeExpectancyTd}</td></tr>
+        <tr><th>${causesOfDeathTh}</th><td>${causesOfDeathTd}</td></tr>
+        <tr><th>${tripleBillionTh}</th><td>${tripleBillionTd}</td></tr>
+    `;
+})();
+</script><script type="text/javascript">
+(function () {
+    var lang = document.documentElement.lang;
+    var link = document.querySelector('.btn-backlink');
+    if (link && link.href) {
+        var url = new URL(window.location.href);
+        var newPath;
+        var prefix = url.pathname.includes('/datadot/') ? '/datadot' : '';
+        switch (lang) {
+            case 'es':
+                newPath = prefix + '/es/countries/';
+                break;
+            case 'fr':
+                newPath = prefix + '/fr/countries/';
+                break;
+            case 'ru':
+                newPath = prefix + '/ru/countries/';
+                break;
+            case 'zh':
+                newPath = prefix + '/zh/countries/';
+                break;
+            case 'ar':
+                newPath = prefix + '/ar/countries/';
+                break;
+            default:
+                newPath = prefix + '/countries/';
+                break;
+        }
+        var newUrl = new URL(newPath, url.protocol + "//" + url.host);
+        link.href = newUrl.toString();
+    }
+})();
+</script><script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+    var countryPage = document.querySelector('.country-pages[data-m49-code]');
+    if (countryPage === null) {
+        return;
+    }
+
+    var m49Code = countryPage.getAttribute('data-m49-code');
+    if (m49Code === null) {
+        return;
+    }
+    
+    var countryPdfLinks = {
+        "004": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/004_Afghanistan.pdf",
+        "008": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/008_Albania.pdf",
+        "012": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/012_Algeria.pdf",
+        "020": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/020_Andorra.pdf",
+        "024": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/024_Angola.pdf",
+        "028": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/028_Antigua and Barbuda.pdf",
+        "031": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/031_Azerbaijan.pdf",
+        "032": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/032_Argentina.pdf",
+        "036": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/036_Australia.pdf",
+        "040": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/040_Austria.pdf",
+        "044": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/044_Bahamas.pdf",
+        "048": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/048_Bahrain.pdf",
+        "050": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/050_Bangladesh.pdf",
+        "051": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/051_Armenia.pdf",
+        "052": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/052_Barbados.pdf",
+        "056": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/056_Belgium.pdf",
+        "064": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/064_Bhutan.pdf",
+        "068": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/068_Bolivia (Plurinational State of).pdf",
+        "070": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/070_Bosnia and Herzegovina.pdf",
+        "072": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/072_Botswana.pdf",
+        "076": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/076_Brazil.pdf",
+        "084": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/084_Belize.pdf",
+        "090": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/090_Solomon Islands.pdf",
+        "096": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/096_Brunei Darussalam.pdf",
+        "100": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/100_Bulgaria.pdf",
+        "104": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/104_Myanmar.pdf",
+        "108": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/108_Burundi.pdf",
+        "112": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/112_Belarus.pdf",
+        "116": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/116_Cambodia.pdf",
+        "120": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/120_Cameroon.pdf",
+        "124": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/124_Canada.pdf",
+        "132": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/132_Cabo Verde.pdf",
+        "140": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/140_Central African Republic.pdf",
+        "144": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/144_Sri Lanka.pdf",
+        "148": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/148_Chad.pdf",
+        "152": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/152_Chile.pdf",
+        "156": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/156_China.pdf",
+        "170": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/170_Colombia.pdf",
+        "174": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/174_Comoros.pdf",
+        "178": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/178_Congo.pdf",
+        "180": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/180_Democratic Republic of the Congo.pdf",
+        "184": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/184_Cook Islands.pdf",
+        "188": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/188_Costa Rica.pdf",
+        "191": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/191_Croatia.pdf",
+        "192": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/192_Cuba.pdf",
+        "196": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/196_Cyprus.pdf",
+        "203": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/203_Czechia.pdf",
+        "204": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/204_Benin.pdf",
+        "208": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/208_Denmark.pdf",
+        "212": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/212_Dominica.pdf",
+        "214": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/214_Dominican Republic.pdf",
+        "218": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/218_Ecuador.pdf",
+        "222": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/222_El Salvador.pdf",
+        "226": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/226_Equatorial Guinea.pdf",
+        "231": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/231_Ethiopia.pdf",
+        "232": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/232_Eritrea.pdf",
+        "233": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/233_Estonia.pdf",
+        "242": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/242_Fiji.pdf",
+        "246": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/246_Finland.pdf",
+        "250": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/250_France.pdf",
+        "262": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/262_Djibouti.pdf",
+        "266": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/266_Gabon.pdf",
+        "268": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/268_Georgia.pdf",
+        "270": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/270_Gambia.pdf",
+        "276": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/276_Germany.pdf",
+        "288": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/288_Ghana.pdf",
+        "296": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/296_Kiribati.pdf",
+        "300": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/300_Greece.pdf",
+        "308": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/308_Grenada.pdf",
+        "320": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/320_Guatemala.pdf",
+        "324": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/324_Guinea.pdf",
+        "328": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/328_Guyana.pdf",
+        "332": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/332_Haiti.pdf",
+        "340": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/340_Honduras.pdf",
+        "348": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/348_Hungary.pdf",
+        "352": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/352_Iceland.pdf",
+        "356": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/356_India.pdf",
+        "360": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/360_Indonesia.pdf",
+        "364": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/364_Iran (Islamic Republic of).pdf",
+        "368": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/368_Iraq.pdf",
+        "372": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/372_Ireland.pdf",
+        "376": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/376_Israel.pdf",
+        "380": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/380_Italy.pdf",
+        "384": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/384_Côte d'Ivoire.pdf",
+        "388": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/388_Jamaica.pdf",
+        "392": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/392_Japan.pdf",
+        "398": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/398_Kazakhstan.pdf",
+        "400": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/400_Jordan.pdf",
+        "404": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/404_Kenya.pdf",
+        "408": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/408_Democratic People's Republic of Korea.pdf",
+        "410": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/410_Republic of Korea.pdf",
+        "414": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/414_Kuwait.pdf",
+        "417": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/417_Kyrgyzstan.pdf",
+        "418": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/418_Lao People's Democratic Republic.pdf",
+        "422": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/422_Lebanon.pdf",
+        "426": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/426_Lesotho.pdf",
+        "428": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/428_Latvia.pdf",
+        "430": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/430_Liberia.pdf",
+        "434": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/434_Libya.pdf",
+        "440": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/440_Lithuania.pdf",
+        "442": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/442_Luxembourg.pdf",
+        "450": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/450_Madagascar.pdf",
+        "454": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/454_Malawi.pdf",
+        "458": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/458_Malaysia.pdf",
+        "462": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/462_Maldives.pdf",
+        "466": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/466_Mali.pdf",
+        "470": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/470_Malta.pdf",
+        "478": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/478_Mauritania.pdf",
+        "480": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/480_Mauritius.pdf",
+        "484": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/484_Mexico.pdf",
+        "492": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/492_Monaco.pdf",
+        "496": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/496_Mongolia.pdf",
+        "498": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/498_Republic of Moldova.pdf",
+        "499": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/499_Montenegro.pdf",
+        "504": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/504_Morocco.pdf",
+        "508": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/508_Mozambique.pdf",
+        "512": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/512_Oman.pdf",
+        "516": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/516_Namibia.pdf",
+        "520": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/520_Nauru.pdf",
+        "524": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/524_Nepal.pdf",
+        "528": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/528_Netherlands.pdf",
+        "548": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/548_Vanuatu.pdf",
+        "554": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/554_New Zealand.pdf",
+        "558": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/558_Nicaragua.pdf",
+        "562": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/562_Niger.pdf",
+        "566": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/566_Nigeria.pdf",
+        "570": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/570_Niue.pdf",
+        "578": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/578_Norway.pdf",
+        "583": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/583_Micronesia (Federated States of).pdf",
+        "584": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/584_Marshall Islands.pdf",
+        "585": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/585_Palau.pdf",
+        "586": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/586_Pakistan.pdf",
+        "591": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/591_Panama.pdf",
+        "598": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/598_Papua New Guinea.pdf",
+        "600": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/600_Paraguay.pdf",
+        "604": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/604_Peru.pdf",
+        "608": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/608_Philippines.pdf",
+        "616": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/616_Poland.pdf",
+        "620": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/620_Portugal.pdf",
+        "624": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/624_Guinea-Bissau.pdf",
+        "626": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/626_Timor-Leste.pdf",
+        "634": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/634_Qatar.pdf",
+        "642": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/642_Romania.pdf",
+        "643": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/643_Russian Federation.pdf",
+        "646": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/646_Rwanda.pdf",
+        "659": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/659_Saint Kitts and Nevis.pdf",
+        "662": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/662_Saint Lucia.pdf",
+        "670": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/670_Saint Vincent and the Grenadines.pdf",
+        "674": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/674_San Marino.pdf",
+        "678": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/678_Sao Tome and Principe.pdf",
+        "682": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/682_Saudi Arabia.pdf",
+        "686": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/686_Senegal.pdf",
+        "688": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/688_Serbia.pdf",
+        "690": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/690_Seychelles.pdf",
+        "694": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/694_Sierra Leone.pdf",
+        "702": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/702_Singapore.pdf",
+        "703": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/703_Slovakia.pdf",
+        "704": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/704_Viet Nam.pdf",
+        "705": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/705_Slovenia.pdf",
+        "706": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/706_Somalia.pdf",
+        "710": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/710_South Africa.pdf",
+        "716": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/716_Zimbabwe.pdf",
+        "724": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/724_Spain.pdf",
+        "728": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/728_South Sudan.pdf",
+        "729": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/729_Sudan.pdf",
+        "740": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/740_Suriname.pdf",
+        "748": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/748_Eswatini.pdf",
+        "752": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/752_Sweden.pdf",
+        "756": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/756_Switzerland.pdf",
+        "760": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/760_Syrian Arab Republic.pdf",
+        "762": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/762_Tajikistan.pdf",
+        "764": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/764_Thailand.pdf",
+        "768": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/768_Togo.pdf",
+        "776": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/776_Tonga.pdf",
+        "780": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/780_Trinidad and Tobago.pdf",
+        "784": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/784_United Arab Emirates.pdf",
+        "788": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/788_Tunisia.pdf",
+        "792": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/792_Türkiye.pdf",
+        "795": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/795_Turkmenistan.pdf",
+        "798": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/798_Tuvalu.pdf",
+        "800": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/800_Uganda.pdf",
+        "804": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/804_Ukraine.pdf",
+        "807": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/807_North Macedonia.pdf",
+        "818": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/818_Egypt.pdf",
+        "826": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/826_United Kingdom of Great Britain and Northern Ireland.pdf",
+        "834": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/834_United Republic of Tanzania.pdf",
+        "840": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/840_United States of America.pdf",
+        "854": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/854_Burkina Faso.pdf",
+        "858": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/858_Uruguay.pdf",
+        "860": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/860_Uzbekistan.pdf",
+        "862": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/862_Venezuela (Bolivarian Republic of).pdf",
+        "882": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/882_Samoa.pdf",
+        "887": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/887_Yemen.pdf",
+        "894": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/PDF/894_Zambia.pdf"
+    };
+
+    var countryDataPackageLinks = {
+        "004": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/004_Afghanistan.zip",
+        "008": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/008_Albania.zip",
+        "012": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/012_Algeria.zip",
+        "020": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/020_Andorra.zip",
+        "024": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/024_Angola.zip",
+        "028": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/028_Antigua and Barbuda.zip",
+        "031": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/031_Azerbaijan.zip",
+        "032": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/032_Argentina.zip",
+        "036": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/036_Australia.zip",
+        "040": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/040_Austria.zip",
+        "044": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/044_Bahamas.zip",
+        "048": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/048_Bahrain.zip",
+        "050": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/050_Bangladesh.zip",
+        "051": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/051_Armenia.zip",
+        "052": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/052_Barbados.zip",
+        "056": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/056_Belgium.zip",
+        "064": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/064_Bhutan.zip",
+        "068": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/068_Bolivia (Plurinational State of).zip",
+        "070": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/070_Bosnia and Herzegovina.zip",
+        "072": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/072_Botswana.zip",
+        "076": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/076_Brazil.zip",
+        "084": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/084_Belize.zip",
+        "090": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/090_Solomon Islands.zip",
+        "096": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/096_Brunei Darussalam.zip",
+        "100": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/100_Bulgaria.zip",
+        "104": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/104_Myanmar.zip",
+        "108": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/108_Burundi.zip",
+        "112": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/112_Belarus.zip",
+        "116": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/116_Cambodia.zip",
+        "120": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/120_Cameroon.zip",
+        "124": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/124_Canada.zip",
+        "132": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/132_Cabo Verde.zip",
+        "140": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/140_Central African Republic.zip",
+        "144": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/144_Sri Lanka.zip",
+        "148": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/148_Chad.zip",
+        "152": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/152_Chile.zip",
+        "156": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/156_China.zip",
+        "170": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/170_Colombia.zip",
+        "174": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/174_Comoros.zip",
+        "178": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/178_Congo.zip",
+        "180": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/180_Democratic Republic of the Congo.zip",
+        "184": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/184_Cook Islands.zip",
+        "188": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/188_Costa Rica.zip",
+        "191": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/191_Croatia.zip",
+        "192": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/192_Cuba.zip",
+        "196": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/196_Cyprus.zip",
+        "203": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/203_Czechia.zip",
+        "204": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/204_Benin.zip",
+        "208": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/208_Denmark.zip",
+        "212": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/212_Dominica.zip",
+        "214": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/214_Dominican Republic.zip",
+        "218": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/218_Ecuador.zip",
+        "222": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/222_El Salvador.zip",
+        "226": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/226_Equatorial Guinea.zip",
+        "231": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/231_Ethiopia.zip",
+        "232": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/232_Eritrea.zip",
+        "233": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/233_Estonia.zip",
+        "242": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/242_Fiji.zip",
+        "246": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/246_Finland.zip",
+        "250": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/250_France.zip",
+        "262": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/262_Djibouti.zip",
+        "266": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/266_Gabon.zip",
+        "268": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/268_Georgia.zip",
+        "270": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/270_Gambia.zip",
+        "276": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/276_Germany.zip",
+        "288": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/288_Ghana.zip",
+        "296": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/296_Kiribati.zip",
+        "300": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/300_Greece.zip",
+        "308": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/308_Grenada.zip",
+        "320": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/320_Guatemala.zip",
+        "324": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/324_Guinea.zip",
+        "328": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/328_Guyana.zip",
+        "332": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/332_Haiti.zip",
+        "340": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/340_Honduras.zip",
+        "348": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/348_Hungary.zip",
+        "352": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/352_Iceland.zip",
+        "356": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/356_India.zip",
+        "360": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/360_Indonesia.zip",
+        "364": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/364_Iran (Islamic Republic of).zip",
+        "368": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/368_Iraq.zip",
+        "372": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/372_Ireland.zip",
+        "376": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/376_Israel.zip",
+        "380": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/380_Italy.zip",
+        "384": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/384_Côte d'Ivoire.zip",
+        "388": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/388_Jamaica.zip",
+        "392": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/392_Japan.zip",
+        "398": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/398_Kazakhstan.zip",
+        "400": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/400_Jordan.zip",
+        "404": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/404_Kenya.zip",
+        "408": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/408_Democratic People's Republic of Korea.zip",
+        "410": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/410_Republic of Korea.zip",
+        "414": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/414_Kuwait.zip",
+        "417": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/417_Kyrgyzstan.zip",
+        "418": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/418_Lao People's Democratic Republic.zip",
+        "422": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/422_Lebanon.zip",
+        "426": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/426_Lesotho.zip",
+        "428": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/428_Latvia.zip",
+        "430": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/430_Liberia.zip",
+        "434": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/434_Libya.zip",
+        "440": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/440_Lithuania.zip",
+        "442": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/442_Luxembourg.zip",
+        "450": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/450_Madagascar.zip",
+        "454": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/454_Malawi.zip",
+        "458": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/458_Malaysia.zip",
+        "462": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/462_Maldives.zip",
+        "466": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/466_Mali.zip",
+        "470": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/470_Malta.zip",
+        "478": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/478_Mauritania.zip",
+        "480": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/480_Mauritius.zip",
+        "484": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/484_Mexico.zip",
+        "492": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/492_Monaco.zip",
+        "496": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/496_Mongolia.zip",
+        "498": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/498_Republic of Moldova.zip",
+        "499": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/499_Montenegro.zip",
+        "504": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/504_Morocco.zip",
+        "508": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/508_Mozambique.zip",
+        "512": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/512_Oman.zip",
+        "516": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/516_Namibia.zip",
+        "520": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/520_Nauru.zip",
+        "524": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/524_Nepal.zip",
+        "528": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/528_Netherlands.zip",
+        "548": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/548_Vanuatu.zip",
+        "554": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/554_New Zealand.zip",
+        "558": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/558_Nicaragua.zip",
+        "562": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/562_Niger.zip",
+        "566": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/566_Nigeria.zip",
+        "570": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/570_Niue.zip",
+        "578": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/578_Norway.zip",
+        "583": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/583_Micronesia (Federated States of).zip",
+        "584": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/584_Marshall Islands.zip",
+        "585": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/585_Palau.zip",
+        "586": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/586_Pakistan.zip",
+        "591": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/591_Panama.zip",
+        "598": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/598_Papua New Guinea.zip",
+        "600": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/600_Paraguay.zip",
+        "604": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/604_Peru.zip",
+        "608": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/608_Philippines.zip",
+        "616": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/616_Poland.zip",
+        "620": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/620_Portugal.zip",
+        "624": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/624_Guinea-Bissau.zip",
+        "626": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/626_Timor-Leste.zip",
+        "634": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/634_Qatar.zip",
+        "642": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/642_Romania.zip",
+        "643": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/643_Russian Federation.zip",
+        "646": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/646_Rwanda.zip",
+        "659": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/659_Saint Kitts and Nevis.zip",
+        "662": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/662_Saint Lucia.zip",
+        "670": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/670_Saint Vincent and the Grenadines.zip",
+        "674": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/674_San Marino.zip",
+        "678": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/678_Sao Tome and Principe.zip",
+        "682": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/682_Saudi Arabia.zip",
+        "686": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/686_Senegal.zip",
+        "688": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/688_Serbia.zip",
+        "690": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/690_Seychelles.zip",
+        "694": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/694_Sierra Leone.zip",
+        "702": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/702_Singapore.zip",
+        "703": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/703_Slovakia.zip",
+        "704": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/704_Viet Nam.zip",
+        "705": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/705_Slovenia.zip",
+        "706": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/706_Somalia.zip",
+        "710": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/710_South Africa.zip",
+        "716": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/716_Zimbabwe.zip",
+        "724": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/724_Spain.zip",
+        "728": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/728_South Sudan.zip",
+        "729": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/729_Sudan.zip",
+        "740": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/740_Suriname.zip",
+        "748": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/748_Eswatini.zip",
+        "752": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/752_Sweden.zip",
+        "756": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/756_Switzerland.zip",
+        "760": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/760_Syrian Arab Republic.zip",
+        "762": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/762_Tajikistan.zip",
+        "764": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/764_Thailand.zip",
+        "768": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/768_Togo.zip",
+        "776": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/776_Tonga.zip",
+        "780": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/780_Trinidad and Tobago.zip",
+        "784": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/784_United Arab Emirates.zip",
+        "788": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/788_Tunisia.zip",
+        "792": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/792_Türkiye.zip",
+        "795": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/795_Turkmenistan.zip",
+        "798": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/798_Tuvalu.zip",
+        "800": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/800_Uganda.zip",
+        "804": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/804_Ukraine.zip",
+        "807": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/807_North Macedonia.zip",
+        "818": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/818_Egypt.zip",
+        "826": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/826_United Kingdom of Great Britain and Northern Ireland.zip",
+        "834": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/834_United Republic of Tanzania.zip",
+        "840": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/840_United States of America.zip",
+        "854": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/854_Burkina Faso.zip",
+        "858": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/858_Uruguay.zip",
+        "860": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/860_Uzbekistan.zip",
+        "862": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/862_Venezuela (Bolivarian Republic of).zip",
+        "882": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/882_Samoa.zip",
+        "887": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/887_Yemen.zip",
+        "894": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/COUNTRY/ZIP/894_Zambia.zip",
+    };
+
+    // Get URLs for current country
+    var pdfUrl = countryPdfLinks[m49Code];
+    var dataPackageUrl = countryDataPackageLinks[m49Code];
+
+    var printToPdfLink = document.querySelector('a[href="javascript:window.print();"]');
+    if (printToPdfLink && pdfUrl) {
+        printToPdfLink.href = pdfUrl;
+        printToPdfLink.target = "_blank";
+        printToPdfLink.querySelector('span').textContent = "Download as PDF";
+    } else {
+        console.error('Print to PDF link not found.');
+    }
+
+    var parentLi = printToPdfLink.closest('li');
+    if (parentLi && dataPackageUrl) {
+        var ul = parentLi.parentElement;
+        var newLi = document.createElement('li');
+        var newLink = document.createElement('a');
+        newLink.href = dataPackageUrl;
+        newLink.target = "_blank";
+        newLink.innerHTML = "<span class='icon-share'>Download Dataset Package</span>";
+        newLi.appendChild(newLink);
+        ul.insertBefore(newLi, parentLi.nextSibling);
+    } else {
+        console.error('Parent list item for the PDF link not found.');
+    }
+});
+
+</script> <!-- js to scrape:on --> <script type='text/javascript' src='/ResourcePackages/DDIBootstrap5/assets/dist/scripts/app.js?v=12.1.7126.25288'></script> <script type='text/javascript' src='/ResourcePackages/DDIBootstrap5/assets/dist/scripts/components/language-selector.js?v=12.1.7126.25288'></script> <script type='text/javascript' src='/ResourcePackages/DDIBootstrap5/assets/dist/scripts/components/in-page-nav.js?v=12.1.7126.25288'></script> <!-- js to scrape:off --> </body> </html>

@@ -1,0 +1,13 @@
+Edge AI là xu hướng đưa trí tuệ nhân tạo xuống các thiết bị cục bộ (edge devices) như camera, cảm biến, loa thông minh. Trong nhà thông minh, Edge AI giúp xử lý dữ liệu trực tiếp tại thiết bị thay vì gửi lên cloud.
+
+Lợi ích:
+- Giảm độ trễ phản hồi (real-time)
+- Bảo vệ quyền riêng tư (không cần gửi dữ liệu ra ngoài)
+- Tiết kiệm băng thông và chi phí điện toán đám mây
+
+Ví dụ ứng dụng:
+- Camera nhận diện khuôn mặt để mở cửa
+- Microphone phân biệt tiếng nói người dùng thật hay TV
+- Cảm biến học hành vi người dùng và điều chỉnh chiếu sáng
+
+Edge AI cũng đóng vai trò quan trọng trong việc ra quyết định và **phân phối tác vụ tại chỗ**. Thiết bị có thể tự gán nhiệm vụ cho nhau mà không cần chờ server xử lý.

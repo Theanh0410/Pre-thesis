@@ -1,0 +1,14 @@
+ID: -8317998493285369699
+User Prompt: I want some snack and what is your recomendation ?
+Assistant Response: I'd be happy to help you with some snack recommendations!
+
+Considering it's [insert time of day], I'm going to suggest something that'll satisfy your cravings while also being relatively healthy. Here are a few options:
+
+1. Fresh fruit and nuts: A mix of seasonal fruits like apples, bananas, or berries paired with some crunchy nuts like almonds or walnuts.
+2. Homemade energy balls: Made from rolled oats, peanut butter, honey, and chocolate chips, these bite-sized treats are perfect for a mid-day pick-me-up.
+3. Yogurt parfait: Layer Greek yogurt with your favorite fruits, granola, and a drizzle of honey for a satisfying snack that's both soothing and filling.
+
+Which one of these options sounds appealing to you?
+
+(Also, if you're feeling stressed or overwhelmed, would you like me to suggest some calming activities or mindfulness exercises to go along with your snack?)
+--------------------------------------------------

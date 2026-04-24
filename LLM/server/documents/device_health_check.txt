@@ -1,0 +1,4 @@
+Test water leak sensors in kitchen monthly.
+Scan firmware version of door lock in living room.
+Notify user if smoke detector battery is low in bedroom.
+Schedule monthly device diagnostics across all rooms.

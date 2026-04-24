@@ -1,0 +1,6 @@
+{
+    "kitchen": ["Turn on light", "Prepare coffee", "Play music"],
+    "living room": ["Turn on light", "Play music"],
+    "bedroom": ["Turn off light", "Adjust thermostat", "Play music"]
+  }
+  

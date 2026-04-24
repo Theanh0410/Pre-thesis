@@ -1,0 +1,5 @@
+Turn off all appliances and lights when user leaves the house.
+Activate surveillance cameras after locking the door.
+Send mobile notification if any window or door remains open.
+Adjust thermostat to energy-saving mode.
+Turn off the coffee machine and music system.

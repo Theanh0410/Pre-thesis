@@ -1,0 +1,13 @@
+Hệ thống nhà thông minh hiện đại thường được thiết kế theo hướng nhận biết ngữ cảnh (context-awareness). Điều này cho phép thiết bị tự điều chỉnh hành vi dựa trên:
+
+- Vị trí người dùng (ví dụ: phòng khách, bếp, phòng ngủ)
+- Thời gian (sáng, chiều, tối)
+- Hoạt động (đang ngủ, làm việc, xem TV)
+- Cảm biến môi trường (ánh sáng, nhiệt độ, độ ẩm)
+
+Ví dụ, nếu người dùng đang làm việc buổi tối:
+- Đèn sẽ điều chỉnh sang ánh sáng trắng dịu
+- Điều hòa duy trì nhiệt độ cố định
+- Cảnh báo tiếng động sẽ được tắt hoặc giảm âm
+
+Nhờ vào context-awareness, hệ thống có thể phân phối tác vụ phù hợp mà không cần người dùng ra lệnh rõ ràng. Từ đó tạo ra trải nghiệm thông minh, chủ động và liền mạch hơn.

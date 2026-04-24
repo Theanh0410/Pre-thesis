@@ -1,0 +1,1447 @@
+ <!DOCTYPE html> <html lang="en" dir="ltr"> <head> <!-- head to scrape:on --> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><title>
+	WHO Data
+</title> <link rel="shortcut icon" href="/favicon.ico"> <link rel="manifest" href="/manifest.json"> <link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png"> <meta name="theme-color" content="#007eb4" /><script src="/ScriptResource.axd?d=6DQe8ARl7A9TiuWej5ttChzH_bH_8oN_s_nT_Gi4bPGf8e5n2fEMKPjzLdvKHVty-4ZMcWf8z4wR7Uoe9uwfRcpGME2zu76GUYKLUjE5oVOWl9suUmdsLOBTG0SyiZPAlK9FJAXJhhse1qDM4EhvGTqNsxl81NUrAtHLeXR4O4h0ZoaW0&amp;t=ffffffffd9a66869" type="text/javascript"></script><script src="/ScriptResource.axd?d=74FHISOx3fOPKwLxL0RMYsy5CZ1ciqpScg89mHaoCwqm0f3BwT2yIdaPnYAdmSwbYEK1ZSsInvrc-K4nfMcj996OJpQwEQ_jiE7tNvBDDNTsWHMs1V-SmrapMyE1jEszh3aIe8dDrVFevv5g4Az8_4JW2NKXOBG4ECPm9aUN8Tqvcq1P0&amp;t=ffffffffd9a66869" type="text/javascript"></script> <!-- head to scrape:off --> <link rel='stylesheet' href='/ResourcePackages/DDIBootstrap5/assets/dist/styles/main.min.css?v=12.1.7126.25288' > <meta property="og:url" content="https://data.who.int" /><meta property="og:type" content="website" /><meta property="og:site_name" content="datadot" /><meta property="og:locale" content="en_US" /><meta property="og:title" content="WHO Data" /><meta property="og:description" content="Health data statistics and trends from the World Health Organization." /><meta property="og:image" content="https://data.who.int/images/librariesprovider22/og/whodata_ogthumb_home.tmb-1200v.png?Culture=en&amp;sfvrsn=77bfd755_11" /><style type="text/css" media="all">/* Hyperlink states #3261 */
+.datadot-portal a:not(.navigation__globe):not(.btn):hover {
+    --a-font-weight: inherit;
+    background-color: #f2f2f2;
+}
+
+.datadot-portal a:not(.navigation__globe):not(.btn):active {
+    --a-font-weight: inherit;
+    background-color: #e6e6e6;
+}
+
+.datadot-portal a:not(.navigation__globe):not(.btn):focus {
+    --a-font-weight: inherit;
+    background-color: #fff400;
+}
+
+.datadot-portal .card a:not(.btn):hover,
+.datadot-portal .card a:not(.btn):active,
+.datadot-portal .card a:not(.btn):focus {
+    padding-inline: 0;
+    padding-bottom: 0;
+    margin-inline: var(--card-padding-inline);
+    margin-bottom: var(--card-description-padding-block);
+}</style><style type="text/css" media="all">.bg-b8{
+
+background-color: #171a33 !important;
+// background-color: #001437 !important;
+  
+color: #fff;
+
+}</style><script type="text/javascript">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T7PBMZX');
+</script><style type="text/css" media="all">.primary {
+  color: #000
+}
+
+.bg-primary {
+  background-color: #000
+}
+
+.secondary {
+  color: #595959
+}
+
+.bg-secondary {
+  background-color: #595959
+}
+
+.knockout {
+  color: #fff
+}
+
+.bg-knockout {
+  background-color: #fff
+}
+
+.link {
+  color: #013a7e
+}
+
+.bg-link {
+  background-color: #013a7e
+}
+
+.link-visited {
+  color: #651297
+}
+
+.bg-link-visited {
+  background-color: #651297
+}
+
+.light-link {
+  color: #90d3fb
+}
+
+.bg-light-link {
+  background-color: #90d3fb
+}
+
+.light-link-visited {
+  color: #dea9ff
+}
+
+.bg-light-link-visited {
+  background-color: #dea9ff
+}
+
+.b1 {
+  color: #caecff
+}
+
+.bg-b1 {
+  background-color: #caecff;
+  color: #000
+}
+
+.bg-b1 a {
+  color: #013a7e
+}
+
+.bg-b1 a:visited {
+  color: #651297
+}
+
+.b8 {
+  color: #001437
+}
+
+.bg-b8 {
+  background-color: #001437;
+  color: #fff;
+
+  h1 {
+    color: #fff;
+  }
+}
+
+.bg-b8 h2 {
+  color: #fff !important;
+}
+
+.bg-b8 a {
+  color: #90d3fb
+}
+
+.bg-b8 a:visited {
+  color: #dea9ff
+}
+
+.brand {
+  color: #009ade
+}
+
+.bg-brand {
+  background-color: #009ade
+}
+
+.f1 {
+  color: #ffff
+}
+
+.bg-f1 {
+  background-color: #fff
+}
+
+.f2 {
+  color: #fafafa
+}
+
+.bg-f2 {
+  background-color: #fafafa
+}
+
+.f3 {
+  color: #f7f7f7
+}
+
+.bg-f3 {
+  background-color: #f7f7f7
+}
+
+.f4 {
+  color: #ececec
+}
+
+.bg-f4 {
+  background-color: #ececec
+}
+
+a {
+  color: #013a7e
+}
+
+a:visited {
+  color: #651297
+}
+
+.sf-main-site {
+  overflow-x: hidden;
+}
+
+.sf-main-site,
+.sf-main-site .sf-content-block,
+.sf-main-site p {
+  font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+  letter-spacing: normal;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 16px;
+  line-height: 180%
+}
+
+.sf-main-site,
+.sf-main-site article,
+.sf-main-site div,
+.sf-main-site p,
+.sf-main-site section,
+.sf-main-site span {
+  font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+  letter-spacing: normal;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 16px;
+  line-height: 180%
+}
+
+.sf-body .sf-content-block.small article,
+.sf-body .sf-content-block.small div,
+.sf-body .sf-content-block.small p,
+.sf-body .sf-content-block.small section,
+.sf-body .sf-content-block.small span,
+.sf-body article.small,
+.sf-body div.small,
+.sf-body p.small,
+.sf-body section.small,
+.sf-body span.small {
+  font-size: 14px;
+  line-height: 180%
+}
+
+.sf-body .sf-content-block.large article,
+.sf-body .sf-content-block.large div,
+.sf-body .sf-content-block.large p,
+.sf-body .sf-content-block.large section,
+.sf-body .sf-content-block.large span,
+.sf-body article.large,
+.sf-body div.large,
+.sf-body p.large,
+.sf-body section.large,
+.sf-body span.large {
+  font-size: 18px;
+  line-height: 180%
+}
+
+.sf-body .sf-content-block.xlarge article,
+.sf-body .sf-content-block.xlarge div,
+.sf-body .sf-content-block.xlarge p,
+.sf-body .sf-content-block.xlarge section,
+.sf-body .sf-content-block.xlarge span,
+.sf-body article.xlarge,
+.sf-body div.xlarge,
+.sf-body p.xlarge,
+.sf-body section.xlarge,
+.sf-body span.xlarge {
+  font-size: 22px;
+  line-height: 180%
+}
+
+.sf-body p.large {
+  margin-bottom: 24px;
+  margin-top: 24px;
+}
+
+.sf-body h1 {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.sf-body h4 {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.sf-body h6 {
+  margin-bottom: 37px;
+  margin-top: 37px;
+}
+
+.sf-body h1 a,
+.sf-body h1 a:active,
+.sf-body h1 a:focus,
+.sf-body h1 a:hover,
+.sf-body h1 a:visited,
+.sf-body h2 a,
+.sf-body h2 a:active,
+.sf-body h2 a:focus,
+.sf-body h2 a:hover,
+.sf-body h2 a:visited,
+.sf-body h3 a,
+.sf-body h3 a:active,
+.sf-body h3 a:focus,
+.sf-body h3 a:hover,
+.sf-body h3 a:visited
+.sf-body h4 a,
+.sf-body h4 a:active,
+.sf-body h4 a:focus,
+.sf-body h4 a:hover,
+.sf-body h4 a:visited,
+.sf-body h5 a,
+.sf-body h5 a:active,
+.sf-body h5 a:focus,
+.sf-body h5 a:hover,
+.sf-body h5 a:visited {
+  color: #013a7e;
+}
+
+@media (min-width:1024px) {
+
+  .sf-body .sf-content-block.small article,
+  .sf-body .sf-content-block.small div,
+  .sf-body .sf-content-block.small p,
+  .sf-body .sf-content-block.small section,
+  .sf-body .sf-content-block.small span,
+  .sf-body article.small,
+  .sf-body div.small,
+  .sf-body p.small,
+  .sf-body section.small,
+  .sf-body span.small {
+    font-size: 14px;
+    line-height: 180%
+  }
+
+  .sf-body .sf-content-block.large article,
+  .sf-body .sf-content-block.large div,
+  .sf-body .sf-content-block.large p,
+  .sf-body .sf-content-block.large section,
+  .sf-body .sf-content-block.large span,
+  .sf-body article.large,
+  .sf-body div.large,
+  .sf-body p.large,
+  .sf-body section.large,
+  .sf-body span.large {
+    font-size: 22px;
+    line-height: 180%
+  }
+
+  .sf-body .sf-content-block.xlarge article,
+  .sf-body .sf-content-block.xlarge div,
+  .sf-body .sf-content-block.xlarge p,
+  .sf-body .sf-content-block.xlarge section,
+  .sf-body .sf-content-block.xlarge span,
+  .sf-body article.xlarge,
+  .sf-body div.xlarge,
+  .sf-body p.xlarge,
+  .sf-body section.xlarge,
+  .sf-body span.xlarge {
+    font-size: 24px;
+    line-height: 180%
+  }
+  
+  .sf-body h1 {
+    margin-bottom: 51px;
+    margin-top: 51px;
+  }
+  
+  .sf-body h4 {
+    margin-bottom: 37px;
+    margin-top: 37px;
+  }
+
+  .sf-body h6 {
+    margin-bottom: 42px;
+    margin-top: 42px;
+  }
+}
+
+@media(min-width:1920px) {
+
+  .sf-body .sf-content-block.small article,
+  .sf-body .sf-content-block.small div,
+  .sf-body .sf-content-block.small p,
+  .sf-body .sf-content-block.small section,
+  .sf-body .sf-content-block.small span,
+  .sf-body article.small,
+  .sf-body div.small,
+  .sf-body p.small,
+  .sf-body section.small,
+  .sf-body span.small {
+    font-size: 14px;
+    line-height: 180%
+  }
+
+  .sf-body .sf-content-block.large article,
+  .sf-body .sf-content-block.large div,
+  .sf-body .sf-content-block.large p,
+  .sf-body .sf-content-block.large section,
+  .sf-body .sf-content-block.large span,
+  .sf-body article.large,
+  .sf-body div.large,
+  .sf-body p.large,
+  .sf-body section.large,
+  .sf-body span.large {
+    font-size: 24px;
+    line-height: 180%
+  }
+
+  .sf-body .sf-content-block.xlarge article,
+  .sf-body .sf-content-block.xlarge div,
+  .sf-body .sf-content-block.xlarge p,
+  .sf-body .sf-content-block.xlarge section,
+  .sf-body .sf-content-block.xlarge span,
+  .sf-body article.xlarge,
+  .sf-body div.xlarge,
+  .sf-body p.xlarge,
+  .sf-body section.xlarge,
+  .sf-body span.xlarge {
+    font-size: 26px;
+    line-height: 180%
+  }
+
+  .sf-body h1 {
+    margin-bottom: 68px;
+    margin-top: 68px;
+  }
+
+  .sf-body h4 {
+    margin-bottom: 47px;
+    margin-top: 47px;
+  }
+
+  .sf-body h6 {
+    margin-bottom: 51px;
+    margin-top: 51px;
+  }
+}
+
+.sf-main-site h1,
+.sf-main-site h4,
+.sf-main-site h5,
+.sf-main-siteh2,
+.sf-main-siteh6 {
+  font-family: 'Noto Sans Display', sans-serif;
+  font-weight: 700
+}
+
+.sf-main-site h5 {
+  margin: 30px 0;
+}
+
+@media (min-width:1024px) {
+  .sf-main-site h5 {
+    margin: 53px 0;
+  }
+}
+
+.sf-main-site p {
+  margin: 16px 0;
+}
+
+.sf-main-site .exp h1 {
+  font-family: 'Noto Sans Display', sans-serif;
+  letter-spacing: normal;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 36px;
+  line-height: 125%
+}
+
+@media (min-width:1024px) {
+  .sf-main-site .exp h1 {
+    font-size: 62px;
+    line-height: 125%
+  }
+}
+
+@media (min-width:1920px) {
+  .sf-main-site .exp h1 {
+    font-size: 82px;
+    line-height: 125%
+  }
+}
+
+.sf-main-site .exp h2 {
+  font-family: 'Noto Sans Display', sans-serif !important;
+  letter-spacing: normal !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  font-size: 30px !important;
+  line-height: 125% !important;
+}
+
+@media (min-width:1024px) {
+  .sf-main-site .exp h2 {
+    font-size: 38px !important;
+    line-height: 125% !important;
+  }
+}
+
+@media (min-width:1920px) {
+  .sf-main-site .exp h2 {
+    font-size: 54px !important;
+    line-height: 125% !important;
+  }
+}
+
+.sf-main-site .exp h3 {
+  font-family: 'Noto Sans Display', sans-serif !important;
+  letter-spacing: normal !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+  font-stretch: normal !important;
+  font-size: 22px !important;
+  line-height: 125% !important;
+}
+
+@media (min-width:1024px) {
+  .sf-main-site .exp h3 {
+    font-size: 28px !important;
+    line-height: 125% !important;
+  }
+}
+
+@media (min-width:1920px) {
+  .sf-main-site .exp h3 {
+    font-size: 36px !important;
+    line-height: 125% !important;
+  }
+}
+
+.sf-main-site .exp h4 {
+  font-family: 'Noto Sans', sans-serif;
+  letter-spacing: normal;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 22px;
+  line-height: 125%
+}
+
+@media (min-width:1024px) {
+  .sf-main-site .exp h4 {
+    font-size: 28px;
+    line-height: 125%
+  }
+}
+
+@media (min-width:1920px) {
+  .sf-main-site .exp h4 {
+    font-size: 36px;
+    line-height: 125%
+  }
+}
+
+.sf-main-site .exp h5 {
+  font-family: 'Noto Sans', sans-serif;
+  letter-spacing: normal;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 18px;
+  line-height: 125%
+}
+
+@media (min-width:1024px) {
+  .sf-main-site .exp h5 {
+    font-size: 22px;
+    line-height: 125%
+  }
+}
+
+@media (min-width:1920px) {
+  .sf-main-site .exp h5 {
+    font-size: 32px;
+    line-height: 125%
+  }
+}
+
+.sf-main-site .exp h6 {
+  font-family: 'Noto Sans', sans-serif;
+  letter-spacing: normal;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 16px;
+  line-height: 125%
+}
+
+@media (min-width:1024px) {
+  .sf-main-site .exp h6 {
+    font-size: 18px;
+    line-height: 125%
+  }
+}
+
+@media (min-width:1920px) {
+  .sf-main-site .exp h6 {
+    font-size: 22px;
+    line-height: 125%
+  }
+}
+
+ul.breadcrumb li a {
+  font-size: 16px;
+  line-height: 150%
+}
+
+.bg-b1 ul.sf-breadscrumb.breadcrumb a,
+.bg-b1 ul.sf-breadscrumb.breadcrumb a:visited {
+  color: #013a7e
+}
+
+.bg-b8 ul.sf-breadscrumb.breadcrumb a,
+.bg-b8 ul.sf-breadscrumb.breadcrumb a:visited {
+  color: #90d3fb
+}
+
+.background-widget {
+  display:block;
+  position:relative;
+  padding:40px 0;
+  overflow:hidden;
+  opacity:1;
+  transition:opacity 0.3s
+}
+.background-widget.bg-image {
+  min-height:470px
+}
+.background-widget.bg-white,
+.background-widget.bg-light-gray {
+  color:#3c4245
+}
+.background-widget.bg-white .section-heading,
+.background-widget.bg-white .section-heading a,
+.background-widget.bg-light-gray .section-heading,
+.background-widget.bg-light-gray .section-heading a {
+  color:#3c4245
+}
+.background-widget.bg-white .section-heading:hover,
+.background-widget.bg-white .section-heading a:hover,
+.background-widget.bg-light-gray .section-heading:hover,
+.background-widget.bg-light-gray .section-heading a:hover {
+  color:inherit
+}
+.background-widget.bg-light .heading,
+.background-widget.bg-main .heading,
+.background-widget.bg-dark .heading {
+  color:#fff
+}
+.background-widget.bg-light .date,
+.background-widget.bg-main .date,
+.background-widget.bg-dark .date {
+  color:#fff
+}
+.background-widget.bg-light .description,
+.background-widget.bg-main .description,
+.background-widget.bg-dark .description {
+  color:#fff
+}
+.background-widget>* {
+  position:relative;
+  z-index:2
+}
+.background-widget .section-heading,
+.background-widget .section-heading a {
+  color:#fff
+}
+.background-widget .section-heading:hover,
+.background-widget .section-heading a:hover {
+  color:#fff
+}
+.background-widget[data-src] {
+  opacity:0
+}
+
+.background-widget img,
+.sf-image img {
+  display: block;
+  width: 100%;
+  float: left;
+}
+
+.datadot-portal a {
+  font-size: inherit !important;
+}
+
+.sfContentBlock ul {
+  padding-left: 30px;
+}
+
+@media (max-width: 768px) {
+  .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    display: block;
+    width: 100%;
+  }
+}</style><meta name="twitter:card" content="summary_large_image" /><link rel="canonical" href="https://data.who.int" /><meta name="description" content="Health data statistics and trends from the World Health Organization." /></head> <body class="sf-body " data-bs-theme="light"> <div class="click-handler-overlay"></div> <div class="datadot-portal "> <div class="skip-to-content-container"> <a href="#main" class="btn btn-primary skip-to-content">Skip to content</a> </div> </div>  <div class="datadot-portal "> 
+<div id="NotificationBar_TFF786F31018_Col00" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container"><div class="row" data-sf-element="Row">
+    <div id="NotificationBar_TFF786F31019_Col00" class="sf_colsIn col-md-9" data-sf-element="Column 1" data-placeholder-label="Column 1">
+    </div>
+    <div id="NotificationBar_TFF786F31019_Col01" class="sf_colsIn col-md-3" data-sf-element="Column 2" data-placeholder-label="Column 2">
+    </div>
+</div>
+
+</div>
+
+
+ </div> <!-- header:on --> <!--noindex--><!--stopindex--> <div class="container datadot-portal "> <div class="row"> <div class="col"> <nav class="navigation"> <header> 
+
+<div class="navigation__logo"><a class="navigation__globe" href="/"><img src="/ResourcePackages/DDIBootstrap5/assets/src/images/icons/navigation/who-logo.svg" alt="WHO Logo" title="WHO Logo" /></a>
+    <div class="navigation__title"><span class="link__brand"><span>World Health Organization</span><abbr>WHO</abbr></span>
+        <span class="link__site">Data</span>
+    </div>
+</div>
+<link href="https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/dataDotViz-base-Dg-rvz0R.css" rel="stylesheet" type="text/css" />
+
+<!-- START data.dot.viz import code -->
+<!-- Code for all browsers-->
+<script>
+    window.dataDotVizLegacyPolyfillSrc =
+        'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/polyfills-legacy-Dlof3glI.js';
+    window.dataDotVizChartsSrc = 'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/data-dot-viz-charts-DAM00NYp.js';
+    window.dataDotVizChartsLegacySrc =
+        'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/data-dot-viz-charts-legacy-DzQoSxtP.js';
+    window.dataDotVizWidgetsSrc = 'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/data-dot-viz-widgets-COSG-bJl.js';
+    window.dataDotVizWidgetsLegacySrc =
+        'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/data-dot-viz-widgets-legacy-D3PDejOc.js';
+    window.dataDotVizCovid19WidgetsSrc =
+        'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/data-dot-viz-covid19-widgets-BSjFjt44.js';
+    window.dataDotVizCovid19WidgetsLegacySrc =
+        'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/data-dot-viz-covid19-widgets-legacy-s_JIqcVl.js';
+</script> <div class="navigation__header-items"> <div class="navigation__header-items__top"> 
+
+<ul class="navigation--accent">
+                <li class="navigation__item--heading">More from WHO</li>
+                <li class="website-icon"><a href="https://www.who.int/" target="_blank">WHO Global<i></i></a></li>
+              </ul> 
+
+
+
+<ul>
+    <li class="navigation__item--heading">Settings</li>
+    <li>
+        <button class="navigation__language-toggle">Language</button>
+        <ul class="navigation__language navigation__ul--collapsible">
+            <li class="navigation__language-toggle"><a href="#void">Language<i></i></a></li>
+                <li aria-selected="true"><a data-language="en">English<i></i></a></li>
+                <li aria-selected="false"><a data-language="ar">العربية<i></i></a></li>
+                <li aria-selected="false"><a data-language="zh">中文<i></i></a></li>
+                <li aria-selected="false"><a data-language="fr">Fran&#231;ais<i></i></a></li>
+                <li aria-selected="false"><a data-language="ru">Русский<i></i></a></li>
+                <li aria-selected="false"><a data-language="es">Espa&#241;ol<i></i></a></li>
+        </ul>
+    </li>
+</ul>
+
+ 
+ </div> <div class="navigation__header-items__bottom"> 
+
+
+
+<ul>
+        <li>
+            <a href="/indicators" target="_self">Indicators</a>
+        </li>
+        <li>
+            <a href="/countries" target="_self">Countries</a>
+        </li>
+        <li>
+            <a href="/dashboards/dashboards" target="_self">Dashboards</a>
+        </li>
+        <li>
+            <a href="/about" target="_self">About</a>
+        </li>
+    <li class="navigation__toggle__li">
+        <button class="navigation__toggle">
+            <span class="close-label">Close</span>
+            <span class="menu-label">Menu</span>
+        </button>
+    </li>
+</ul>
+ </div> </div> </header> </nav> </div> </div> </div> <!--/noindex--><!--startindex--> <!-- header:off --> <main id="main" class="sf-main-site main-site main datadot-portal "> <section class="sf-content content"> 
+<div id="PageContent_C220_Col00" class="sf_colsIn container--contrast" data-sf-element="Container" data-placeholder-label="Container"><div id="PageContent_C221_Col00" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container"><div class="row" data-sf-element="Row">
+    <div id="PageContent_C222_Col00" class="sf_colsIn col-md-6" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<article class="card">
+    <div class="card__img-container">
+            <img alt="" src="https://iris.who.int/bitstream/handle/10665/376869/9789240094703-eng.pdf.jpg?sequence=4">
+    </div>
+    <header>
+        <strong>Global report</strong> Published 21 May 2024
+    </header>
+        <a class="lg" href="https://www.who.int/publications/i/item/9789240094703" target="_blank">World Health Statistics 2024</a>
+    <footer class="button-container">
+        <a class="btn btn-primary btn-sm" href="https://www.who.int/publications/i/item/9789240094703" target="_blank">View</a>
+        <a class="btn btn-secondary btn-sm" href="https://iris.who.int/bitstream/handle/10665/376869/9789240094703-eng.pdf?sequence=1">Download<span>4.5 Mb</span></a>
+    </footer>
+</article>
+    </div>
+    <div id="PageContent_C222_Col01" class="sf_colsIn col-md-6" data-sf-element="Column 2" data-placeholder-label="Column 2"><div id="PageContent_C228_Col00" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container">
+<div >
+    <div class="sfContentBlock sf-Long-text" ><p class="large">The <strong>World health statistics</strong> report is the World Health Organization&rsquo;s (WHO) annual compilation of the most recent available data on health and health-related indicators.</p></div>
+</div>
+<div >
+    <div class="sfContentBlock sf-Long-text" ><h2>World health statistics 2024</h2></div>
+</div>
+</div>
+<div id="PageContent_C225_Col00" class="list-menu list-menu--light sf_colsIn" data-sf-element="List menu items" data-placeholder-label="List menu items">
+<div >
+    <div class="sfContentBlock sf-Long-text" ><div class="arrowed-link"><a href="https://www.who.int/publications/i/item/9789240094703" target="_blank" data-sf-ec-immutable="">Read the publication</a></div><div class="arrowed-link"><a href="https://cdn.who.int/media/docs/default-source/gho-documents/world-health-statistic-reports/2024/web_download.xlsx?sfvrsn=4e7bbebd_1" data-sf-ec-immutable="">Download the data</a></div><div class="arrowed-link"><a href="https://www.who.int/data/gho/whs-annex/" target="_blank" data-sf-ec-immutable="">Online data annex</a></div></div>
+</div></div>
+    </div>
+</div>
+
+</div>
+
+</div>
+<div class="row" data-sf-element="Row">
+    <div id="PageContent_C001_Col00" class="sf_colsIn col-md-12 exp" data-sf-element="Column 1" data-placeholder-label="Column 1"><div class="row" data-sf-element="Row">
+    <div id="PageContent_C077_Col00" class="sf_colsIn col-md-12" data-sf-element="Column 1" data-placeholder-label="Column 1"><div id="PageContent_C078_Col00" class="sf_colsIn background-widget bg-b8 bg-171a33 exp" data-sf-element="Background widget" data-placeholder-label="Background widget"><div id="PageContent_C079_Col00" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container"><div class="row" data-sf-element="Row">
+<div id="PageContent_C122_Col00" class="sf_colsIn col-sm-2 col-md-1 col-lg-0" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sfContentBlock sf-Long-text" ></div>
+</div>
+</div>
+<div id="PageContent_C122_Col01" class="sf_colsIn col-sm-8 col-md-10 col-lg-12" data-sf-element="Column 2" data-placeholder-label="Column 2"><div id="PageContent_C135_Col00" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container">
+<div >
+    <div class="sfContentBlock sf-Long-text" ><h2>Triple Billion progress</h2></div>
+</div>
+</div>
+
+</div>
+<div id="PageContent_C122_Col02" class="sf_colsIn col-sm-2 col-md-1 col-lg-0" data-sf-element="Column 3" data-placeholder-label="Column 3">
+</div>
+</div>
+<div class="row" data-sf-element="Row">
+    <div id="PageContent_C080_Col00" class="sf_colsIn col-sm-12 col-md-12 col-lg-4" data-sf-element="Column 1" data-placeholder-label="Column 1"><div id="PageContent_C121_Col00" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container"><div class="row" data-sf-element="Row">
+    <div id="PageContent_C090_Col00" class="sf_colsIn col-sm-2 col-md-1 col-lg-0" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sfContentBlock sf-Long-text" ></div>
+</div>
+    </div>
+    <div id="PageContent_C090_Col01" class="sf_colsIn col-sm-8 col-md-10 col-lg-12" data-sf-element="Column 2" data-placeholder-label="Column 2"><div class="row" data-sf-element="Row">
+    <div id="PageContent_C086_Col00" class="sf_colsIn col-sm-12 col-md-6 col-lg-12" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sfContentBlock sf-Long-text" ><p class="large"><strong>Healthier populations</strong></p></div>
+</div>
+
+        <img loading="lazy" src="/images/librariesprovider22/default-album/hpop.jpg?sfvrsn=97f80407_0" title="HPOP" alt="HPOP"
+         
+          />
+
+    </div>
+    <div id="PageContent_C086_Col01" class="sf_colsIn col-sm-12 col-md-6 col-lg-12" data-sf-element="Column 2" data-placeholder-label="Column 2">
+<!--
+  
+<div
+class="dataDotViz-chartConfig dataDotViz-reset dataDotViz-theme dataDotViz-theme-dark"
+data-type="line"
+data-data-source="void"
+data-indicator="hpop_healthier"
+data-dimensions="spatial:GLOBAL:GLOBAL"
+data-line-target-value="1000000000"
+data-line-target-flag-position="2025"
+data-line-soft-uncertainties="true"
+data-line-show-legend="false"
+data-auto-annotations="none"
+data-color-sequence-offset="3"
+data-extent-min="0"
+data-extent-max="2000000000"
+data-data='{"measurement":"absolute","timeDims":["2018","2019","2020","2021","2022","2023","2024","2025"],"spatialDims":[{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"disaggregatingDims":{},"disaggregatingDimCombinations":[],"dataPoints":[{"id":"hpop_healthier-2018","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2018","date":"2018-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2018","date":"2018-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":0,"value":0,"valueHigh":0},{"id":"hpop_healthier-2019","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2019","date":"2019-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2019","date":"2019-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":405677640,"value":410618431,"valueHigh":415519495},{"id":"hpop_healthier-2020","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2020","date":"2020-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2020","date":"2020-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":466482450,"value":606086742,"valueHigh":740605550},{"id":"hpop_healthier-2021","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2021","date":"2021-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2021","date":"2021-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":710370408,"value":910313134,"valueHigh":1086155422},{"id":"hpop_healthier-2022","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2022","date":"2022-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2022","date":"2022-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":839086474,"value":1083239540,"valueHigh":1297238499,"status":["projected"]},{"id":"hpop_healthier-2023","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2023","date":"2023-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2023","date":"2023-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":959755443,"value":1256155433,"valueHigh":1489797102,"status":["projected"]},{"id":"hpop_healthier-2024","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2024","date":"2024-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2024","date":"2024-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":1097745376,"value":1410968004,"valueHigh":1665002086,"status":["projected"]},{"id":"hpop_healthier-2025","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2025","date":"2025-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2025","date":"2025-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":1212136444,"value":1549296887,"valueHigh":1819635252,"status":["projected"]}]}'
+></div>
+  
+  <!-- -->
+    </div>
+    <div id="PageContent_C086_Col02" class="sf_colsIn col-sm-12 col-md-12 col-lg-12" data-sf-element="Column 3" data-placeholder-label="Column 3"><div class="row" data-sf-element="Row">
+    <div id="PageContent_C095_Col00" class="sf_colsIn col-sm-0 col-md-6 col-lg-0" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sfContentBlock sf-Long-text" ></div>
+</div>
+    </div>
+    <div id="PageContent_C095_Col01" class="sf_colsIn col-sm-12 col-md-6 col-lg-12" data-sf-element="Column 2" data-placeholder-label="Column 2">
+<div >
+    <div class="sfContentBlock sf-Long-text" ><p class="large">Worldwide, <strong data-testid="dataDotViz-3bn-text-unit">the number of additional people expected to be enjoying better health and wellbeing</strong>
+ is projected to be
+      <strong data-testid="dataDotViz-3bn-text-value">1.5bn (1.2bn &ndash; 1.8bn)</strong>
+ by
+      <strong data-testid="dataDotViz-3bn-text-time-dim">2025</strong> compared to
+        2018.</p></div>
+</div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+    </div>
+    <div id="PageContent_C090_Col02" class="sf_colsIn col-sm-2 col-md-1 col-lg-12" data-sf-element="Column 3" data-placeholder-label="Column 3">
+    </div>
+</div>
+
+</div>
+
+    </div>
+    <div id="PageContent_C080_Col01" class="sf_colsIn col-sm-12 col-md-12 col-lg-4" data-sf-element="Column 2" data-placeholder-label="Column 2"><div id="PageContent_C119_Col00" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container"><div class="row" data-sf-element="Row">
+    <div id="PageContent_C097_Col00" class="sf_colsIn col-sm-2 col-md-1 col-lg-0" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sfContentBlock sf-Long-text" ></div>
+</div>
+    </div>
+    <div id="PageContent_C097_Col01" class="sf_colsIn col-sm-8 col-md-10 col-lg-12" data-sf-element="Column 2" data-placeholder-label="Column 2"><div class="row" data-sf-element="Row">
+    <div id="PageContent_C099_Col00" class="sf_colsIn col-sm-12 col-md-6 col-lg-12" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sfContentBlock sf-Long-text" ><p class="large"><strong>Universal health coverage</strong></p></div>
+</div>
+
+        <img loading="lazy" src="/images/librariesprovider22/default-album/uhc.jpg?sfvrsn=b5907eb2_2" title="UHC" alt="UHC"
+         
+          />
+
+    </div>
+    <div id="PageContent_C099_Col01" class="sf_colsIn col-sm-12 col-md-6 col-lg-12" data-sf-element="Column 2" data-placeholder-label="Column 2">
+<!--
+<div
+class="dataDotViz-chartConfig dataDotViz-reset dataDotViz-theme dataDotViz-theme-dark"
+data-type="line"
+data-data-source="void"
+data-indicator="uhc_sm"
+data-dimensions="spatial:GLOBAL:GLOBAL"
+data-line-target-value="1000000000"
+data-line-target-flag-position="2025"
+data-line-soft-uncertainties="true"
+data-line-show-legend="false"
+data-auto-annotations="none"
+data-color-sequence-offset="1"
+data-extent-min="0"
+data-extent-max="2000000000"
+data-data='{"measurement":"absolute","timeDims":["2018","2019","2020","2021","2022","2023","2024","2025"],"spatialDims":[{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"disaggregatingDims":{},"disaggregatingDimCombinations":[],"dataPoints":[{"id":"uhc_sm-2018","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2018","date":"2018-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2018","date":"2018-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":0,"value":0,"valueHigh":0},{"id":"uhc_sm-2019","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2019","date":"2019-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2019","date":"2019-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":112579114,"value":122665847,"valueHigh":133870163},{"id":"uhc_sm-2020","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2020","date":"2020-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2020","date":"2020-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":119886744,"value":135305946,"valueHigh":149110518},{"id":"uhc_sm-2021","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2021","date":"2021-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2021","date":"2021-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":147773315,"value":168286781,"valueHigh":187908137},{"id":"uhc_sm-2022","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2022","date":"2022-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2022","date":"2022-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":342928239,"value":379972130,"valueHigh":415658951,"status":["projected"]},{"id":"uhc_sm-2023","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2023","date":"2023-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2023","date":"2023-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":433587239,"value":477472836,"valueHigh":523630063,"status":["projected"]},{"id":"uhc_sm-2024","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2024","date":"2024-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2024","date":"2024-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":518617347,"value":566204192,"valueHigh":614361826,"status":["projected"]},{"id":"uhc_sm-2025","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2025","date":"2025-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2025","date":"2025-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":586423005,"value":642568343,"valueHigh":696451484,"status":["projected"]}]}'
+></div>
+  <!-- -->
+    </div>
+    <div id="PageContent_C099_Col02" class="sf_colsIn col-sm-12 col-md-12 col-lg-12" data-sf-element="Column 3" data-placeholder-label="Column 3"><div class="row" data-sf-element="Row">
+    <div id="PageContent_C102_Col00" class="sf_colsIn col-sm-0 col-md-6 col-lg-0" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sfContentBlock sf-Long-text" ></div>
+</div>
+    </div>
+    <div id="PageContent_C102_Col01" class="sf_colsIn col-sm-12 col-md-6 col-lg-12" data-sf-element="Column 2" data-placeholder-label="Column 2">
+<div >
+    <div class="sfContentBlock sf-Long-text" ><p class="large">Worldwide, <strong data-testid="dataDotViz-3bn-text-unit">the number of additional people expected to be covered by essential services and not experiencing financial hardship</strong>
+ is projected to be
+      <strong data-testid="dataDotViz-3bn-text-value">585m (526.1m &ndash; 639.5m)</strong>
+ by
+      <strong data-testid="dataDotViz-3bn-text-time-dim">2025</strong> compared to
+        2018.</p></div>
+</div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+    </div>
+    <div id="PageContent_C097_Col02" class="sf_colsIn col-sm-2 col-md-1 col-lg-12" data-sf-element="Column 3" data-placeholder-label="Column 3">
+    </div>
+</div>
+
+</div>
+
+    </div>
+    <div id="PageContent_C080_Col02" class="sf_colsIn col-sm-12 col-md-12 col-lg-4" data-sf-element="Column 3" data-placeholder-label="Column 3"><div id="PageContent_C118_Col00" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container"><div class="row" data-sf-element="Row">
+    <div id="PageContent_C107_Col00" class="sf_colsIn col-sm-2 col-md-1 col-lg-0" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sfContentBlock sf-Long-text" ></div>
+</div>
+    </div>
+    <div id="PageContent_C107_Col01" class="sf_colsIn col-sm-8 col-md-10 col-lg-12" data-sf-element="Column 2" data-placeholder-label="Column 2"><div class="row" data-sf-element="Row">
+    <div id="PageContent_C109_Col00" class="sf_colsIn col-sm-12 col-md-6 col-lg-12" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sfContentBlock sf-Long-text" ><p class="large"><strong>Health emergencies protection</strong></p></div>
+</div>
+
+        <img loading="lazy" src="/images/librariesprovider22/default-album/hep.jpg?sfvrsn=1e55a306_2" title="HEP" alt="HEP"
+         
+          />
+
+    </div>
+    <div id="PageContent_C109_Col01" class="sf_colsIn col-sm-12 col-md-6 col-lg-12" data-sf-element="Column 2" data-placeholder-label="Column 2">
+<!--
+  
+<div
+class="dataDotViz-chartConfig dataDotViz-reset dataDotViz-theme dataDotViz-theme-dark"
+data-type="line"
+data-data-source="void"
+data-indicator="hep_idx"
+data-dimensions="spatial:GLOBAL:GLOBAL"
+data-line-target-value="1000000000"
+data-line-target-flag-position="2025"
+data-line-soft-uncertainties="true"
+data-line-show-legend="false"
+data-auto-annotations="none"
+data-color-sequence-offset="2"
+data-extent-min="0"
+data-extent-max="2000000000"
+data-data='{"measurement":"absolute","timeDims":["2018","2019","2020","2021","2022","2023","2024","2025"],"spatialDims":[{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"disaggregatingDims":{},"disaggregatingDimCombinations":[],"dataPoints":[{"id":"hep_idx-2018","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2018","date":"2018-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2018","date":"2018-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":0,"value":0,"valueHigh":0},{"id":"hep_idx-2019","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2019","date":"2019-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2019","date":"2019-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":314249162,"value":314249162,"valueHigh":314249162},{"id":"hep_idx-2020","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2020","date":"2020-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2020","date":"2020-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":404590983,"value":404590983,"valueHigh":404590983},{"id":"hep_idx-2021","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2021","date":"2021-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2021","date":"2021-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":358839743,"value":364617298,"valueHigh":368579360},{"id":"hep_idx-2022","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2022","date":"2022-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2022","date":"2022-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":462445530,"value":489496398,"valueHigh":514505388,"status":["projected"]},{"id":"hep_idx-2023","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2023","date":"2023-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2023","date":"2023-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":591236749,"value":689611499,"valueHigh":784150851,"status":["projected"]},{"id":"hep_idx-2024","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2024","date":"2024-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2024","date":"2024-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":706086693,"value":845432351,"valueHigh":970907693,"status":["projected"]},{"id":"hep_idx-2025","spatialDim":{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"},"temporalDim":{"dim":"temporal","type":"YEAR","value":"2025","date":"2025-01-01T00:00:00.000Z"},"dimensions":[{"dim":"temporal","type":"YEAR","value":"2025","date":"2025-01-01T00:00:00.000Z"},{"dim":"spatial","type":"GLOBAL","value":"GLOBAL","name":"Monde"}],"valueLow":738832507,"value":896656805,"valueHigh":1044737565,"status":["projected"]}]}'
+></div>
+  <!-- -->
+    </div>
+    <div id="PageContent_C109_Col02" class="sf_colsIn col-sm-12 col-md-12 col-lg-12" data-sf-element="Column 3" data-placeholder-label="Column 3"><div class="row" data-sf-element="Row">
+    <div id="PageContent_C111_Col00" class="sf_colsIn col-sm-0 col-md-6 col-lg-0" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sfContentBlock sf-Long-text" ></div>
+</div>
+    </div>
+    <div id="PageContent_C111_Col01" class="sf_colsIn col-sm-12 col-md-6 col-lg-12" data-sf-element="Column 2" data-placeholder-label="Column 2">
+<div >
+    <div class="sfContentBlock sf-Long-text" ><div data-testid="dataDotViz-chart"><p class="large" data-testid="dataDotViz-3bn-text">Worldwide, <strong data-testid="dataDotViz-3bn-text-unit">the number of additional people expected to be protected from health emergencies</strong>
+ is projected to be
+            <strong data-testid="dataDotViz-3bn-text-value">776.9m (647.4m &ndash; 912.5m)</strong>
+ by
+            <strong data-testid="dataDotViz-3bn-text-time-dim">2025</strong> compared to
+            2018.
+        </p></div></div>
+</div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+    </div>
+    <div id="PageContent_C107_Col02" class="sf_colsIn col-sm-2 col-md-1 col-lg-12" data-sf-element="Column 3" data-placeholder-label="Column 3">
+    </div>
+</div>
+
+</div>
+
+    </div>
+</div>
+<div class="row" data-sf-element="Row">
+    <div id="PageContent_C125_Col00" class="sf_colsIn col-sm-12 col-md-12 col-lg-6" data-sf-element="Column 1" data-placeholder-label="Column 1"><div id="PageContent_C126_Col00" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container"><div class="row" data-sf-element="Row">
+    <div id="PageContent_C128_Col00" class="sf_colsIn col-sm-2 col-md-1 col-lg-0" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sfContentBlock sf-Long-text" ></div>
+</div>
+    </div>
+    <div id="PageContent_C128_Col01" class="sf_colsIn col-sm-8 col-md-10 col-lg-12" data-sf-element="Column 2" data-placeholder-label="Column 2">
+<div >
+    <div class="sfContentBlock sf-Long-text" ><p>&nbsp;</p><p class="large">The triple billion targets provide a unified approach to accelerating progress towards the achievement of the health-related Sustainable Development Goals.</p></div>
+</div><div id="PageContent_C195_Col00" class="list-menu list-menu--dark sf_colsIn" data-sf-element="List menu items" data-placeholder-label="List menu items">
+<div >
+    <div class="sfContentBlock sf-Long-text" ><div class="arrowed-link"><a href="https://data.who.int/dashboards/global-progress/triple-billion?n=o" data-sf-ec-immutable="">Learn more about the Triple Billions</a></div></div>
+</div></div>
+    </div>
+    <div id="PageContent_C128_Col02" class="sf_colsIn col-sm-2 col-md-1 col-lg-0" data-sf-element="Column 3" data-placeholder-label="Column 3">
+    </div>
+</div>
+
+</div>
+
+    </div>
+    <div id="PageContent_C125_Col01" class="sf_colsIn col-sm-12 col-md-12 col-lg-6" data-sf-element="Column 2" data-placeholder-label="Column 2"><div id="PageContent_C127_Col00" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container"><div class="row" data-sf-element="Row">
+    <div id="PageContent_C130_Col00" class="sf_colsIn col-sm-2 col-md-1 col-lg-0" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sfContentBlock sf-Long-text" ></div>
+</div>
+    </div>
+    <div id="PageContent_C130_Col01" class="sf_colsIn col-sm-8 col-md-10 col-lg-12" data-sf-element="Column 2" data-placeholder-label="Column 2">
+<div >
+    <div class="sfContentBlock sf-Long-text" ><p>&nbsp;</p><hr /><p>Estimates are calculated with 90% uncertainty intervals (UI) and presented as the upper and lower bounds in the closed brackets after the mean estimate.</p></div>
+</div>
+    </div>
+    <div id="PageContent_C130_Col02" class="sf_colsIn col-sm-2 col-md-1 col-lg-0" data-sf-element="Column 3" data-placeholder-label="Column 3">
+    </div>
+</div>
+
+</div>
+
+    </div>
+</div>
+
+</div>
+
+</div>
+
+    </div>
+</div>
+<div class="row" data-sf-element="Row">
+    <div id="PageContent_C013_Col00" class="sf_colsIn col-md-12 exp" data-sf-element="Column 1" data-placeholder-label="Column 1"><div id="PageContent_C015_Col00" class="sf_colsIn background-widget bg-white exp" data-sf-element="Background widget" data-placeholder-label="Background widget"><div id="PageContent_C014_Col00" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container"><div class="row" data-sf-element="Row">
+<div id="PageContent_C018_Col00" class="sf_colsIn col-sm-2 col-md-1 col-lg-0" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sfContentBlock sf-Long-text" >&nbsp;</div>
+</div>
+</div>
+<div id="PageContent_C018_Col01" class="sf_colsIn col-sm-8 col-md-10 col-lg-12" data-sf-element="Column 2" data-placeholder-label="Column 2"><div id="PageContent_C146_Col00" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container"><div class="row" data-sf-element="Row">
+    <div id="PageContent_C150_Col00" class="sf_colsIn col-md-12" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sfContentBlock sf-Long-text" ><h2>Featured indicator</h2></div>
+</div><div class="row" data-sf-element="Row">
+<div id="PageContent_C151_Col00" class="sf_colsIn col-sm-12 col-md-5 col-lg-5" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sfContentBlock sf-Long-text" ><h4>Under-five mortality rate (per 1000 live births)</h4><p>Probability of a child born in a specific year or period dying before reaching the age of five, if subject to age-specific mortality rates of that period. (SDG 3.2.1)<br /><br /></p></div>
+</div><div id="PageContent_C196_Col00" class="list-menu list-menu--default sf_colsIn" data-sf-element="List menu items" data-placeholder-label="List menu items">
+<div >
+    <div class="sfContentBlock sf-Long-text" ><div class="arrowed-link"><a href="https://data.who.int/indicators/i/E3CAF2B/2322814" data-sf-ec-immutable="">Visit indicator</a></div><div class="arrowed-link"><a href="https://srhdpeuwpubsa.blob.core.windows.net/whdh/DATADOT/INDICATOR/2322814_ALL_LATEST.csv" data-sf-ec-immutable="">Download data</a></div><div class="arrowed-link"><a href="/indicators">All indicators</a></div></div>
+</div></div>
+</div>
+<div id="PageContent_C151_Col01" class="sf_colsIn col-sm-0 col-md-1 col-lg-1" data-sf-element="Column 2" data-placeholder-label="Column 2">
+</div>
+<div id="PageContent_C151_Col02" class="sf_colsIn col-sm-12 col-md-6 col-lg-6" data-sf-element="Column 3" data-placeholder-label="Column 3">
+<!-- 
+<div class="dataDotViz-chartConfig"
+  data-type="line"
+  data-data-source="xmartdatadot"
+  data-data-source-flags="useIndId"
+  data-indicator="2322814MDG_0000000007"
+  data-dimensions="spatial:WHOREGION:*|disaggregating:DIM_SEX:TOTAL|disaggregating:DIM_AGE:Y_LT5"
+  data-sort-by="dim"
+  data-sort-order="asc"
+  data-show-legend="true"
+  data-line-soft-uncertainties="true"
+  data-line-allow-non-zero-axis="true"></div>
+    
+    <!-- -->
+
+        <img loading="lazy" src="/images/librariesprovider22/default-album/under5.jpg?sfvrsn=71cecbec_2" title="under5" alt="under5"
+         
+          />
+
+<div >
+    <div class="sfContentBlock sf-Long-text" ><p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WHO Regions, mortality rate per 1000 live births</em></p></div>
+</div>
+</div>
+</div>
+
+    </div>
+</div>
+
+</div>
+
+</div>
+<div id="PageContent_C018_Col02" class="sf_colsIn col-sm-2 col-md-1 col-lg-0" data-sf-element="Column 3" data-placeholder-label="Column 3">
+</div>
+</div>
+
+</div>
+
+</div>
+<div class="row" data-sf-element="Row">
+    <div id="PageContent_C034_Col00" class="sf_colsIn col-md-12 exp" data-sf-element="Column 1" data-placeholder-label="Column 1"><div id="PageContent_C035_Col00" class="sf_colsIn background-widget bg-b1" data-sf-element="Background widget" data-placeholder-label="Background widget"><div id="PageContent_C036_Col00" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container"><div class="row" data-sf-element="Row">
+<div id="PageContent_C155_Col00" class="sf_colsIn col-sm-2 col-md-1 col-lg-0" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sfContentBlock sf-Long-text" ></div>
+</div>
+</div>
+<div id="PageContent_C155_Col01" class="sf_colsIn col-sm-8 col-md-10 col-lg-12" data-sf-element="Column 2" data-placeholder-label="Column 2"><div id="PageContent_C158_Col00" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container"><div class="row" data-sf-element="Row">
+    <div id="PageContent_C164_Col00" class="sf_colsIn col-md-12" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sfContentBlock sf-Long-text" ><h2>Design innovation and diversity</h2></div>
+</div>
+    </div>
+</div>
+<div class="row" data-sf-element="Row">
+    <div id="PageContent_C159_Col00" class="sf_colsIn col-md-6" data-sf-element="Column 1" data-placeholder-label="Column 1"><div class="row" data-sf-element="Row">
+    <div id="PageContent_C165_Col00" class="sf_colsIn col-sm-12 col-md-12 col-lg-10" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sfContentBlock sf-Long-text" ><p class="large">Through data.who.int, the World Health Organization is continuing to nurture community around health data; fostering ideation, facilitating innovation and increasing capacity across the field.</p><p class="large">data.who.int will host diverse and engaging representations for trusted health data; pairing statisticians and technical leads with world-class data designers from around the world.</p><p>&nbsp;</p></div>
+</div><div id="PageContent_C198_Col00" class="list-menu list-menu--light sf_colsIn" data-sf-element="List menu items" data-placeholder-label="List menu items">
+<div >
+    <div class="sfContentBlock sf-Long-text" ><div class="arrowed-link"><a href="/about/datadot/design-innovation-diversity">Learn more</a></div></div>
+</div></div>
+    </div>
+    <div id="PageContent_C165_Col01" class="sf_colsIn col-sm-0 col-md-0 col-lg-2" data-sf-element="Column 2" data-placeholder-label="Column 2">
+    </div>
+</div>
+
+    </div>
+    <div id="PageContent_C159_Col01" class="sf_colsIn col-md-6" data-sf-element="Column 2" data-placeholder-label="Column 2"><div class="row" data-sf-element="Row">
+    <div id="PageContent_C162_Col00" class="sf_colsIn col-sm-0 col-md-1 col-lg-1" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sfContentBlock sf-Long-text" ></div>
+</div>
+    </div>
+    <div id="PageContent_C162_Col01" class="sf_colsIn col-sm-12 col-md-10 col-lg-10" data-sf-element="Column 2" data-placeholder-label="Column 2">
+
+        <img loading="lazy" src="/images/librariesprovider22/creators/19e688d/who_datadot_creators_19e688d_a.tmb-549v.jpg?Culture=en&amp;sfvrsn=1f00331d_2" title="WHO_Datadot_Creators_19E688D_a" alt="Poster of Antibiotic Consumption data design sitting on a wooden desk"
+         
+          />
+
+    </div>
+    <div id="PageContent_C162_Col02" class="sf_colsIn col-sm-0 col-md-1 col-lg-1" data-sf-element="Column 3" data-placeholder-label="Column 3">
+    </div>
+</div>
+
+    </div>
+</div>
+
+</div>
+
+</div>
+<div id="PageContent_C155_Col02" class="sf_colsIn col-sm-2 col-md-1 col-lg-0" data-sf-element="Column 3" data-placeholder-label="Column 3">
+</div>
+</div>
+
+</div>
+
+</div>
+<div class="row" data-sf-element="Row">
+    <div id="PageContent_C046_Col00" class="sf_colsIn col-md-12 exp" data-sf-element="Column 1" data-placeholder-label="Column 1"><div id="PageContent_C047_Col00" class="sf_colsIn background-widget bg-white" data-sf-element="Background widget" data-placeholder-label="Background widget"><div id="PageContent_C168_Col00" class="sf_colsIn container" data-sf-element="Container" data-placeholder-label="Container"><div class="row" data-sf-element="Row">
+<div id="PageContent_C167_Col00" class="sf_colsIn col-sm-2 col-md-1 col-lg-0" data-sf-element="Column 1" data-placeholder-label="Column 1">
+<div >
+    <div class="sfContentBlock sf-Long-text" ></div>
+</div>
+</div>
+<div id="PageContent_C167_Col01" class="sf_colsIn col-sm-8 col-md-10 col-lg-12" data-sf-element="Column 2" data-placeholder-label="Column 2">
+<div >
+    <div class="sfContentBlock sf-Long-text" ><h5 style="text-align:left;">WHO is building a new home for health data at data.who.int. While data products and resources are migrated you can find more at <a href="http://www.who.int/data" data-sf-ec-immutable="">www.who.int/data</a> and on the <a href="https://www.who.int/data/gho" data-sf-ec-immutable="">Global Health Observatory</a>.</h5><h5 style="text-align:left;">Please <a href="mailto:whdh@who.int">contact us</a> if you'd like more information about the work of the World Health Data Hub and the release of data.who.int.</h5></div>
+</div>
+</div>
+<div id="PageContent_C167_Col02" class="sf_colsIn col-sm-2 col-md-1 col-lg-0" data-sf-element="Column 3" data-placeholder-label="Column 3">
+</div>
+</div>
+
+</div>
+
+</div>
+
+<style>
+
+    /* Override background color */
+
+    .dataDotViz-theme-dark {
+
+      --dd-color-background-base: #001437 !important;
+
+    }
+
+</style>
+<link href="https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/dataDotViz-base-4Pq789ER.css?package=DDIBootstrap5" rel="stylesheet" type="text/css" />
+
+<!-- START data.dot.viz import code -->
+<!-- Code for all browsers-->
+<script>
+    window.dataDotVizLegacyPolyfillSrc =
+        'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/polyfills-legacy-0TarHeEt.js?package=DDIBootstrap5';
+    window.dataDotVizChartsSrc = 'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/data-dot-viz-charts-_yu9GW7Z.js?package=DDIBootstrap5';
+    window.dataDotVizChartsLegacySrc =
+        'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/data-dot-viz-charts-legacy-0fa4m0RY.js?package=DDIBootstrap5';
+    window.dataDotVizWidgetsSrc = 'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/data-dot-viz-widgets-KUiAsYyd.js?package=DDIBootstrap5';
+    window.dataDotVizWidgetsLegacySrc =
+        'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/data-dot-viz-widgets-legacy-bzBCD7m7.js?package=DDIBootstrap5';
+    window.dataDotVizCovid19WidgetsSrc =
+        'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/data-dot-viz-covid19-widgets-g5cxfnbu.js?package=DDIBootstrap5';
+    window.dataDotVizCovid19WidgetsLegacySrc =
+        'https://datadot-dcg6ejhjhscqdndb.z01.azurefd.net/charting-library/data-dot-viz-covid19-widgets-legacy-snis3CAQ.js?package=DDIBootstrap5';
+</script>
+<!-- START data.dot.viz import code -->
+<!-- Code for all browsers-->
+<script>
+    // Cross-browser init functions
+    function dataDotVizInitCharts() {
+        // Init charts from embedded HTML config
+        window.dataDotViz.renderCharts(
+            window.dataDotViz.defaultEngineConfig,
+            document.body
+        );
+
+        // Init charts from embedded JSON config
+        Array.prototype.slice
+            .call(document.querySelectorAll('.dataDotViz-jsonChartConfig'))
+            .forEach(
+                function(element) {
+                    var json = element.getAttribute('data-data-dot-viz-json-config');
+                    if (!json) return;
+                    var config;
+                    try {
+                        config = JSON.parse(json);
+                    } catch (error) {
+                        console.error('Could not parse chart config:', json);
+                        return;
+                    }
+                    window.dataDotViz.renderChartFromConfig(
+                        window.dataDotViz.defaultEngineConfig,
+                        element,
+                        config
+                    );
+                    element.classList.remove('dataDotViz-jsonChartConfig');
+                }
+            );
+    }
+
+    function dataDotVizInitWidgets() {
+        var element = document.getElementById('data-visualization');
+        if (!element) return;
+        var elementDataSet = element.dataset;
+        var dataWidgetConfig = elementDataSet.widgetConfig,
+            dataWidgetConfigOverride = elementDataSet.widgetConfigOverride,
+            dataWidgetType = elementDataSet.widgetType,
+            config = {
+                element: element
+            };
+        if (typeof dataWidgetConfig === 'undefined') {
+            return;
+        }
+        if (typeof dataWidgetConfigOverride !== 'undefined') {
+            config = Object.assign(config, JSON.parse(dataWidgetConfig), JSON.parse(dataWidgetConfigOverride));
+        } else {
+            config = Object.assign(config, JSON.parse(dataWidgetConfig));
+        }
+
+        if (dataWidgetType === 'country-explorer') {
+            // Country explorer configuration
+            window.dataDotVizWidgets.renderSimpleIndicatorCountryExplorer(config);
+            return;
+        }
+        // Category explorer configuration
+        window.dataDotVizWidgets.renderCategoryExplorer(config);
+    }
+
+    function dataDotVizInitLegacy() {
+        System.import(dataDotVizWidgetsLegacySrc).then(dataDotVizInitWidgets);
+        System.import(dataDotVizChartsLegacySrc).then(dataDotVizInitCharts);
+    }
+
+    function dataDotVizLoadLegacyPolyfill() {
+        if (window.System) {
+            dataDotVizInitLegacy();
+        } else if (!window.dataDotVizIsLoadingLegacyPolyfill) {
+            window.dataDotVizIsLoadingLegacyPolyfill = true;
+            var script = document.createElement('script');
+            script.src = dataDotVizLegacyPolyfillSrc;
+            script.onload = dataDotVizInitLegacy;
+            document.body.appendChild(script);
+        }
+    }
+</script>
+<!-- ESM -->
+<script type="module">
+    // Use dynamic import. This causes a syntax error in browsers that don't, stopping the script.
+    import(dataDotVizChartsSrc).then(dataDotVizInitCharts);
+    import(dataDotVizWidgetsSrc).then(dataDotVizInitWidgets);
+    window.dataDotVizDynamicImportSupported = true;
+</script>
+<!--
+  Fall back to legacy build when dynamic import is unsupported
+  (Chrome 61-62, Firefox 60-66, Edge 16-78 and Safari 10.3-11.0).
+-->
+<script type="module">
+    if (!window.dataDotVizDynamicImportSupported) {
+        dataDotVizLoadLegacyPolyfill();
+    }
+</script>
+<!-- Non-ESM -->
+<script nomodule>
+    dataDotVizLoadLegacyPolyfill();
+</script>
+<!-- END data.dot.viz import code -->
+
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+ </section> </main> <!-- footer:on --> <!--noindex--><!--stopindex--> <div class="datadot-portal"> <footer class="footer"> <div class="footer__top"> <div class="container"> <div class="row"> <div class="col-12"> 
+
+<div class="footer__desktop">
+    <div class="footer__row">
+        <h3>Datadot</h3>
+            <ul>
+                    <li><a href="/redirect-pages/footer/datadot/home" target="_self">Home</a></li>
+                    <li><a href="/redirect-pages/footer/datadot/indicators" target="_self">Indicators</a></li>
+                    <li><a href="/redirect-pages/footer/datadot/products" target="_self">Countries</a></li>
+                    <li><a href="/redirect-pages/footer/datadot/about" target="_self">About</a></li>
+            </ul>
+    </div>
+    <div class="footer__row">
+        <h3>More data from WHO</h3>
+            <ul>
+                    <li><a href="/redirect-pages/footer/more-data/who.int-data" target="_blank">who.int/data</a></li>
+                    <li><a href="/redirect-pages/footer/more-data/triple-billion-dashboard" target="_blank">Global Health Estimates</a></li>
+                    <li><a href="/redirect-pages/footer/more-data/ddi" target="_blank">Health Inequality Monitor</a></li>
+                    <li><a href="/redirect-pages/footer/more-data/covid-19-dashboard" target="_blank">COVID-19 dashboard</a></li>
+            </ul>
+    </div>
+    <div class="footer__row">
+        <h3>Learn more</h3>
+            <ul>
+                    <li><a href="/redirect-pages/footer/learn-more/data-principles" target="_self">WHO data principles</a></li>
+                    <li><a href="/redirect-pages/footer/learn-more/who-data-policy" target="_self">WHO data policy</a></li>
+                    <li><a href="/redirect-pages/footer/learn-more/terms-and-conditions" target="_self">Terms and conditions</a></li>
+                    <li><a href="/redirect-pages/footer/learn-more/language-translations" target="_self">Language translations</a></li>
+            </ul>
+    </div>
+</div>
+<div class="footer__mobile">
+    <div class="footer__row">
+        <details>
+            <summary>Datadot</summary>
+                <ul>
+                        <li><a href="/redirect-pages/footer/datadot/home" target="_self">Home</a></li>
+                        <li><a href="/redirect-pages/footer/datadot/indicators" target="_self">Indicators</a></li>
+                        <li><a href="/redirect-pages/footer/datadot/products" target="_self">Countries</a></li>
+                        <li><a href="/redirect-pages/footer/datadot/about" target="_self">About</a></li>
+                </ul>
+        </details>
+    </div>
+    <div class="footer__row">
+        <details>
+            <summary>More data from WHO</summary>
+                <ul>
+                        <li><a href="/redirect-pages/footer/more-data/who.int-data" target="_blank">who.int/data</a></li>
+                        <li><a href="/redirect-pages/footer/more-data/triple-billion-dashboard" target="_blank">Global Health Estimates</a></li>
+                        <li><a href="/redirect-pages/footer/more-data/ddi" target="_blank">Health Inequality Monitor</a></li>
+                        <li><a href="/redirect-pages/footer/more-data/covid-19-dashboard" target="_blank">COVID-19 dashboard</a></li>
+                </ul>
+        </details>
+    </div>
+    <div class="footer__row">
+        <details>
+            <summary>Learn more</summary>
+                <ul>
+                        <li><a href="/redirect-pages/footer/learn-more/data-principles" target="_self">WHO data principles</a></li>
+                        <li><a href="/redirect-pages/footer/learn-more/who-data-policy" target="_self">WHO data policy</a></li>
+                        <li><a href="/redirect-pages/footer/learn-more/terms-and-conditions" target="_self">Terms and conditions</a></li>
+                        <li><a href="/redirect-pages/footer/learn-more/language-translations" target="_self">Language translations</a></li>
+                </ul>
+        </details>
+    </div>
+</div>
+
+
+ </div> </div> </div> </div> <div class="container"> <div class="row"> <div class="col-12"> <div class="footer__bottom"> 
+
+<a href="/">
+    <img src="/ResourcePackages/DDIBootstrap5/assets/src/images/icons/navigation/who-logo.svg" alt="WHO Logo" />
+</a>
+<ul>
+    <li><a href="/">Privacy legal notice</a></li>
+    <li>&copy;2024 WHO</li>
+</ul>
+
+ </div> </div> </div> </div> </footer> </div> <!--/noindex--><!--startindex--> <!-- footer:off --> <!-- js to scrape:on --> <script type='text/javascript' src='/ResourcePackages/DDIBootstrap5/assets/src/scripts/components/navigation.js?v=12.1.7126.25288'></script> <!-- js to scrape:off --> <script>
+        var navigation;
+        (function () {
+            navigation = new Navigation();
+            navigation.init();
+        })();
+    </script> <script type="application/json" id="PersonalizationTracker">
+	{"IsPagePersonalizationTarget":false,"IsUrlPersonalizationTarget":false,"PageId":"095c6b63-b2f9-487e-8382-3d527eeb547b"}
+</script><script type="text/javascript" src="/WebResource.axd?d=NjxTqR2bqTw1rewxxlkHPuVWylniiuH85dElS4-sTWByH4RE8E5E1AceaaoCFAJqZaJ0XO7-0paGWvgZTYHK6HfSMq7_7jIhS9QthTeHBDUU0pberHuOZvwLatBEXp3F8dWshLi8dFLqd-R5ePILXLxt9fP0bczWzQjlYINayIOpB5YnfTHc2ZyRpWOgtz7dNZw0Q5MPTr0UAPNLDUP5XStYynM1&amp;t=638745473720000000">
+
+</script><input data-sf-role='en' type='hidden' value='https://data.who.int/home'><input data-sf-role='ar' type='hidden' value='https://data.who.int/ar/home'><input data-sf-role='zh' type='hidden' value='https://data.who.int/zh/home'><input data-sf-role='fr' type='hidden' value='https://data.who.int/fr/home'><input data-sf-role='ru' type='hidden' value='https://data.who.int/ru/home'><input data-sf-role='es' type='hidden' value='https://data.who.int/es/home'><script type="text/javascript" src="/ResourcePackages/DDIBootstrap5/assets/src/scripts/components/dropdowns.js"></script> <!-- js to scrape:on --> <script type='text/javascript' src='/ResourcePackages/DDIBootstrap5/assets/dist/scripts/app.js?v=12.1.7126.25288'></script> <script type='text/javascript' src='/ResourcePackages/DDIBootstrap5/assets/dist/scripts/components/language-selector.js?v=12.1.7126.25288'></script> <!-- js to scrape:off --> </body> </html>

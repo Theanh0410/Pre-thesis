@@ -1,0 +1,17 @@
+{
+  "emotional": {
+    "verywellmind": "https://www.verywellmind.com",
+    "psychology_today": "https://www.psychologytoday.com",
+    "mentalhealth_uk": "https://www.mentalhealth.org.uk/explore-mental-health"
+  },
+  "smarthome": {
+    "alexa_routines": "https://www.amazon.com/alexa-routines",
+    "google_home_support": "https://support.google.com/googlenest",
+    "home_assistant_blueprints": "https://www.home-assistant.io/blueprints/"
+  },
+  "healthcare": {
+    "who_mental": "https://www.who.int/health-topics/mental-health",
+    "mayoclinic": "https://www.mayoclinic.org",
+    "sleep_foundation": "https://www.sleepfoundation.org"
+  }
+}

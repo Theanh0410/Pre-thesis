@@ -1,0 +1,10 @@
+{
+  "coffee": "kitchen",
+  "music": "living room",
+  "light": "bedroom",
+  "thermostat": "bedroom",
+  "water": "kitchen",
+  "scene": "bedroom",
+  "guest": "living room",
+  "porch": "living room"
+}

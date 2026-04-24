@@ -1,0 +1,4 @@
+Detect fridge door left open and send a notification.
+Start kitchen ventilation automatically when stove is on.
+Preheat rice cooker before estimated dinner time.
+Enable auto-measurement on smart scale for meal portions.

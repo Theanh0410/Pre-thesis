@@ -1,0 +1,191 @@
+[
+  {
+    "command": "Turn on light",
+    "description": "Bật đèn trong phòng.",
+    "examples": [
+      "Turn on the lights",
+      "Switch on the light",
+      "Illuminate the room",
+      "Make the room brighter",
+      "Activate lighting"
+    ]
+  },
+  {
+    "command": "Turn off light",
+    "description": "Tắt đèn trong phòng.",
+    "examples": [
+      "Turn off the lights",
+      "Switch off the light",
+      "Kill the lights",
+      "Darken the room"
+    ]
+  },
+  {
+    "command": "Dim the lights",
+    "description": "Giảm độ sáng của đèn.",
+    "examples": [
+      "Dim the lights",
+      "Lower the brightness",
+      "Make the lights softer",
+      "Reduce light intensity"
+    ]
+  },
+  {
+    "command": "Turn on music",
+    "description": "Bật nhạc.",
+    "examples": [
+      "Play some music",
+      "Turn on the speaker",
+      "Put on some tunes",
+      "Start playing songs"
+    ]
+  },
+  {
+    "command": "Turn off music",
+    "description": "Tắt nhạc.",
+    "examples": [
+      "Stop the music",
+      "Turn off the speaker",
+      "Kill the music",
+      "End the song"
+    ]
+  },
+  {
+    "command": "Play relaxing music",
+    "description": "Phát nhạc thư giãn.",
+    "examples": [
+      "Play calming music",
+      "Put on some relaxing tunes",
+      "Start ambient sounds",
+      "Play peaceful melodies"
+    ]
+  },
+  {
+    "command": "Adjust thermostat",
+    "description": "Điều chỉnh nhiệt độ tổng thể.",
+    "examples": [
+      "Adjust the thermostat",
+      "Set a comfortable temperature",
+      "Change the room temperature",
+      "Regulate the climate"
+    ]
+  },
+  {
+    "command": "Increase temperature",
+    "description": "Tăng nhiệt độ phòng.",
+    "examples": [
+      "Make it warmer",
+      "Raise the temperature",
+      "Turn up the heat"
+    ]
+  },
+  {
+    "command": "Decrease temperature",
+    "description": "Giảm nhiệt độ phòng.",
+    "examples": [
+      "Make it cooler",
+      "Lower the temperature",
+      "Turn down the heat"
+    ]
+  },
+  {
+    "command": "Turn on fan",
+    "description": "Bật quạt.",
+    "examples": [
+      "Turn on the fan",
+      "Switch on the fan",
+      "Start the fan"
+    ]
+  },
+  {
+    "command": "Turn off fan",
+    "description": "Tắt quạt.",
+    "examples": [
+      "Turn off the fan",
+      "Stop the fan",
+      "Switch off the fan"
+    ]
+  },
+  {
+    "command": "Open curtains",
+    "description": "Mở rèm cửa.",
+    "examples": [
+      "Open the curtains",
+      "Pull back the drapes",
+      "Let the sunlight in"
+    ]
+  },
+  {
+    "command": "Close curtains",
+    "description": "Đóng rèm cửa.",
+    "examples": [
+      "Close the curtains",
+      "Shut the blinds",
+      "Block out the light"
+    ]
+  },
+  {
+    "command": "Lock the door",
+    "description": "Khoá cửa.",
+    "examples": [
+      "Lock the front door",
+      "Secure the house",
+      "Engage the lock"
+    ]
+  },
+  {
+    "command": "Unlock the door",
+    "description": "Mở khoá cửa.",
+    "examples": [
+      "Unlock the front door",
+      "Open the door lock",
+      "Disable the lock"
+    ]
+  },
+  {
+    "command": "Start vacuum cleaner",
+    "description": "Bật robot hút bụi.",
+    "examples": [
+      "Start the vacuum",
+      "Turn on the robot cleaner",
+      "Begin cleaning"
+    ]
+  },
+  {
+    "command": "Stop vacuum cleaner",
+    "description": "Tắt robot hút bụi.",
+    "examples": [
+      "Stop the vacuum",
+      "Turn off the cleaner",
+      "Pause cleaning"
+    ]
+  },
+  {
+    "command": "Turn on TV",
+    "description": "Bật TV.",
+    "examples": [
+      "Turn on the television",
+      "Switch on the TV",
+      "Start watching TV"
+    ]
+  },
+  {
+    "command": "Turn off TV",
+    "description": "Tắt TV.",
+    "examples": [
+      "Turn off the television",
+      "Switch off the TV",
+      "Shut down the screen"
+    ]
+  },
+  {
+    "command": "Prepare drink",
+    "description": "Pha nước hoặc đồ uống.",
+    "examples": [
+      "Prepare a drink",
+      "Make some tea",
+      "Get a beverage",
+      "Brew a coffee"
+    ]
+  }
+]

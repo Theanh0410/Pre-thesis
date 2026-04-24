@@ -1,0 +1,5 @@
+Unlock door when user approaches based on geofencing.
+Turn on hallway lights and start welcome routine.
+Play favorite playlist based on time of day.
+Adjust thermostat to comfort setting when door opens.
+Announce welcome message via smart speaker.

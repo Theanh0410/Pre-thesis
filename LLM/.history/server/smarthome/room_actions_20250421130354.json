@@ -1,0 +1,26 @@
+{
+  "kitchen": [
+    "Turn on light",
+    "Prepare coffee",
+    "Bring water",
+    "Remind to refill water"
+  ],
+  "living room": [
+    "Turn on light",
+    "Play music",
+    "Enable music scene",
+    "Dim porch light",
+    "Monitor camera",
+    "Enable guest mode",
+    "Deactivate guest mode"
+  ],
+  "bedroom": [
+    "Turn off light",
+    "Adjust thermostat",
+    "Play music",
+    "Dim light",
+    "Enable bedtime scene",
+    "Schedule wake up alarm",
+    "Remind bedtime"
+  ]
+}

@@ -1,0 +1,11 @@
+ID,user_prompt,RoomNumber,Object,Action,Status,Agent_id
+1,turn on the light in the library room,1.0,light,turn off,not done,
+2,turn on the lie in the living room,1.0,lie,turn on,not done,
+3,turned on the lie in the living,,lie,turn on,not done,
+4,turn off the light in the living room,1.0,light,turn off,not done,
+5,the,,,prepare,not done,
+6,happy,,,prepare,not done,
+7,switch off the light in the living room,1.0,light,turn off,not done,
+8,turn on the lie in the living room,1.0,lie,turn on,not done,
+9,Turn on the light,1.0,light,turn on,not done,
+10,turn on the light in the living room,1.0,light,turn on,not done,

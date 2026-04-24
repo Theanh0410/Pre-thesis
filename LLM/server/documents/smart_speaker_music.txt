@@ -1,0 +1,5 @@
+Play your favorite relaxing music using voice command.
+Say 'Play jazz in the kitchen' to start music in a specific room.
+You can stop the music by saying 'Stop the music'.
+Create playlists for different moods like focus, chill, or party.
+Volume can be adjusted with 'Volume up' or 'Volume down'.

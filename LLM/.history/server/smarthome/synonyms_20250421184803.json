@@ -1,0 +1,95 @@
+{
+  "put on": "Turn on",
+  "switch on": "Turn on",
+  "activate": "Turn on",
+  "power on": "Turn on",
+  "play": "Turn on",
+  "start": "Turn on",
+  "turn on": "Turn on",
+
+  "switch off": "Turn off",
+  "power off": "Turn off",
+  "shut down": "Turn off",
+  "stop": "Turn off",
+  "turn off": "Turn off",
+
+  "set": "Adjust",
+  "tweak": "Adjust",
+  "change": "Adjust",
+  "adjust": "Adjust",
+  "modify": "Adjust",
+
+  "increase": "Increase",
+  "raise": "Increase",
+  "turn up": "Increase",
+  "boost": "Increase",
+  "elevate": "Increase",
+
+  "decrease": "Decrease",
+  "lower": "Decrease",
+  "turn down": "Decrease",
+  "reduce": "Decrease",
+  "drop": "Decrease",
+
+  "make": "Prepare",
+  "brew": "Prepare",
+  "serve": "Prepare",
+  "cook": "Prepare",
+  "fix": "Prepare",
+
+  "open": "Open",
+  "pull up": "Open",
+  "slide open": "Open",
+  "uncover": "Open",
+  "lift": "Open",
+
+  "close": "Close",
+  "shut": "Close",
+  "slide down": "Close",
+  "cover": "Close",
+
+  "dim": "Dim",
+  "fade": "Dim",
+  "soften": "Dim",
+
+  "enable": "Enable",
+  "activate scene": "Enable",
+  "turn on scene": "Enable",
+
+  "bring": "Bring",
+  "fetch": "Bring",
+  "get": "Bring",
+  "grab": "Bring",
+  "hand me": "Bring",
+
+  "plan": "Schedule",
+  "schedule": "Schedule",
+  "remind me": "Remind",
+  "remind": "Remind",
+  "notify": "Remind",
+  "alert": "Remind",
+
+  "disable": "Deactivate",
+  "turn off scene": "Deactivate",
+  "cancel": "Deactivate",
+
+  "watch": "Monitor",
+  "check camera": "Monitor",
+  "keep an eye": "Monitor",
+  "monitor": "Monitor",
+  "view": "Monitor",
+
+  "clean": "Clean",
+  "wipe": "Clean",
+  "scrub": "Clean",
+  "wash": "Clean",
+
+  "throw": "Dispose",
+  "discard": "Dispose",
+  "toss": "Dispose",
+  "bin": "Dispose",
+
+  "charge": "Charge",
+  "plug in": "Charge",
+  "power up": "Charge"
+}

@@ -1,0 +1,181 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #2a2a3e;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.header-icon {
+  background: #0f3460;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 28px;
+  color: #fff;
+}
+
+.header-text h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: 5px;
+  color: #fff;
+}
+
+.header-text h2 {
+  color: #fff;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  margin-right: 47px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #4fc3f7;
+  background-color: #1e2749;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+.password-container {
+  position: relative;
+}
+
+#password, #confirm_password {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #4fc3f7;
+  background-color: #1e2749;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+#password:focus, #confirm_password:focus {
+  outline: none;
+  border-color: #4caf50; /* Green border color */
+}
+
+#togglePassword, #toggleConfirmPassword {
+  position: absolute;
+  right: 18px;
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #fff;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+.login-container-link {
+  margin-top: 20px;
+  color: #fff;
+}
+
+.login-link {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link:hover {
+  color: #45a049;
+}
+
+.alert {
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .register-container {
+    width: 90%;
+    margin-top: 20px;
+  }
+}
+
+/* Existing styles */
+
+.input-group input.error {
+  border: 1px solid rgb(255, 73, 73); /* Red border color for error */
+}
+
+/* For password input when there is an error */
+#password.error, #confirm_password.error {
+  border: 1px solid rgb(255, 73, 73); /* Red border color for error */
+}
+
+.error-message {
+  color: rgb(255, 73, 73);
+  font-size: 14px;
+}

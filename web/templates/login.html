@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Smart Home</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+  <div class="login-container">
+    <!-- Logo and Smart Home Text Inside the Login Container -->
+    <div class="header-left">
+      <div class="header-icon">
+        <i class="fas fa-home"></i> <!-- Smart Home Icon -->
+      </div>
+      <div class="header-text">
+        <h1>Smart Home</h1> <!-- Smart Home Text -->
+        <h2>Login</h2>
+      </div>
+    </div>
+
+    <form id="loginForm" action="/login" method="POST">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required />
+        <div id="usernameError" class="error-message"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <div class="password-container">
+          <input type="password" id="password" name="password" required />
+          <i class="fas fa-eye" id="togglePassword"></i> <!-- Eye icon -->
+        </div>
+        <div id="passwordError" class="error-message"></div>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- Register Button -->
+    <div class="register-container">
+      <p>Don't have an account? <a href="/register" class="register-link">Register here</a></p>
+    </div>
+  </div>
+
+  <script>
+    // Check if the username exists (AJAX request)
+    function checkUsernameAvailability(username) {
+      return new Promise((resolve, reject) => {
+        fetch('/check-username', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username: username })
+        })
+        .then(response => response.json())
+        .then(data => {
+          resolve(data.exists);  // True if username exists, False if not
+        })
+        .catch(error => reject(error));
+      });
+    }
+
+
+    // Validation Functions
+    function validateUsername(username) {
+      const regex = /^[a-zA-Z0-9]{4,20}$/;  // Alphanumeric, 4-20 characters
+      return regex.test(username);
+    }
+
+    function validatePassword(password) {
+      const regex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;  // Min 8 chars, 1 uppercase, 1 number
+      return regex.test(password);
+    }
+
+    // Validate the entire form
+    function validateForm(event) {
+      event.preventDefault();  // Prevent form submission to handle validation
+
+      let isValid = true;
+
+      // Validate Username
+      const username = document.getElementById('username').value;
+      const usernameError = document.getElementById('usernameError');
+      const password = document.getElementById('password').value;
+      const passwordError = document.getElementById('passwordError');
+
+      // Check if the username is valid
+      if (!validateUsername(username)) {
+        usernameError.textContent = 'Username must be 4-20 characters and alphanumeric.';
+        document.getElementById('username').classList.add('error');
+        isValid = false;
+      } else {
+        usernameError.textContent = '';
+        document.getElementById('username').classList.remove('error');
+      }
+
+      // Check if username exists in database
+      if (username) {
+        checkUsernameAvailability(username).then(isAvailable => {
+          if (!isAvailable) {
+            usernameError.textContent = 'Username does not exist. Please register first.';
+            document.getElementById('username').classList.add('error');
+            isValid = false;
+          }
+        });
+      }
+
+      // Validate Password
+      if (!validatePassword(password)) {
+        passwordError.textContent = 'Password must be at least 8 characters, include 1 uppercase and 1 number.';
+        document.getElementById('password').classList.add('error');
+        isValid = false;
+      } else {
+        passwordError.textContent = '';
+        document.getElementById('password').classList.remove('error');
+      }
+
+      // If the form is invalid, don't submit it and show error messages
+      if (isValid) {
+        // Send the form data to the server
+        const formData = new FormData(document.getElementById('loginForm'));
+        fetch('/login', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            window.location.href = data.redirect;  // Redirect to home/dashboard
+          } else {
+            passwordError.textContent = data.message;  // Show the error message returned by the server
+            document.getElementById('password').classList.add('error');
+          }
+        });
+      }
+    }
+
+    // Toggle password visibility
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordField = document.getElementById('password');
+
+    togglePassword.addEventListener('click', function() {
+      // Toggle the type between 'password' and 'text'
+      const type = passwordField.type === 'password' ? 'text' : 'password';
+      passwordField.type = type;
+
+      // Toggle the eye icon (open/closed)
+      this.classList.toggle('fa-eye-slash');
+    });
+
+    // Attach validation on form submit
+    document.getElementById('loginForm').addEventListener('submit', validateForm);
+  </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+Hệ thống nhà thông minh (smart home system) cho phép tự động hóa các thiết bị như đèn, điều hòa, camera, khóa cửa và cảm biến. Việc điều khiển có thể thực hiện qua ứng dụng di động hoặc bằng giọng nói thông qua trợ lý ảo như Google Assistant, Alexa, hoặc Siri.
+
+Một tính năng quan trọng của nhà thông minh là khả năng **phân phối và gán nhiệm vụ (task allocation)** giữa các thiết bị hoặc agent. Ví dụ, khi cảm biến phát hiện có người trong phòng, hệ thống có thể giao nhiệm vụ:
+- Bật đèn
+- Điều chỉnh nhiệt độ điều hòa
+- Kích hoạt camera an ninh
+
+Trong các hệ thống tiên tiến, việc **phân phối nhiệm vụ có thể dựa trên độ ưu tiên, mức năng lượng còn lại của thiết bị, hoặc trạng thái hiện tại**. Điều này giúp tối ưu hóa năng lượng và cải thiện trải nghiệm người dùng.
+
+Hệ thống còn có thể tích hợp lịch làm việc của người dùng để đưa ra quyết định thông minh, ví dụ như tự động mở rèm vào buổi sáng hoặc tắt toàn bộ thiết bị khi chủ nhà rời đi.
+
+Ngoài ra, việc phân phối tác vụ trong nhà thông minh có thể được phối hợp bởi một **multi-agent system (MAS)**, trong đó mỗi thiết bị hoặc nhóm thiết bị là một agent có vai trò riêng, tự thương lượng và phối hợp với nhau để đạt được hiệu quả cao nhất.

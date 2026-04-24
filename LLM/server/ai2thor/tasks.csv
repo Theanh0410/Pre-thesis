@@ -1,0 +1,8 @@
+ID,user_prompt,RoomNumber,Object,Action,Status,Agent_id
+4,Can you turn off the DeskLamp as soon as possible?,201,DeskLamp,turnOn,done,1
+5,Can you turn off the FloorLamp?,216,FloorLamp,turnOff,done,2
+6,Can you turn on the TV?,216,Television,turnOn,not done,
+7,Pick up the Pillow,216,Pillow,pickup,not done,
+
+
+

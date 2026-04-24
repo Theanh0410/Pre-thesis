@@ -1,0 +1,28 @@
+{
+    "put on": "Turn on",
+    "switch on": "Turn on",
+    "activate": "Turn on",
+    "power on": "Turn on",
+    "enable": "Turn on",
+    "play": "Turn on",
+    "start": "Turn on",
+  
+    "switch off": "Turn off",
+    "power off": "Turn off",
+    "shut down": "Turn off",
+    "disable": "Turn off",
+    "stop": "Turn off",
+    "turn down": "Turn off",
+  
+    "set": "Adjust",
+    "tweak": "Adjust",
+    "change": "Adjust",
+    "modify": "Adjust",
+  
+    "make": "Prepare",
+    "brew": "Prepare",
+    "serve": "Prepare",
+    "get": "Prepare",
+    "fix": "Prepare"
+  }
+  

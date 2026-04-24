@@ -1,0 +1,31 @@
+{
+  "max_depth": 3,
+  "valid_path_keywords": [
+    "article",
+    "advice",
+    "guide",
+    "topics",
+    "mental",
+    "health",
+    "support"
+  ],
+  "skip_keywords": [
+    "login",
+    "signup",
+    "account",
+    "privacy",
+    "terms",
+    "index"
+  ],
+  "skip_extensions": [
+    ".pdf",
+    ".zip",
+    ".jpg",
+    ".jpeg",
+    ".png",
+    ".svg",
+    ".webp",
+    ".doc",
+    ".docx"
+  ]
+}

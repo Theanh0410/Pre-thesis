@@ -1,0 +1,3 @@
+ID,user_prompt,RoomNumber,Object,Action,Status,Agent_id
+1,Would you like me to suggest some calming activities to help you unwind?,,activity,pause,not done,
+2,"Perhaps we could enable the relaxation mode on your smart lights to create a soothing ambiance, or I can guide you through a gentle meditation session?",,mode,turn on,not done,

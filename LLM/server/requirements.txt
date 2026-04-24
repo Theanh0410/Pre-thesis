@@ -1,0 +1,19 @@
+flask
+flask-cors
+requests
+pandas
+numpy
+sounddevice
+vosk
+sentence-transformers
+nltk
+spacy
+rank-bm25
+
+For your project, the full setup sequence is now:
+conda activate llm
+cd "D:\OneDrive\IU\Sem 8\Pre-thesis\test\LLM\server"
+pip install -r requirements.txt
+python -m spacy download en_core_web_sm
+python -c "import nltk; nltk.download('punkt')"
+python app.py

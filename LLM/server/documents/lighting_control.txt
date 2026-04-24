@@ -1,0 +1,5 @@
+To turn on the lights in the living room, say: 'Turn on the lights'.
+You can dim the lights to 50% for a relaxing mood.
+Smart bulbs allow setting colors and brightness levels using voice or app.
+At night, a motion sensor can trigger hallway lights automatically.
+Create a bedtime routine to turn off all lights at 10 PM.

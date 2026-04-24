@@ -1,0 +1,4 @@
+Set up geofencing alerts if children leave the living room area.
+Disable power to outlets in the bedroom when children are alone.
+Lock the oven and microwave in the kitchen during restricted hours.
+Play safety announcements when child enters bathroom unsupervised.

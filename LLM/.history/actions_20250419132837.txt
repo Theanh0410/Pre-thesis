@@ -1,0 +1,8 @@
+Turn on
+Turn off
+Adjust
+Prepare
+Open
+Close
+Play
+Stop

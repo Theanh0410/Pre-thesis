@@ -1,0 +1,48 @@
+{
+    "stress": ["stress", "overwhelmed", "burnout", "pressure"],
+    "anxiety": ["anxiety", "panic", "worry", "fear"],
+    "depression": ["depression", "sadness", "hopeless", "low mood"],
+    "self-care": ["self-care", "relaxation", "mindfulness", "meditation"],
+    "sleep": ["insomnia", "sleep", "rest", "night"],
+    "motivation": ["motivation", "productivity", "energy", "goal"],
+
+    "smart-home-action": [
+        "turn on light", "turn off light", "dim light", "change light color", "adjust brightness",
+        "play music", "stop music", "pause music", "resume music", "volume up", "volume down",
+        "play ambient sound", "white noise", "nature sounds",
+        "open curtain", "close curtain", "lock door", "unlock door",
+        "adjust temperature", "increase temperature", "decrease temperature",
+        "turn on fan", "turn off fan", "turn on air purifier", "turn off heater",
+        "remind me", "set reminder", "send alert", "daily check-in",
+        "greet user", "say welcome", "ask about mood", "read journal", "read daily affirmation",
+        "suggest breathing exercise", "start morning routine", "start bedtime routine",
+        "control smart plug", "turn on tv", "turn off tv", "start cleaning", "brew coffee",
+        "start washing machine", "adjust humidity", "trigger scene", "execute command",
+        "voice command", "gesture control", "robot nod", "robot dance", "robot encourage"
+    ],
+
+    "home-health": [
+        "mental health", "emotional health", "stress relief", "wellbeing", "well-being", "therapy session",
+        "mood tracking", "daily reflection", "guided meditation", "relaxation routine",
+
+        "home workout", "stretching", "indoor exercise", "yoga", "breathing exercise", "tai chi", "walk indoors",
+        "fitness reminder", "stand up", "move around",
+
+        "healthy eating", "meal planning", "balanced diet", "drink water", "hydration", "take vitamins",
+        "prepare healthy meal", "nutrition reminder", "food log",
+
+        "improve sleep", "nap reminder", "bedtime", "sleep tracker", "circadian rhythm",
+
+        "air quality", "purify air", "ventilation", "humidity", "clean air", "open windows", "fresh air",
+        "dust allergy", "pollen", "filter change",
+
+        "heart rate", "blood pressure", "track symptoms", "check temperature", "health monitoring",
+        "daily check-in", "fatigue", "pain level", "headache", "dizzy", "fever",
+
+        "self check", "how do you feel", "log your feeling", "how's your energy", "hydrate yourself",
+        "take a break", "relax your eyes", "deep breath", "mental reset", "light therapy",
+
+        "wash hands", "sanitize", "clean environment", "air out the room", "disinfect",
+        "hygiene reminder", "daily routine", "stay healthy"
+    ]
+}

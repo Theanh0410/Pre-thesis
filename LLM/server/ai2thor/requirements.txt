@@ -1,0 +1,4 @@
+opencv-python = 2.2.3
+ai2thor
+numpy = 2.2.3
+scipy = 2.2.3

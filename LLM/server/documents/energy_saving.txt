@@ -1,0 +1,5 @@
+Turn off unused devices to save electricity.
+Smart plugs allow remote control of appliances.
+Lower thermostat when you're not at home.
+Use motion sensors to control lights in low-traffic areas.
+Monitor energy usage from the smart home dashboard.

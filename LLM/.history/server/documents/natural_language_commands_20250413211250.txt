@@ -1,0 +1,17 @@
+Một trong những thách thức lớn của nhà thông minh là xử lý lệnh từ người dùng dưới dạng ngôn ngữ tự nhiên. Người dùng thường sử dụng các câu như:
+
+- "Tắt hết đèn ở tầng dưới lúc 10 giờ tối"
+- "Bật điều hòa trước khi tôi về nhà"
+- "Đừng làm phiền tôi khi đang họp"
+
+Để xử lý các lệnh này, hệ thống cần:
+1. **Phân tích ngữ nghĩa** để xác định hành động, đối tượng, thời gian
+2. **Gán tác vụ cho thiết bị phù hợp** (task allocation)
+3. **Lưu lịch để thực hiện theo lịch trình hoặc điều kiện ngữ cảnh**
+
+Việc sử dụng mô hình ngôn ngữ lớn (LLM) giúp cải thiện khả năng hiểu lệnh phức tạp, mơ hồ hoặc nhiều bước.
+
+Ví dụ:  
+Câu lệnh "Khi trời mưa, hãy kéo rèm xuống và tắt quạt ngoài ban công" được phân rã thành:
+- Kiểm tra điều kiện thời tiết
+- Giao nhiệm vụ cho rèm và quạt dựa trên điều kiện

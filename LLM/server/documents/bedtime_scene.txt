@@ -1,0 +1,5 @@
+Create a 'Goodnight' scene to turn off lights and lock doors.
+Set thermostat to eco mode before sleeping.
+Close blinds and turn off television automatically.
+Play white noise or sleep music using a smart speaker.
+Enable 'Do Not Disturb' mode on connected devices at bedtime.
