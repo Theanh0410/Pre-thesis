@@ -39,7 +39,7 @@
       <!-- Sensor Data -->
       <div class="grid">
         <!-- Living room -->
-        <div class="card">
+        <div class="card" id="room-1" data-room-id="1" data-room-name="Living Room">
           <div class="card-title">
             <i class="fas fa-couch"></i>
             Living Room
@@ -58,10 +58,12 @@
             </div>
           </div>
 
-          <div class="device-grid" style="margin-top: 20px">
+          <div class="device-grid" id="devices-1" style="margin-top: 20px">
             <button
               class="device-button light-off"
               id="livingroom_light"
+              data-device-code="light"
+              data-command-base="livingroom_light"
               onclick="toggleDevice('livingroom_light')"
             >
               <i class="fas fa-lightbulb"></i>
@@ -71,16 +73,47 @@
             <button
               class="device-button fan-off"
               id="livingroom_fan"
+              data-device-code="fan"
+              data-command-base="livingroom_fan"
               onclick="toggleDevice('livingroom_fan')"
             >
               <i class="fas fa-fan"></i>
               Living room fan
             </button>
+
+            <button class="add-device-tile" onclick="showAddDeviceForm(1)">
+              <i class="fas fa-plus"></i>
+              Add Device
+            </button>
+          </div>
+
+          <div class="inline-device-form" id="device-form-1">
+            <select id="device-type-1" class="input">
+              <option value="">Choose device</option>
+              <option value="1" data-code="light" data-icon="lightbulb">Light</option>
+              <option value="2" data-code="fan" data-icon="fan">Fan</option>
+            </select>
+
+            <input
+              type="text"
+              id="device-name-1"
+              class="input"
+              placeholder="Custom device name"
+            />
+
+            <div class="inline-device-actions">
+              <button class="small-add-button" onclick="addDeviceToRoom(1)">
+                Add
+              </button>
+              <button class="small-cancel-button" onclick="hideAddDeviceForm(1)">
+                Cancel
+              </button>
+            </div>
           </div>
         </div>
 
         <!-- Bedroom -->
-        <div class="card">
+        <div class="card" id="room-2" data-room-id="2" data-room-name="Bedroom">
           <div class="card-title">
             <i class="fas fa-bed"></i>
             Bedroom
@@ -99,10 +132,12 @@
             </div>
           </div>
 
-          <div class="device-grid" style="margin-top: 20px">
+          <div class="device-grid" id="devices-2" style="margin-top: 20px">
             <button
               class="device-button light-off"
               id="bedroom_light"
+              data-device-code="light"
+              data-command-base="bedroom_light"
               onclick="toggleDevice('bedroom_light')"
             >
               <i class="fas fa-lightbulb"></i>
@@ -112,12 +147,60 @@
             <button
               class="device-button fan-off"
               id="bedroom_fan"
+              data-device-code="fan"
+              data-command-base="bedroom_fan"
               onclick="toggleDevice('bedroom_fan')"
             >
               <i class="fas fa-fan"></i>
               Bedroom fan
             </button>
+
+            <button class="add-device-tile" onclick="showAddDeviceForm(2)">
+              <i class="fas fa-plus"></i>
+              Add Device
+            </button>
           </div>
+
+          <div class="inline-device-form" id="device-form-2">
+            <select id="device-type-2" class="input">
+              <option value="">Choose device</option>
+              <option value="1" data-code="light" data-icon="lightbulb">Light</option>
+              <option value="2" data-code="fan" data-icon="fan">Fan</option>
+            </select>
+
+            <input
+              type="text"
+              id="device-name-2"
+              class="input"
+              placeholder="Custom device name"
+            />
+
+            <div class="inline-device-actions">
+              <button class="small-add-button" onclick="addDeviceToRoom(2)">
+                Add
+              </button>
+              <button class="small-cancel-button" onclick="hideAddDeviceForm(2)">
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Room -->
+      <!-- Add Room -->
+      <div class="add-room-card">
+        <div class="card-title">
+          <i class="fas fa-plus-circle"></i>
+          Add New Room
+        </div>
+
+        <div class="add-room-form">
+          <input type="text" id="roomName" class="input add-room-input" placeholder="Enter room name"/>
+          <button class="add-room-button" onclick="addRoom()">
+            <i class="fas fa-plus"></i>
+            Add Room
+          </button>
         </div>
       </div>
 
@@ -205,22 +288,33 @@
 
       // Toggle device function
       function toggleDevice(device) {
-        const currentState = deviceStates[device];
+        const button = document.getElementById(device);
+
+        const currentState = deviceStates[device] || false;
         const newState = !currentState;
         const action = newState ? 'on' : 'off';
 
         deviceStates[device] = newState;
         updateDeviceUI(device, newState);
-        sendCommand(`${device}_${action}`);
+
+        const commandBase = button.dataset.commandBase || device;
+        sendCommand(`${commandBase}_${action}`);
       }
 
       // Update device UI
       function updateDeviceUI(device, isOn) {
         const button = document.getElementById(device);
-        if (device.includes('light')) {
+
+        if (!button) return;
+
+        const deviceCode = button.dataset.deviceCode || device;
+
+        if (deviceCode.includes('light')) {
           button.className = `device-button ${isOn ? 'light-on' : 'light-off'}`;
-        } else if (device.includes('fan')) {
+        } else if (deviceCode.includes('fan')) {
           button.className = `device-button ${isOn ? 'fan-on' : 'fan-off'}`;
+        } else {
+          button.className = `device-button ${isOn ? 'light-on' : 'light-off'}`;
         }
       }
 
@@ -315,6 +409,221 @@
           btn.disabled = false;
           btn.innerHTML = '<i class="fas fa-microphone"></i> Start Recording';
         }
+      }
+
+      function addRoom() {
+        const roomName = document.getElementById('roomName').value;
+
+        fetch('/add_room', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ room_name: roomName })
+        })
+          .then(response => response.json())
+          .then(data => {
+            if (data.status === 'success') {
+              alert('Room added!');
+              // Optionally, update the UI to show the new room
+              addRoomCard(data.room_id, data.room_name, data.devices);
+            } else {
+              alert(data.message);
+            }
+          })
+          .catch(error => console.error('Error adding room:', error));
+      }
+
+      //add room
+      function addRoomCard(roomId, roomName, devices) {
+        const roomCardHTML = `
+          <div class="card" id="room-${roomId}" data-room-id="${roomId}" data-room-name="${roomName}">
+            <div class="card-title">
+              <i class="fas fa-couch"></i>
+              ${roomName}
+            </div>
+
+            <div class="sensor-grid">
+              <div class="sensor-card">
+                <i class="fas fa-tint sensor-icon humidity-icon"></i>
+                <div class="sensor-label">Humidity</div>
+                <div class="sensor-value" id="room-${roomId}-humidity">--%</div>
+              </div>
+
+              <div class="sensor-card">
+                <i class="fas fa-sun sensor-icon light-icon"></i>
+                <div class="sensor-label">Light</div>
+                <div class="sensor-value" id="room-${roomId}-light-sensor">--</div>
+              </div>
+            </div>
+
+            <div class="device-grid" id="devices-${roomId}" style="margin-top: 20px">
+              ${devices.map(device => `
+                <button
+                  class="device-button ${device.status === 'on' ? 'light-on' : 'light-off'}"
+                  id="device-${device.id}"
+                  data-device-code="${device.device_code || 'light'}"
+                  data-command-base="device-${device.id}"
+                  onclick="toggleDevice('device-${device.id}')"
+                >
+                  <i class="fas fa-lightbulb"></i>
+                  ${device.custom_name || 'Device'}
+                </button>
+              `).join('')}
+
+              <button class="add-device-tile" onclick="showAddDeviceForm(${roomId})">
+                <i class="fas fa-plus"></i>
+                Add Device
+              </button>
+            </div>
+
+            <div class="inline-device-form" id="device-form-${roomId}">
+              <select id="device-type-${roomId}" class="input">
+                <option value="">Choose device</option>
+                <option value="1" data-code="light" data-icon="lightbulb">Light</option>
+                <option value="2" data-code="fan" data-icon="fan">Fan</option>
+              </select>
+
+              <input
+                type="text"
+                id="device-name-${roomId}"
+                class="input"
+                placeholder="Custom device name"
+              />
+
+              <div class="inline-device-actions">
+                <button class="small-add-button" onclick="addDeviceToRoom(${roomId})">
+                  Add
+                </button>
+
+                <button class="small-cancel-button" onclick="hideAddDeviceForm(${roomId})">
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+
+        // Append the new room card to the container
+        const roomContainer = document.querySelector('.grid');
+        roomContainer.insertAdjacentHTML('beforeend', roomCardHTML);
+      }
+
+      function addDevice() {
+        const roomId = document.getElementById('roomSelect').value;
+        const deviceTypeId = document.getElementById('deviceTypeSelect').value;
+        const customName = document.getElementById('deviceName').value;
+
+        fetch('/add_device', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ room_id: roomId, device_type_id: deviceTypeId, custom_name: customName })
+        })
+          .then(response => response.json())
+          .then(data => {
+            if (data.status === 'success') {
+              alert('Device added!');
+              // Optionally, update the UI to show the new device
+            } else {
+              alert(data.message);
+            }
+          })
+          .catch(error => console.error('Error adding device:', error));
+      }
+
+      function showAddDeviceForm(roomId) {
+        const form = document.getElementById(`device-form-${roomId}`);
+        form.style.display = 'block';
+      }
+
+      function hideAddDeviceForm(roomId) {
+        const form = document.getElementById(`device-form-${roomId}`);
+        form.style.display = 'none';
+      }
+
+      function normalizeRoomName(roomName) {
+        return roomName.toLowerCase().replace(/\s+/g, '').replace(/[^a-z0-9]/g, '');
+      }
+
+      async function addDeviceToRoom(roomId) {
+        const deviceTypeSelect = document.getElementById(`device-type-${roomId}`);
+        const deviceNameInput = document.getElementById(`device-name-${roomId}`);
+
+        const deviceTypeId = deviceTypeSelect.value;
+        const customName = deviceNameInput.value.trim();
+
+        if (!deviceTypeId) {
+          alert('Please choose a device type.');
+          return;
+        }
+
+        if (!customName) {
+          alert('Please enter a device name.');
+          return;
+        }
+
+        try {
+          const response = await fetch('/add_device', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              room_id: roomId,
+              device_type_id: deviceTypeId,
+              custom_name: customName
+            })
+          });
+
+          const data = await response.json();
+
+          if (data.status === 'success') {
+            const selectedOption = deviceTypeSelect.options[deviceTypeSelect.selectedIndex];
+
+            const device = {
+              id: data.device_id,
+              custom_name: customName,
+              device_code: selectedOption.dataset.code,
+              device_icon: selectedOption.dataset.icon,
+              status: 'off'
+            };
+
+            addDeviceButtonToRoom(roomId, device);
+
+            deviceTypeSelect.value = '';
+            deviceNameInput.value = '';
+            hideAddDeviceForm(roomId);
+          } else {
+            alert(data.message);
+          }
+        } catch (error) {
+          console.error('Error adding device:', error);
+        }
+      }
+
+      function addDeviceButtonToRoom(roomId, device) {
+        const roomCard = document.getElementById(`room-${roomId}`);
+        const roomName = roomCard.dataset.roomName;
+        const roomCode = normalizeRoomName(roomName);
+
+        const deviceId = `device-${device.id}`;
+        const commandBase = `${roomCode}_${device.device_code}`;
+
+        deviceStates[deviceId] = false;
+
+        const buttonHTML = `
+          <button
+            class="device-button ${device.device_code === 'fan' ? 'fan-off' : 'light-off'}"
+            id="${deviceId}"
+            data-device-code="${device.device_code}"
+            data-command-base="${commandBase}"
+            onclick="toggleDevice('${deviceId}')"
+          >
+            <i class="fas fa-${device.device_icon}"></i>
+            ${device.custom_name}
+          </button>
+        `;
+
+        const deviceGrid = document.getElementById(`devices-${roomId}`);
+        const addButton = deviceGrid.querySelector('.add-device-tile');
+
+        addButton.insertAdjacentHTML('beforebegin', buttonHTML);
       }
     </script>
   </body>

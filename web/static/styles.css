@@ -228,42 +228,6 @@ body {
   color: #fff;
 }
 
-/* Motor Controls */
-.motor-container {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.motor-display {
-  background: #0f3460;
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #2a2a3e;
-}
-
-.motor-icon {
-  font-size: 40px;
-  margin-bottom: 10px;
-  display: block;
-}
-
-.servo-icon {
-  color: #ff7043;
-}
-.dc-icon {
-  color: #7e57c2;
-}
-.stepper-icon {
-  color: #4caf50;
-}
-
-.motor-value {
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-}
-
 /* Sliders */
 .slider-container {
   margin: 20px 0;
@@ -327,18 +291,6 @@ body {
   background: #f44336;
 }
 
-.btn-servo {
-  background: #ff7043;
-}
-
-.btn-stepper {
-  background: #4caf50;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  justify-content: center;
-}
-
 /* Input */
 .input {
   background: #2a2a3e;
@@ -360,11 +312,127 @@ body {
   color: #888;
 }
 
-/* Stepper Controls */
-.stepper-buttons {
+/* Add Room Section */
+.add-room-card {
+  background: #1e2749;
+  border: 1px solid #2a2a3e;
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.add-room-form {
   display: flex;
   gap: 15px;
-  justify-content: center;
+  align-items: center;
+}
+
+.add-room-input {
+  margin-bottom: 0;
+  flex: 1;
+}
+
+.add-room-button {
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.add-room-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(76, 175, 80, 0.35);
+}
+
+.add-room-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .add-room-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .add-room-button {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* Add Device Button Inside Room Card */
+.add-device-tile {
+  background: transparent;
+  border: 2px dashed #4fc3f7;
+  border-radius: 12px;
+  padding: 20px 15px;
+  color: #4fc3f7;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.add-device-tile i {
+  font-size: 24px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.add-device-tile:hover {
+  background: rgba(79, 195, 247, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(79, 195, 247, 0.2);
+}
+
+.inline-device-form {
+  display: none;
+  background: #0f3460;
+  border: 1px solid #2a2a3e;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.inline-device-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.small-add-button {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.small-cancel-button {
+  background: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.small-add-button:hover,
+.small-cancel-button:hover {
+  transform: translateY(-2px);
 }
 
 /* Responsive */

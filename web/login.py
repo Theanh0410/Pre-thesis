@@ -24,6 +24,7 @@ def login():
             try:
                 if bcrypt.checkpw(password.encode('utf-8'), stored_password_hash.encode('utf-8')):
                     session['username'] = username  # Store username in session
+                    session['user_id'] = user[0]  # Assuming user ID is in the first column of the database (index 0)
                     return jsonify({"success": True, "redirect": url_for('home')})  # Redirect to home/dashboard after login
                 else:
                     return jsonify({"success": False, "message": 'Invalid password. Please try again.'})

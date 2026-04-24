@@ -125,7 +125,7 @@ def home():
 
 @app.route('/logout', methods=['POST'])
 def logout():
-    session.pop('username', None)  # Clear the user session
+    session.clear()
     return redirect(url_for('login.login'))  # Redirect to login page
 
 @app.route('/dashboard')
@@ -142,6 +142,105 @@ def control_device():
         return jsonify({"status": "success", "message": f"Command '{command}' sent."})
     
     return jsonify({"status": "error", "message": "Invalid command."}), 400
+
+
+@app.route('/add_room', methods=['POST'])
+def add_room():
+    if 'username' not in session:
+        return jsonify({"status": "error", "message": "User not logged in"}), 400
+    
+    user_id = session['user_id']
+    room_name = request.json.get('room_name')
+    
+    # Insert new room into the database
+    cursor = mysql.connection.cursor()
+    cursor.execute("INSERT INTO rooms (user_id, room_name) VALUES (%s, %s)", (user_id, room_name))
+    mysql.connection.commit()
+    
+    # Get the newly added room's id and device types
+    cursor.execute("SELECT id FROM rooms WHERE room_name = %s AND user_id = %s", (room_name, user_id))
+    room_id = cursor.fetchone()[0]
+    
+    cursor.execute("SELECT * FROM devices WHERE room_id = %s", (room_id,))
+    devices = cursor.fetchall()
+
+    cursor.close()
+
+    return jsonify({
+        "status": "success",
+        "message": "Room added successfully",
+        "room_id": room_id,
+        "room_name": room_name,
+        "devices": devices
+    })
+
+@app.route('/remove_room', methods=['POST'])
+def remove_room():
+    if 'username' not in session:
+        return jsonify({"status": "error", "message": "User not logged in"}), 400
+    
+    room_id = request.json.get('room_id')
+
+    # Remove room
+    cursor = mysql.connection.cursor()
+    cursor.execute("DELETE FROM rooms WHERE id = %s", (room_id,))
+    mysql.connection.commit()
+    cursor.close()
+
+    return jsonify({"status": "success", "message": "Room removed successfully"})
+
+@app.route('/add_device', methods=['POST'])
+def add_device():
+    if 'username' not in session:
+        return jsonify({"status": "error", "message": "User not logged in"}), 400
+
+    room_id = request.json.get('room_id')
+    device_type_id = request.json.get('device_type_id')
+    custom_name = request.json.get('custom_name')
+
+    if not room_id or not device_type_id or not custom_name:
+        return jsonify({
+            "status": "error",
+            "message": "Missing room, device type, or device name."
+        }), 400
+    
+    cursor = mysql.connection.cursor()
+
+    cursor.execute(
+        """
+        INSERT INTO devices (room_id, device_type_id, custom_name, status)
+        VALUES (%s, %s, %s, 'off')
+        """,
+        (room_id, device_type_id, custom_name)
+    )
+
+    mysql.connection.commit()
+
+    device_id = cursor.lastrowid
+
+    cursor.close()
+    
+    return jsonify({
+        "status": "success",
+        "message": "Device added successfully",
+        "device_id": device_id
+    })
+
+@app.route('/remove_device', methods=['POST'])
+def remove_device():
+    if 'username' not in session:
+        return jsonify({"status": "error", "message": "User not logged in"}), 400
+    
+    device_id = request.json.get('device_id')
+
+    cursor = mysql.connection.cursor()
+    cursor.execute("DELETE FROM devices WHERE id = %s", (device_id,))
+    mysql.connection.commit()
+    cursor.close()
+
+    return jsonify({"status": "success", "message": "Device removed successfully"})
+
+
 
 @app.route('/start_voice', methods=['POST'])
 def start_voice():
