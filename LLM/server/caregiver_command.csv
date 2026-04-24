@@ -445,3 +445,4 @@ ID,user_prompt,RoomNumber,Object,Action,Status,Agent_id
 444,turn on the light and the fan in the living room,201.0,light,turn on,not done,
 445,a on a night in the living room,201.0,night,dim,not done,
 446,turn on the light in the living room,201.0,light,turn on,not done,
+447,the turn on the light in the living room,201.0,light,dim,not done,
