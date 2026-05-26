@@ -207,16 +207,16 @@
       <div class="card">
         <div class="card-title">
           <i class="fas fa-microphone"></i>
-          Ra lệnh bằng giọng nói
+          Voice command
         </div>
 
         <button class="btn" id="voiceBtn" onclick="startVoiceRecording()">
           <i class="fas fa-microphone"></i>
-          Bắt đầu ghi âm
+          Start recording
         </button>
 
         <div style="margin-top: 15px">
-          <div style="margin-bottom: 8px; color: #b8b8d4">Văn bản đã ghi âm:</div>
+          <div style="margin-bottom: 8px; color: #b8b8d4">Recorded text:</div>
           <div
             id="voiceText"
             style="
@@ -227,7 +227,7 @@
               min-height: 52px;
             "
           >
-            Chưa có dữ liệu...
+            No data available...
           </div>
         </div>
       </div>
@@ -381,10 +381,10 @@
 
         btn.disabled = true;
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Recording...';
-        voiceText.innerText = 'Đang khởi động micro, vui lòng chờ 1 chút...';
+        voiceText.innerText = 'Preparing to record...';
         
         setTimeout(() => {
-          voiceText.innerText = 'Đang ghi âm... Nói gì đó vào micro!';
+          voiceText.innerText = 'Recording... Say something into the microphone!';
         }, 2000);
 
         try {
@@ -398,13 +398,13 @@
           const data = await response.json();
 
           if (data.status === 'success') {
-            voiceText.innerText = data.text || 'Không nhận được nội dung.';
+            voiceText.innerText = data.text || 'No content received.';
           } else {
-            voiceText.innerText = data.message || 'Có lỗi xảy ra.';
+            voiceText.innerText = data.message || 'An error occurred.';
           }
         } catch (error) {
           console.error('Voice recording error:', error);
-          voiceText.innerText = 'Không thể kết nối tới voice server.';
+          voiceText.innerText = 'Cannot connect to voice server.';
         } finally {
           btn.disabled = false;
           btn.innerHTML = '<i class="fas fa-microphone"></i> Start Recording';
