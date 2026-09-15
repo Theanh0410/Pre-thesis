@@ -86,5 +86,8 @@
   "ToiletPaper": "bathroom",
   "ToiletPaperHanger": "bathroom",
   "Towel": "bathroom",
-  "TowelHolder": "bathroom"
+  "TowelHolder": "bathroom", 
+  "fan": "living room",
+  "ac": "living room",
+  "air conditioner": "living room"
 }

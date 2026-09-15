@@ -42,10 +42,27 @@ def on_message(client, userdata, msg):
 
     if msg.topic == MQTT_TOPIC_SENSORS:
         try:
-            humidity, light_level = payload.split(',')
-            socketio.emit('sensor_data', {'humidity': humidity, 'light_level': light_level})
-        except ValueError:
-            print("Error parsing sensor data.")
+            # Parse payload - handle both old format "humidity,light_level" and new format "room,humidity,light_level"
+            parts = payload.split(',')
+            
+            if len(parts) == 3:  # New format: "room,humidity,light_level"
+                room, humidity, light_level = parts
+            elif len(parts) == 2:  # Old format: "humidity,light_level"
+                humidity, light_level = parts
+                room = "living room"  # Default room
+            else:
+                print(f"Error: Invalid sensor data format: {payload}")
+                return
+            
+            # Emit sensor data with room information using socketio.server.emit for background thread
+            socketio.server.emit('sensor_data', {
+                'humidity': humidity, 
+                'light_level': light_level,
+                'room': room
+            }, to=None)
+            print(f"✓ Sensor data emitted: {room} | humidity={humidity}%, light={light_level}")
+        except (ValueError, IndexError) as e:
+            print(f"Error parsing sensor data: {e}")
 
     elif msg.topic == MQTT_TOPIC_CONTROL:
         try:
@@ -58,12 +75,12 @@ def on_message(client, userdata, msg):
             ui_command = map_llm_command_to_ui(data)
 
             if ui_command:
-                socketio.emit('device_status', {'command': ui_command})
+                socketio.server.emit('device_status', {'command': ui_command}, to=None)
                 print(f"Emitted device_status: {ui_command}")
             else:
                 print(f"Could not map command: {data}")
         except json.JSONDecodeError:
-            socketio.emit('device_status', {'command': payload})
+            socketio.server.emit('device_status', {'command': payload}, to=None)
 
 # --- MQTT connection setup ---
 def on_connect(client, userdata, flags, rc):

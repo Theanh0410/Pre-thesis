@@ -19,6 +19,9 @@ String mqtt_client_id;
 const char* topicControl = "home/control";
 const char* topicSensors = "home/sensors"; // (not used yet, kept for compatibility)
 
+unsigned long lastSensorPublish = 0;
+const unsigned long sensorInterval = 3000; // send every 3 seconds
+
 // --- Sensor & Actuator Pins (ESP8266) ---
 // NodeMCU pins:
 // D1=GPIO5, D2=GPIO4, D4=GPIO2, D5=GPIO14, D6=GPIO12, D7=GPIO13
@@ -110,7 +113,13 @@ void loop() {
   if (!client.connected()) {
     reconnectMQTT();
   }
+
   client.loop();
+
+  if (millis() - lastSensorPublish >= sensorInterval) {
+    lastSensorPublish = millis();
+    publishSensorData();
+  }
 }
 
 void reconnectMQTT() {
@@ -301,4 +310,23 @@ void controlDevices(const String& cmd) {
     Serial.print("Unknown command: ");
     Serial.println(cmd);
   }
+}
+
+void publishSensorData() {
+  float humidity = dht.readHumidity();
+  int lightLevel = analogRead(LIGHT_SENSOR_PIN);
+
+  if (isnan(humidity)) {
+    Serial.println("Failed to read DHT sensor!");
+    return;
+  }
+
+  String room = "living room";
+
+  String payload = room + "," + String(humidity, 1) + "," + String(lightLevel);
+
+  Serial.print("Publishing sensor data: ");
+  Serial.println(payload);
+
+  client.publish(topicSensors, payload.c_str());
 }

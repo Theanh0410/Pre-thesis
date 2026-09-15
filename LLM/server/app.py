@@ -7,6 +7,7 @@ import threading
 from flask import Flask, jsonify, session
 from flask_cors import CORS
 from SmartHomeCommandExtractor import SmartHomeCommandExtractor
+from ContextualCommandProcessor import ContextualCommandProcessor
 from RAG.bm25 import BM25Retriever
 
 # Import speech to text functionality
@@ -73,6 +74,11 @@ extractor = SmartHomeCommandExtractor(
     room_actions=room_actions,
     object_room_map=object_room_map,
     threshold=0.1
+)
+
+contextual_processor = ContextualCommandProcessor(
+    room_actions=room_actions,
+    object_room_map=object_room_map
 )
 
 bm25_retriever = BM25Retriever(docs_folder="documents")
@@ -233,13 +239,34 @@ def save_tasks_to_csv(results):
 
     new_rows = []
     for r in results:
-        room_number = ROOM_ID_MAP.get(r["room"], "")
+        # Handle both dict results and ensure proper types
+        if not isinstance(r, dict):
+            print(f"Warning: Skipping non-dict result: {r}")
+            continue
+            
+        # Get fields with defaults
+        room = r.get("room", "living room")
+        sentence = r.get("sentence", "")
+        device = r.get("object") or r.get("device", "unknown")
+        action = r.get("action", "unknown")
+        
+        # Ensure types are correct
+        if not isinstance(sentence, str):
+            sentence = str(sentence)
+        if not isinstance(room, str):
+            room = str(room)
+        if not isinstance(device, str):
+            device = str(device)
+        if not isinstance(action, str):
+            action = str(action)
+        
+        room_number = ROOM_ID_MAP.get(room, "")
         new_row = {
             "ID": current_id,
-            "user_prompt": r["sentence"].strip(),
+            "user_prompt": sentence.strip(),
             "RoomNumber": room_number,
-            "Object": r["object"] or "",
-            "Action": r["action"].lower(),
+            "Object": device,
+            "Action": action.lower(),
             "Status": "not done",
             "Agent_id": ""
         }
@@ -258,11 +285,22 @@ def is_device_control_command(results):
     action_keywords = ["turn on", "turn off", "switch on", "switch off", "open", "close"]
     
     for result in results:
-        if result.get("object") and result.get("action"):
-            obj = result["object"].lower()
-            action = result["action"].lower()
-            if any(device in obj for device in device_keywords) and any(act in action for act in action_keywords):
-                return True
+        # Skip non-dict results
+        if not isinstance(result, dict):
+            continue
+            
+        obj = result.get("object") or result.get("device", "")
+        action = result.get("action", "")
+        
+        # Ensure we have strings
+        if not isinstance(obj, str) or not isinstance(action, str):
+            continue
+            
+        obj_lower = obj.lower()
+        action_lower = action.lower()
+        
+        if any(device in obj_lower for device in device_keywords) and any(act in action_lower for act in action_keywords):
+            return True
     return False
 
 def process_one_voice_command():
@@ -325,42 +363,50 @@ def process_one_voice_command():
         update_context(prompt, assistant_response, use_flask_session=False)
 
         # Extract smart home commands
-        suggested_results = extractor.extract(prompt)
+        # Step 1: Try contextual processor first (comfort/emotional states)
+        contextual_results = contextual_processor.process_contextual_command(prompt)
+        
+        if contextual_results and len(contextual_results) > 0 and contextual_results[0].get("valid"):
+            # High confidence contextual match - use this
+            suggested_results = contextual_results
+        else:
+            # Fallback to standard extractor
+            suggested_results = extractor.extract(prompt)
 
-        if isinstance(suggested_results, dict) and "commands" in suggested_results:
-            suggested_results = suggested_results["commands"]
+            if isinstance(suggested_results, dict) and "commands" in suggested_results:
+                suggested_results = suggested_results["commands"]
 
-        if not suggested_results:
-            suggested_results = []
-        elif isinstance(suggested_results, dict) and "commands" in suggested_results:
-            suggested_results = suggested_results["commands"]
-        elif not isinstance(suggested_results, list):
-            suggested_results = []
+            if not suggested_results:
+                suggested_results = []
+            elif isinstance(suggested_results, dict) and "commands" in suggested_results:
+                suggested_results = suggested_results["commands"]
+            elif not isinstance(suggested_results, list):
+                suggested_results = []
 
         valid_results = [
             r for r in suggested_results
-            if isinstance(r, dict) and "action" in r and "object" in r
+            if isinstance(r, dict) and "action" in r and ("object" in r or "device" in r)
         ]
 
         if valid_results:
             print("\nSmart Home Commands Detected:")
             for result in valid_results:
                 print(f"Action: {result['action']}")
-                print(f"Object: {result['object']}")
+                print(f"Object: {result.get('object') or result.get('device')}")
                 if 'room' in result:
                     print(f"Room: {result['room']}")
-                print(f"Valid: {result['valid']}")
-                print(f"Score: {result['score']}")
+                print(f"Valid: {result.get('valid', True)}")
+                print(f"Score: {result.get('score', 'N/A')}")
 
             save_tasks_to_csv(valid_results)
 
             if is_device_control_command(valid_results):
                 for result in valid_results:
                     mqtt_data = {
-                        "device": result["object"],
+                        "device": result.get("object") or result.get("device"),
                         "action": result["action"],
                         "room": result.get("room"),
-                        "valid": result.get("valid", False),
+                        "valid": result.get("valid", True),
                         "source": "llm_voice"
                     }
 
