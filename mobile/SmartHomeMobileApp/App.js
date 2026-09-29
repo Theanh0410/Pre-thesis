@@ -19,8 +19,8 @@ export default function App() {
   const [isConnected, setIsConnected] = useState(false);
   const [humidity, setHumidity] = useState('--');
   const [lightLevel, setLightLevel] = useState('--');
-  const [servoAngle, setServoAngle] = useState(90);
-  const [dcSpeed, setDcSpeed] = useState(0);
+  // const [servoAngle, setServoAngle] = useState(90);
+  // const [dcSpeed, setDcSpeed] = useState(0);
   const [stepperRounds, setStepperRounds] = useState('1');
   const [deviceStates, setDeviceStates] = useState({
     light1: false,

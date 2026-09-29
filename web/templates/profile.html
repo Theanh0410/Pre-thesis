@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+      .profile-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+        align-items: start;
+      }
+      .profile-avatar-large {
+        position: relative;
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        background: #0f3460;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        margin-bottom: 20px;
+        overflow: hidden;
+      }
+      .profile-avatar-large img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .avatar-edit-button {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: #4caf50;
+        border: 2px solid #1e2749;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        cursor: pointer;
+      }
+      .avatar-edit-button:hover { background: #43a047; }
+      .profile-field {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid #2a2a3e;
+      }
+      .profile-field:last-child { border-bottom: none; }
+      .profile-field-label { color: #b8b8d4; font-size: 14px; }
+      .profile-field-value { font-size: 14px; }
+
+      .health-form-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px;
+        margin-top: 5px;
+      }
+      .health-form-field label {
+        display: block;
+        color: #b8b8d4;
+        font-size: 12px;
+        margin-bottom: 6px;
+      }
+      .health-form-field select {
+        width: 100%;
+        background: #0f3460;
+        border: 1px solid #2a2a3e;
+        border-radius: 8px;
+        padding: 10px 12px;
+        color: #fff;
+        font-size: 14px;
+      }
+      #healthProfileStatus {
+        font-size: 13px;
+        color: #b8b8d4;
+        margin-left: 12px;
+      }
+    </style>
+  </head>
+
+  <body>
+    {% include 'partials/navbar.html' %}
+
+    <div class="container">
+      <div class="profile-grid">
+        <div class="card">
+          <div class="profile-avatar-large" id="avatarPreviewWrap">
+            {% if user and user[4] %}
+            <img src="{{ url_for('static', filename=user[4]) }}" alt="Avatar" id="avatarPreview">
+            {% else %}
+            <i class="fas fa-user" id="avatarPreviewIcon"></i>
+            {% endif %}
+            <label class="avatar-edit-button" for="avatarInput" title="Change avatar">
+              <i class="fas fa-camera"></i>
+            </label>
+            <input type="file" id="avatarInput" accept="image/png,image/jpeg,image/gif,image/webp" style="display:none" onchange="uploadAvatar(this)">
+          </div>
+
+          {% if user %}
+          <div class="profile-field">
+            <span class="profile-field-label">Full name</span>
+            <span class="profile-field-value">{{ user[0] }}</span>
+          </div>
+          <div class="profile-field">
+            <span class="profile-field-label">Username</span>
+            <span class="profile-field-value">{{ user[1] }}</span>
+          </div>
+          <div class="profile-field">
+            <span class="profile-field-label">Email</span>
+            <span class="profile-field-value">{{ user[2] }}</span>
+          </div>
+          <div class="profile-field">
+            <span class="profile-field-label">Member since</span>
+            <span class="profile-field-value">{{ user[3] }}</span>
+          </div>
+          {% else %}
+          <p>Could not load profile information.</p>
+          {% endif %}
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <i class="fas fa-heart-pulse"></i>
+            Health Measurements
+          </div>
+          <p style="color:#b8b8d4; font-size:13px; margin-bottom:15px;">
+            Used to give context for blood pressure guidance. Leave blank if unknown.
+          </p>
+
+          <form id="healthProfileForm" onsubmit="saveHealthProfile(event)">
+            <div class="health-form-grid">
+              <div class="health-form-field">
+                <label for="hp-age">Age</label>
+                <input type="number" id="hp-age" class="input" min="0" max="130" value="{{ user[5] if user and user[5] is not none else '' }}">
+              </div>
+              <div class="health-form-field">
+                <label for="hp-sex">Sex</label>
+                <select id="hp-sex">
+                  <option value="" {{ 'selected' if not (user and user[6]) else '' }}>-- Select --</option>
+                  <option value="male" {{ 'selected' if user and user[6] == 'male' else '' }}>Male</option>
+                  <option value="female" {{ 'selected' if user and user[6] == 'female' else '' }}>Female</option>
+                  <option value="other" {{ 'selected' if user and user[6] == 'other' else '' }}>Other</option>
+                </select>
+              </div>
+              <div class="health-form-field">
+                <label for="hp-systolic">Systolic (mmHg)</label>
+                <input type="number" id="hp-systolic" class="input" min="50" max="300" value="{{ user[7] if user and user[7] is not none else '' }}">
+              </div>
+              <div class="health-form-field">
+                <label for="hp-diastolic">Diastolic (mmHg)</label>
+                <input type="number" id="hp-diastolic" class="input" min="30" max="200" value="{{ user[8] if user and user[8] is not none else '' }}">
+              </div>
+              <div class="health-form-field">
+                <label for="hp-pulse">Pulse (bpm)</label>
+                <input type="number" id="hp-pulse" class="input" min="20" max="250" value="{{ user[9] if user and user[9] is not none else '' }}">
+              </div>
+              <div class="health-form-field">
+                <label for="hp-weight">Weight (kg)</label>
+                <input type="number" step="0.1" id="hp-weight" class="input" min="1" max="400" value="{{ user[10] if user and user[10] is not none else '' }}">
+              </div>
+              <div class="health-form-field">
+                <label for="hp-height">Height (cm)</label>
+                <input type="number" step="0.1" id="hp-height" class="input" min="30" max="250" value="{{ user[11] if user and user[11] is not none else '' }}">
+              </div>
+            </div>
+
+            <div style="margin-top: 20px; display:flex; align-items:center;">
+              <button type="submit" class="add-room-button" style="width:auto;">
+                <i class="fas fa-save"></i>
+                Save
+              </button>
+              <span id="healthProfileStatus"></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script>
+    <script>
+      var socket = io();
+      socket.on('connect', function () { updateConnectionStatus(true); });
+      socket.on('disconnect', function () { updateConnectionStatus(false); });
+
+      async function uploadAvatar(input) {
+        const file = input.files[0];
+        if (!file) return;
+
+        const formData = new FormData();
+        formData.append('avatar', file);
+
+        try {
+          const response = await fetch('/profile/avatar', { method: 'POST', body: formData });
+          const data = await response.json();
+
+          if (data.status === 'success') {
+            const wrap = document.getElementById('avatarPreviewWrap');
+            let img = document.getElementById('avatarPreview');
+            if (!img) {
+              const icon = document.getElementById('avatarPreviewIcon');
+              if (icon) icon.remove();
+              img = document.createElement('img');
+              img.id = 'avatarPreview';
+              img.alt = 'Avatar';
+              wrap.insertBefore(img, wrap.firstChild);
+            }
+            img.src = data.avatar_url + '?t=' + Date.now();
+          } else {
+            alert(data.message || 'Failed to upload avatar.');
+          }
+        } catch (error) {
+          console.error('Avatar upload error:', error);
+          alert('Failed to upload avatar.');
+        }
+      }
+
+      async function saveHealthProfile(event) {
+        event.preventDefault();
+
+        const payload = {
+          age: document.getElementById('hp-age').value,
+          sex: document.getElementById('hp-sex').value,
+          systolic: document.getElementById('hp-systolic').value,
+          diastolic: document.getElementById('hp-diastolic').value,
+          pulse: document.getElementById('hp-pulse').value,
+          weight_kg: document.getElementById('hp-weight').value,
+          height_cm: document.getElementById('hp-height').value,
+        };
+
+        const statusEl = document.getElementById('healthProfileStatus');
+        statusEl.textContent = 'Saving...';
+
+        try {
+          const response = await fetch('/profile/health', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          const data = await response.json();
+          statusEl.textContent = data.status === 'success' ? 'Saved.' : (data.message || 'Failed to save.');
+        } catch (error) {
+          console.error('Error saving health profile:', error);
+          statusEl.textContent = 'Failed to save.';
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Consultation Log</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+      .health-log-card { margin-bottom: 20px; }
+      .health-log-meta { color: #b8b8d4; font-size: 12px; margin-top: 10px; }
+      .health-log-condition {
+        display: inline-block;
+        background: #0f3460;
+        color: #fff;
+        border-radius: 20px;
+        padding: 4px 12px;
+        font-size: 12px;
+        margin-bottom: 10px;
+        text-transform: capitalize;
+      }
+    </style>
+  </head>
+
+  <body>
+    {% include 'partials/navbar.html' %}
+
+    <div class="container">
+      <h2 style="margin-bottom: 20px; font-size: 18px; color: #b8b8d4; font-weight: normal;">
+        <i class="fas fa-notes-medical"></i> Health Consultation Log
+      </h2>
+
+      <div id="healthLogList">
+        {% for log in logs %}
+        <div class="card health-log-card">
+          <div class="health-log-condition">{{ log[1] or "general" }}</div>
+          <p><strong>Q:</strong> {{ log[2] }}</p>
+          <p><strong>A:</strong> {{ log[3] }}</p>
+          <div class="health-log-meta">
+            {{ log[5] }}{% if log[4] %} &middot; Sources: {{ log[4] }}{% endif %}
+          </div>
+        </div>
+        {% else %}
+        <div class="card">No health consultations logged yet.</div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script>
+    <script>
+      var socket = io();
+
+      socket.on('connect', function () { updateConnectionStatus(true); });
+      socket.on('disconnect', function () { updateConnectionStatus(false); });
+
+      socket.on('health_log', function (entry) {
+        prependHealthLogCard(entry);
+      });
+
+      function escapeHtml(value) {
+        if (value === undefined || value === null) return '';
+        return String(value)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function prependHealthLogCard(entry) {
+        const list = document.getElementById('healthLogList');
+        const placeholder = list.querySelector('.card:only-child');
+        if (placeholder && placeholder.textContent.includes('No health consultations')) {
+          placeholder.remove();
+        }
+
+        const card = document.createElement('div');
+        card.className = 'card health-log-card';
+        card.innerHTML = `
+          <div class="health-log-condition">${escapeHtml(entry.condition_tag || 'general')}</div>
+          <p><strong>Q:</strong> ${escapeHtml(entry.question)}</p>
+          <p><strong>A:</strong> ${escapeHtml(entry.answer)}</p>
+          <div class="health-log-meta">
+            just now${entry.retrieved_docs ? ' &middot; Sources: ' + escapeHtml(entry.retrieved_docs) : ''}
+          </div>
+        `;
+        list.insertBefore(card, list.firstChild);
+      }
+    </script>
+  </body>
+</html>

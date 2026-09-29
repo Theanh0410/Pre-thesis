@@ -1,0 +1,60 @@
+{
+  "diabetes": {
+    "examples": [
+      "what should i eat if i have diabetes",
+      "is my blood sugar too high",
+      "how do i manage my diabetes",
+      "can i eat sweets with diabetes",
+      "diabetes diet tips",
+      "how much exercise is good for diabetes",
+      "what are warning signs of diabetes problems",
+      "how often should i check my blood sugar"
+    ],
+    "actions": [
+      { "condition": "diabetes" }
+    ]
+  },
+  "hypertension": {
+    "examples": [
+      "is my blood pressure too high",
+      "how do i lower my blood pressure",
+      "what should i eat for high blood pressure",
+      "how much exercise is good for high blood pressure",
+      "is 150 over 90 blood pressure bad",
+      "what are warning signs of a blood pressure emergency",
+      "how often should i check my blood pressure"
+    ],
+    "actions": [
+      { "condition": "hypertension" }
+    ]
+  },
+  "profile_lookup": {
+    "examples": [
+      "can you give me my body measurements",
+      "what are my body measurements",
+      "what's my height and weight",
+      "what information do you have about me",
+      "read back my health profile",
+      "what do you have on file for me",
+      "show me my stored health information",
+      "what's my age weight and height",
+      "what measurements do you have saved for me"
+    ],
+    "actions": [
+      { "condition": "profile_lookup" }
+    ]
+  },
+  "arthritis": {
+    "examples": [
+      "how do i manage my arthritis pain",
+      "what exercise is good for arthritis",
+      "should i rest or move with arthritis",
+      "what foods help with joint pain",
+      "how do i reduce arthritis flare ups",
+      "when should i worry about joint pain"
+    ],
+    "actions": [
+      { "condition": "arthritis" }
+    ]
+  }
+}

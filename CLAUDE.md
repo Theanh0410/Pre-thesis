@@ -41,10 +41,17 @@ For each voice/text utterance:
 2. The prompt + BM25-retrieved doc context (`RAG/bm25.py` over `documents/`) + conversation context is
    sent to a local Ollama server (`OLLAMA_URL`, model `llama3.2`) for a natural-language reply.
 3. In parallel, command extraction runs two ways and picks whichever succeeds:
-   - `ContextualCommandProcessor` first — matches comfort/emotional phrasing ("I'm hot", "it's dark
-     in here") to device actions via `COMFORT_MAPPINGS`/`ROOM_KEYWORDS` fuzzy matching.
-   - Falls back to `SmartHomeCommandExtractor` — sentence-embedding similarity (SentenceTransformers)
-     against `smarthome/actions.json`, with spaCy dependency parsing to pull the target object and
+   - `ContextualCommandProcessor` first — matches indirect/natural phrasing ("I'm hot", "I want to go
+     to bed") to one or more device actions via `IntentMatcher` (`intent_matching.py`): each intent in
+     `smarthome/intents.json` carries example phrases + a list of `{device, action, room}` actions;
+     the utterance is embedded (shared `SentenceTransformer`, see below) and matched by cosine
+     similarity against every intent's examples, so new phrasings generalize without new code — add
+     examples to the config instead. `ROOM_KEYWORDS`/`VOICE_MISHEARING_MAP` in
+     `ContextualCommandProcessor.py` still handle explicit room overrides and Vosk mishearing
+     correction as pre/post-processing around the match.
+   - Falls back to `SmartHomeCommandExtractor` — sentence-embedding similarity (same shared
+     `SentenceTransformer` model, passed in via its `model=` param so it isn't loaded twice) against
+     `smarthome/actions.json`, with spaCy dependency parsing to pull the target object and
      `smarthome/synonyms.json` / `smarthome/room_actions.json` / `smarthome/object_room_map.json` to
      resolve synonyms, room, and validity.
 4. Extracted commands are appended to `caregiver_command.csv` (`save_tasks_to_csv`, room name mapped
@@ -54,9 +61,12 @@ For each voice/text utterance:
    session when in a request context, a module-level `VOICE_CONTEXT` global otherwise — needed
    because the voice loop runs outside a request).
 
-`smarthome/*.json` is the single source of truth for valid actions/rooms/objects/synonyms consumed by
-both the contextual processor and the extractor — update these together when adding a new room or
-device type, matching the "add new room"/"add new device" work in recent commits.
+`smarthome/*.json` is the single source of truth for valid actions/rooms/objects/synonyms/intents
+consumed by both the contextual processor and the extractor — update these together when adding a new
+room or device type, matching the "add new room"/"add new device" work in recent commits. To teach the
+contextual processor a new indirect phrase/intent (e.g. "I'm leaving the house"), add an entry to
+`smarthome/intents.json` (example phrases + target actions) — no code change needed unless the new
+intent needs logic beyond "match phrase → emit action(s)".
 
 ### `web/app.py`
 
@@ -81,8 +91,12 @@ python app.py                      # serves on port 8000, debug=True
 Requires a local Ollama server running the `llama3.2` model (`ollama serve`) and a Vosk model at
 `LLM/server/models/vosk-model-en-us-0.22/` (path is checked/prompted for at startup).
 
-There is no automated test suite — `test_contextual.py` and `test.py` are standalone manual scripts,
-run directly with `python test_contextual.py`. `mock_sensor_publisher.py` /
+`test_intent_matching.py`, `test_contextual_command_processor.py`, and `test_smarthome_intents_config.py`
+are real automated `unittest` suites (`python -m unittest discover -p "test_*.py"`) — they use a fake,
+injected `embed_fn` instead of the real model, so they run without the heavy ML deps installed.
+`test_contextual.py` and `test.py` are standalone manual scripts requiring the real
+`sentence-transformers`/spaCy stack (run in the `llm` conda env, not a plain venv), used for
+eyeballing real-model behavior rather than as pass/fail checks. `mock_sensor_publisher.py` /
 `mock_sensor_publisher_advanced.py` publish fake `home/sensors` data to the MQTT broker for exercising
 `web/app.py` without real hardware.
 

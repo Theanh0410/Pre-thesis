@@ -4,10 +4,11 @@ import requests
 import pandas as pd
 import time
 import threading
-from flask import Flask, jsonify, session
+from flask import Flask, jsonify, session, request
 from flask_cors import CORS
 from SmartHomeCommandExtractor import SmartHomeCommandExtractor
-from ContextualCommandProcessor import ContextualCommandProcessor
+from ContextualCommandProcessor import ContextualCommandProcessor, correct_voice_mishearing
+from intent_matching import IntentMatcher
 from RAG.bm25 import BM25Retriever
 
 # Import speech to text functionality
@@ -15,6 +16,7 @@ import wave
 import numpy as np
 from vosk import Model, KaldiRecognizer
 import sounddevice as sd
+from sentence_transformers import SentenceTransformer
 
 # Import ThingSpeak functionality
 import logging
@@ -26,6 +28,13 @@ app.secret_key = 'your_secret_key'
 # Configuration
 OLLAMA_URL = "http://localhost:11434/api/generate"
 MODEL_NAME = "llama3.2"
+
+# The web dashboard (web/app.py) owns the resident's health profile
+# (age/sex/BP/pulse/weight/height, edited from the profile page). This
+# server has no login of its own, so it reads it over HTTP using the same
+# shared internal key web/app.py checks - keep these two values in sync.
+WEB_APP_URL = "http://localhost:5000"
+INTERNAL_API_KEY = "smart-home-internal-9f3a1c"
 LOG_FILE = 'conversation_log.txt'
 TASK_FILE = os.path.join(os.path.dirname(__file__), "caregiver_command.csv")
 VOSK_MODEL_PATH = os.path.join(os.path.dirname(__file__), "models", "vosk-model-en-us-0.22")
@@ -40,6 +49,7 @@ MQTT_PORT = 1883
 MQTT_USERNAME = "theanh0410"
 MQTT_PASSWORD = "eoCNam4gR2IWOA6d"
 MQTT_TOPIC = "home/control"
+MQTT_TOPIC_HEALTH_LOG = "home/health_log"
 
 mqtt_client = mqtt.Client()
 mqtt_client.username_pw_set(MQTT_USERNAME, MQTT_PASSWORD)
@@ -50,6 +60,143 @@ def publish_to_shiftr(command_data):
     payload = json.dumps(command_data)
     result = mqtt_client.publish(MQTT_TOPIC, payload)
     return result.rc == 0
+
+def publish_health_log(log_data):
+    payload = json.dumps(log_data)
+    result = mqtt_client.publish(MQTT_TOPIC_HEALTH_LOG, payload)
+    return result.rc == 0
+
+def fetch_health_profile():
+    """Best-effort fetch of the resident's body measurements from the web
+    dashboard. Returns None if the web server is unreachable or the request
+    fails - the health RAG prompt just falls back to generic guidance."""
+    try:
+        response = requests.get(
+            f"{WEB_APP_URL}/api/health_profile/default",
+            headers={"X-Internal-Key": INTERNAL_API_KEY},
+            timeout=3
+        )
+        if response.status_code == 200:
+            return response.json()
+    except requests.exceptions.RequestException as e:
+        print(f"Could not fetch health profile: {e}")
+    return None
+
+def format_health_profile(profile):
+    """Render the fetched profile as a short block for the prompt, skipping
+    any fields the user hasn't filled in. Returns "" if nothing is set."""
+    if not profile:
+        return ""
+
+    lines = []
+    if profile.get("age") is not None:
+        lines.append(f"Age: {profile['age']}")
+    if profile.get("sex"):
+        lines.append(f"Sex: {profile['sex']}")
+    if profile.get("systolic") is not None and profile.get("diastolic") is not None:
+        lines.append(f"Blood pressure: {profile['systolic']}/{profile['diastolic']} mmHg")
+    if profile.get("pulse") is not None:
+        lines.append(f"Pulse: {profile['pulse']} bpm")
+    if profile.get("weight_kg") is not None:
+        lines.append(f"Weight: {profile['weight_kg']} kg")
+    if profile.get("height_cm") is not None:
+        lines.append(f"Height: {profile['height_cm']} cm")
+
+    return "\n".join(lines)
+
+# Deterministic blood-pressure classification. Kept as plain code rather
+# than left to the LLM to infer, since asking the model to compare numbers
+# against a threshold it read in a document is unreliable and unverifiable -
+# this way the status is computed the same way every time and can be tested
+# directly. Thresholds are a simplified 3-tier reading of the standard AHA
+# categories (Normal / Elevated+Stage 1+2 collapsed to "High" / Hypotension).
+BLOOD_PRESSURE_ADVICE = {
+    "Low": (
+        "Your reading is on the low side. Sit or lie down if you feel dizzy "
+        "or lightheaded, stay hydrated, and stand up slowly from sitting or "
+        "lying down. If you feel faint, have chest pain, or this is a big "
+        "change from your usual reading, contact your doctor."
+    ),
+    "Normal": (
+        "Your reading is within a normal range. Keep up healthy habits: a "
+        "balanced low-salt diet, regular light exercise, and routine "
+        "monitoring."
+    ),
+    "High": (
+        "Your reading is elevated. Reduce salt intake, avoid caffeine and "
+        "alcohol for now, try to relax, and recheck it after resting. If "
+        "readings stay high across multiple checks, contact your doctor."
+    ),
+}
+
+BLOOD_PRESSURE_EMERGENCY_ADVICE = (
+    "This reading is dangerously high and may be a hypertensive emergency. "
+    "Please seek medical attention right away or call emergency services, "
+    "especially if you also have a severe headache, chest pain, shortness "
+    "of breath, or vision changes."
+)
+
+def classify_blood_pressure(systolic, diastolic):
+    """Returns {"status": "Low"|"Normal"|"High", "is_emergency": bool}, or
+    None if either reading is missing."""
+    if systolic is None or diastolic is None:
+        return None
+
+    is_emergency = systolic >= 180 or diastolic >= 120
+
+    if systolic < 90 or diastolic < 60:
+        status = "Low"
+    elif systolic >= 130 or diastolic >= 80:
+        status = "High"
+    else:
+        status = "Normal"
+
+    return {"status": status, "is_emergency": is_emergency}
+
+def handle_profile_lookup(prompt):
+    """Answers "what are my measurements" style questions by reciting the
+    stored profile directly, deterministically - no LLM involved, so there's
+    no risk of it inventing or altering numbers it's just supposed to repeat."""
+    profile = fetch_health_profile()
+    formatted = format_health_profile(profile)
+
+    if formatted:
+        assistant_response = "Here are your stored body measurements:\n" + formatted
+    else:
+        assistant_response = (
+            "You don't have any body measurements saved yet. You (or your "
+            "caregiver) can add them from your profile page on the dashboard."
+        )
+
+    conversation_id = str(hash(f"{prompt}{assistant_response}"))
+    write_to_txt(prompt, assistant_response, conversation_id)
+    update_context(prompt, assistant_response, use_flask_session=False)
+
+    save_health_log_to_csv(prompt, "profile_lookup", assistant_response, [])
+    publish_health_log({
+        "condition_tag": "profile_lookup",
+        "question": prompt,
+        "answer": assistant_response,
+        "retrieved_docs": [],
+        "source": "llm_voice",
+        "bp_status": None,
+        "bp_emergency": False
+    })
+
+    print("\nCaregiver Response:")
+    print(assistant_response)
+    print("\n" + "=" * 50)
+
+    return {
+        "status": "success",
+        "message": "Voice processed successfully",
+        "text": prompt,
+        "response": assistant_response,
+        "smart_home": [],
+        "health_topic": "profile_lookup",
+        "bp_status": None,
+        "bp_emergency": False
+    }
 
 # ThingSpeak logging setup
 logging.basicConfig(
@@ -67,21 +214,44 @@ with open("smarthome/room_actions.json") as f:
     room_actions = json.load(f)
 with open("smarthome/object_room_map.json") as f:
     object_room_map = json.load(f)
+with open("smarthome/intents.json") as f:
+    intents = json.load(f)
+with open("smarthome/health_intents.json") as f:
+    health_intents = json.load(f)
+
+# Loaded once and shared between the extractor (direct commands) and the
+# contextual processor (natural/indirect phrasing like "I want to go to
+# bed") so the ~130MB model isn't loaded into memory twice.
+embedding_model = SentenceTransformer("paraphrase-MiniLM-L12-v2")
+
+
+def embed_texts(texts):
+    return embedding_model.encode(texts, convert_to_tensor=False).tolist()
+
 
 extractor = SmartHomeCommandExtractor(
     actions=actions,
     synonym_map=synonym_map,
     room_actions=room_actions,
     object_room_map=object_room_map,
-    threshold=0.1
+    threshold=0.1,
+    model=embedding_model
 )
 
 contextual_processor = ContextualCommandProcessor(
+    intents=intents,
+    embed_fn=embed_texts,
     room_actions=room_actions,
     object_room_map=object_room_map
 )
 
 bm25_retriever = BM25Retriever(docs_folder="documents")
+
+# Health consultation feature: separate corpus + intent matcher so patient
+# education material doesn't dilute BM25 relevance for smart-home documents.
+health_bm25_retriever = BM25Retriever(docs_folder="documents/health")
+health_matcher = IntentMatcher(health_intents, embed_fn=embed_texts)
+HEALTH_LOG_FILE = os.path.join(os.path.dirname(__file__), "health_consultation_log.csv")
 
 ROOM_ID_MAP = {
     "living room": 201,
@@ -280,6 +450,33 @@ def save_tasks_to_csv(results):
         df_combined = pd.concat([df_existing, df_new], ignore_index=True)
         df_combined.to_csv(TASK_FILE, index=False)
 
+def save_health_log_to_csv(question, condition_tag, answer, retrieved_filenames, bp_result=None):
+    if not os.path.exists(HEALTH_LOG_FILE) or os.stat(HEALTH_LOG_FILE).st_size == 0:
+        df_existing = pd.DataFrame()
+        current_id = 1
+    else:
+        df_existing = pd.read_csv(HEALTH_LOG_FILE)
+        if "ID" not in df_existing.columns or df_existing["ID"].dropna().empty:
+            current_id = 1
+        else:
+            current_id = int(df_existing["ID"].max()) + 1
+
+    new_row = pd.DataFrame([{
+        "ID": current_id,
+        "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+        "condition_tag": condition_tag,
+        "question": question,
+        "answer": answer,
+        "retrieved_docs": ", ".join(retrieved_filenames),
+        "bp_status": bp_result["status"] if bp_result else "",
+        "bp_emergency": bp_result["is_emergency"] if bp_result else "",
+    }])
+
+    if df_existing.empty:
+        new_row.to_csv(HEALTH_LOG_FILE, index=False)
+    else:
+        pd.concat([df_existing, new_row], ignore_index=True).to_csv(HEALTH_LOG_FILE, index=False)
+
 def is_device_control_command(results):
     device_keywords = ["light", "fan", "lamp", "bulb", "switch"]
     action_keywords = ["turn on", "turn off", "switch on", "switch off", "open", "close"]
@@ -304,9 +501,8 @@ def is_device_control_command(results):
     return False
 
 def process_one_voice_command():
-    """Process one voice input and return result for web/API use"""
+    """Record and process one voice input and return result for web/API use"""
     try:
-        # Get speech input
         prompt = speech_to_text(timeout=6)
 
         if not prompt.strip():
@@ -318,14 +514,91 @@ def process_one_voice_command():
                 "smart_home": []
             }
 
-        print(f"\n🎤 Voice Input: {prompt}")
+        print(f"\nVoice Input: {prompt}")
+        return process_text_input(prompt)
 
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": str(e),
+            "text": "",
+            "response": "",
+            "smart_home": []
+        }
+
+def process_text_input(prompt):
+    """Process a single utterance (typed or transcribed) through the same
+    health-RAG / smart-home pipeline, and return result for web/API use."""
+    try:
         # Process with AI
         context = get_context(use_flask_session=False)
-        bm25_context = "\n".join([doc for _, doc in bm25_retriever.get_top_k_filenames(prompt, k=5)])
 
-        combined_prompt = f"""
-        
+        # Health consultation: route to the health corpus + a strict,
+        # non-diagnostic prompt instead of the generic smart-home chat one.
+        health_matches = health_matcher.match(correct_voice_mishearing(prompt), threshold=0.6)
+        condition_tag = health_matches[0].actions[0]["condition"] if health_matches else None
+
+        if condition_tag == "profile_lookup":
+            return handle_profile_lookup(prompt)
+
+        if condition_tag:
+            health_docs = health_bm25_retriever.get_top_k_filenames(prompt, k=3)
+            health_context = "\n\n".join(doc for _, doc in health_docs)
+            retrieved_filenames = [filename for filename, _ in health_docs]
+
+            health_profile = fetch_health_profile()
+            patient_info = format_health_profile(health_profile)
+            patient_info_block = f"\n        Patient Info:\n        {patient_info}\n" if patient_info else ""
+
+            bp_result = None
+            if condition_tag == "hypertension" and health_profile:
+                bp_result = classify_blood_pressure(
+                    health_profile.get("systolic"), health_profile.get("diastolic")
+                )
+
+            instructions = (
+                "You are a health-information assistant for older adults.\n"
+                "        Answer using ONLY the reference material below. Do not diagnose or\n"
+                "        prescribe medication. Always encourage the user to consult their\n"
+                "        doctor for anything personalized or urgent."
+            )
+
+            bp_status_block = ""
+            if bp_result:
+                status = bp_result["status"]
+                advice = BLOOD_PRESSURE_EMERGENCY_ADVICE if bp_result["is_emergency"] else BLOOD_PRESSURE_ADVICE[status]
+                emergency_note = " (POSSIBLE EMERGENCY)" if bp_result["is_emergency"] else ""
+                bp_status_block = (
+                    f"\n        Blood Pressure Status: {status}{emergency_note}\n"
+                    f"        Suggested Advice: {advice}\n"
+                )
+                instructions += (
+                    "\n        A Blood Pressure Status and Suggested Advice are given below, "
+                    "already determined from the patient's actual reading - state the "
+                    "status plainly and explain the advice in your own words. Do not "
+                    "recalculate, second-guess, or contradict the given status."
+                )
+            elif patient_info:
+                instructions += (
+                    "\n        If patient info is provided below, you may say whether their "
+                    "reported numbers fall inside or outside the ranges described in the "
+                    "reference material."
+                )
+
+            combined_prompt = f"""
+
+        {instructions}
+        {patient_info_block}{bp_status_block}
+        Reference Material:
+        {health_context}
+
+        User: {prompt}
+        Assistant:"""
+        else:
+            bm25_context = "\n".join([doc for _, doc in bm25_retriever.get_top_k_filenames(prompt, k=5)])
+
+            combined_prompt = f"""
+
         You are a helpful assistant.
         Use the provided context to answer or act appropriately.
 
@@ -362,13 +635,39 @@ def process_one_voice_command():
         write_to_txt(prompt, assistant_response, conversation_id)
         update_context(prompt, assistant_response, use_flask_session=False)
 
+        if condition_tag:
+            save_health_log_to_csv(prompt, condition_tag, assistant_response, retrieved_filenames, bp_result)
+            publish_health_log({
+                "condition_tag": condition_tag,
+                "question": prompt,
+                "answer": assistant_response,
+                "retrieved_docs": retrieved_filenames,
+                "source": "llm_voice",
+                "bp_status": bp_result["status"] if bp_result else None,
+                "bp_emergency": bp_result["is_emergency"] if bp_result else False
+            })
+            print("\nCaregiver Response:")
+            print(assistant_response)
+            print("\n" + "=" * 50)
+            return {
+                "status": "success",
+                "message": "Voice processed successfully",
+                "text": prompt,
+                "response": assistant_response,
+                "smart_home": [],
+                "health_topic": condition_tag,
+                "bp_status": bp_result["status"] if bp_result else None,
+                "bp_emergency": bp_result["is_emergency"] if bp_result else False
+            }
+
         # Extract smart home commands
         # Step 1: Try contextual processor first (comfort/emotional states)
         contextual_results = contextual_processor.process_contextual_command(prompt)
-        
-        if contextual_results and len(contextual_results) > 0 and contextual_results[0].get("valid"):
+        contextual_valid_results = [r for r in contextual_results if r.get("valid")]
+
+        if contextual_valid_results:
             # High confidence contextual match - use this
-            suggested_results = contextual_results
+            suggested_results = contextual_valid_results
         else:
             # Fallback to standard extractor
             suggested_results = extractor.extract(prompt)
@@ -376,11 +675,7 @@ def process_one_voice_command():
             if isinstance(suggested_results, dict) and "commands" in suggested_results:
                 suggested_results = suggested_results["commands"]
 
-            if not suggested_results:
-                suggested_results = []
-            elif isinstance(suggested_results, dict) and "commands" in suggested_results:
-                suggested_results = suggested_results["commands"]
-            elif not isinstance(suggested_results, list):
+            if not isinstance(suggested_results, list):
                 suggested_results = []
 
         valid_results = [
@@ -406,7 +701,7 @@ def process_one_voice_command():
                         "device": result.get("object") or result.get("device"),
                         "action": result["action"],
                         "room": result.get("room"),
-                        "valid": result.get("valid", True),
+                        "valid": result.get("valid", False),
                         "source": "llm_voice"
                     }
 
@@ -428,7 +723,8 @@ def process_one_voice_command():
             "message": "Voice processed successfully",
             "text": prompt,
             "response": assistant_response,
-            "smart_home": valid_results
+            "smart_home": valid_results,
+            "health_topic": None
         }
 
     except Exception as e:
@@ -455,7 +751,7 @@ def process_voice_command():
             time.sleep(1)
 
         except KeyboardInterrupt:
-            print("\n👋 Voice Assistant stopped by user")
+            print("\nVoice Assistant stopped by user")
             break
         except Exception as e:
             print(f"Error in main loop: {e}")
@@ -474,6 +770,30 @@ def home():
 @app.route("/start_voice", methods=["POST"])
 def start_voice():
     result = process_one_voice_command()
+
+    if result["status"] == "error":
+        return jsonify(result), 400
+
+    return jsonify(result)
+
+@app.route("/process_text", methods=["POST"])
+def process_text():
+    """Same pipeline as /start_voice, but for typed input - useful when
+    speech recognition misheard something."""
+    data = request.get_json(silent=True) or {}
+    text = (data.get("text") or "").strip()
+
+    if not text:
+        return jsonify({
+            "status": "error",
+            "message": "No text provided",
+            "text": "",
+            "response": "",
+            "smart_home": []
+        }), 400
+
+    print(f"\nText Input: {text}")
+    result = process_text_input(text)
 
     if result["status"] == "error":
         return jsonify(result), 400

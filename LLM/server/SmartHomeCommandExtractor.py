@@ -99,8 +99,11 @@ import spacy
 import nltk
 
 class SmartHomeCommandExtractor:
-    def __init__(self, actions, synonym_map, room_actions, object_room_map, threshold=0.2):
-        self.model = SentenceTransformer("paraphrase-MiniLM-L12-v2")
+    def __init__(self, actions, synonym_map, room_actions, object_room_map, threshold=0.2, model=None):
+        # Accept a pre-loaded model so callers (app.py) can share one
+        # SentenceTransformer instance with ContextualCommandProcessor
+        # instead of loading it twice.
+        self.model = model or SentenceTransformer("paraphrase-MiniLM-L12-v2")
         self.actions = actions
         self.synonym_map = {k.lower(): v for k, v in synonym_map.items()}
         self.room_actions = room_actions

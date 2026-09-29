@@ -1,0 +1,57 @@
+<div class="header">
+  <div class="container">
+    <div class="header-content">
+      <a href="/dashboard" class="header-left" style="text-decoration:none; color:inherit;">
+        <div class="header-icon">
+          <i class="fas fa-home"></i>
+        </div>
+        <div class="header-text">
+          <h1>Smart Home</h1>
+        </div>
+      </a>
+
+      <div class="user-menu" id="userMenu">
+        <button class="user-menu-trigger" type="button" onclick="toggleUserMenu()">
+          <span class="status-dot" id="connectionStatus" title="Connection status"></span>
+          <span class="user-avatar">
+            {% if session.get('avatar_path') %}
+            <img src="{{ url_for('static', filename=session.get('avatar_path')) }}" alt="Avatar">
+            {% else %}
+            <i class="fas fa-user"></i>
+            {% endif %}
+          </span>
+          <span class="user-name">{{ session.get('fullname') or session.get('username', 'Account') }}</span>
+          <i class="fas fa-chevron-down user-menu-caret"></i>
+        </button>
+
+        <div class="user-menu-dropdown" id="userMenuDropdown">
+          <a href="/dashboard"><i class="fas fa-gauge"></i> Dashboard</a>
+          <a href="/health"><i class="fas fa-notes-medical"></i> Health Log</a>
+          <a href="/profile"><i class="fas fa-id-badge"></i> Profile</a>
+          <form action="/logout" method="POST">
+            <button type="submit"><i class="fas fa-sign-out-alt"></i> Logout</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleUserMenu() {
+    document.getElementById('userMenuDropdown').classList.toggle('open');
+  }
+
+  document.addEventListener('click', function (event) {
+    const menu = document.getElementById('userMenu');
+    const dropdown = document.getElementById('userMenuDropdown');
+    if (menu && dropdown && !menu.contains(event.target)) {
+      dropdown.classList.remove('open');
+    }
+  });
+
+  function updateConnectionStatus(connected) {
+    const dot = document.getElementById('connectionStatus');
+    if (dot) dot.classList.toggle('disconnected', !connected);
+  }
+</script>

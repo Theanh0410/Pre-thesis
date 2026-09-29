@@ -39,6 +39,49 @@ class IntentMatcherMatchTests(unittest.TestCase):
         self.assertEqual(matches[0].intent, "going_to_bed")
         self.assertAlmostEqual(matches[0].score, 1.0)
 
+    def test_returns_empty_when_no_intent_clears_threshold(self):
+        intents = {
+            "going_to_bed": {
+                "examples": ["i want to go to bed"],
+                "actions": [{"device": "light", "action": "turn off", "room": "bedroom"}],
+            }
+        }
+        # Orthogonal vectors => cosine similarity 0.0, well below threshold.
+        embed_fn = fake_embed_fn({
+            "i want to go to bed": [1.0, 0.0],
+            "what's the weather like": [0.0, 1.0],
+        })
+
+        matcher = IntentMatcher(intents, embed_fn)
+        matches = matcher.match("what's the weather like", threshold=0.6)
+
+        self.assertEqual(matches, [])
+
+    def test_multiple_matching_intents_are_sorted_by_score_descending(self):
+        intents = {
+            "hot": {
+                "examples": ["i'm hot"],
+                "actions": [{"device": "fan", "action": "turn on", "room": "living room"}],
+            },
+            "going_to_bed": {
+                "examples": ["i want to go to bed"],
+                "actions": [{"device": "light", "action": "turn off", "room": "bedroom"}],
+            },
+        }
+        # Input is closer to "going_to_bed" (0.9) than to "hot" (0.7), so
+        # going_to_bed must be ranked first even though it's declared second.
+        embed_fn = fake_embed_fn({
+            "i'm hot": [1.0, 0.0],
+            "i want to go to bed": [0.0, 1.0],
+            "input": [0.6, 0.9],
+        })
+
+        matcher = IntentMatcher(intents, embed_fn)
+        matches = matcher.match("input", threshold=0.5)
+
+        self.assertEqual([m.intent for m in matches], ["going_to_bed", "hot"])
+        self.assertGreater(matches[0].score, matches[1].score)
+
 
 if __name__ == "__main__":
     unittest.main()

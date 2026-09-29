@@ -1,0 +1,22 @@
+ID,timestamp,condition_tag,question,answer,retrieved_docs,bp_status,bp_emergency
+1,2026-09-29 21:03:13,profile_lookup,what are my body measurements,You don't have any body measurements saved yet. You (or your caregiver) can add them from your profile page on the dashboard.,,,
+2,2026-09-29 21:03:36,profile_lookup,what are my body measurement?,You don't have any body measurements saved yet. You (or your caregiver) can add them from your profile page on the dashboard.,,,
+3,2026-09-29 21:04:27,profile_lookup,what are my body measurements?,You don't have any body measurements saved yet. You (or your caregiver) can add them from your profile page on the dashboard.,,,
+4,2026-09-29 21:06:01,profile_lookup,what are my body measurements?,You don't have any body measurements saved yet. You (or your caregiver) can add them from your profile page on the dashboard.,,,
+5,2026-09-29 21:08:17,profile_lookup,what are my body measurements,"Here are your stored body measurements:
+Age: 70
+Sex: male
+Blood pressure: 118/70 mmHg
+Pulse: 70 bpm
+Weight: 70.0 kg
+Height: 170.0 cm",,,
+6,2026-09-29 21:08:44,profile_lookup,what are my body measurements?,"Here are your stored body measurements:
+Age: 70
+Sex: male
+Blood pressure: 118/70 mmHg
+Pulse: 70 bpm
+Weight: 70.0 kg
+Height: 170.0 cm",,,
+7,2026-09-29 21:09:04,hypertension,is my blood pressure high?,Your blood pressure is within a normal range.,"hypertension.txt, diabetes.txt, arthritis.txt",Normal,0.0
+8,2026-09-29 21:09:36,hypertension,is my blood pressure high ?,Your blood pressure reading of 150/90 mmHg is classified as High. This means that your systolic (top number) and diastolic (bottom number) pressure levels are higher than the general guidelines recommend.,"hypertension.txt, diabetes.txt, arthritis.txt",High,0.0
+9,2026-09-29 21:10:07,hypertension,do you have any recommendation for my blood pressure,"Based on your high blood pressure reading of 150/90 mmHg, I recommend that you try to relax and recheck your blood pressure after resting for a few minutes. This can help determine if your blood pressure is within a normal range. Additionally, I suggest reducing your salt intake by favoring fresh fruits, vegetables, and whole grains, and limiting processed and canned foods, which are often high in sodium.","hypertension.txt, diabetes.txt, arthritis.txt",High,0.0

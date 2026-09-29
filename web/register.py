@@ -5,7 +5,7 @@ register_bp = Blueprint('register', __name__)
 
 @register_bp.route('/register', methods=['GET', 'POST'])
 def register():
-    from app import mysql  # Import MySQL instance from app.py
+    from app import mysql, seed_default_rooms  # Import from app.py
     
     if request.method == 'POST':
         fullname = request.form['fullname']
@@ -42,10 +42,13 @@ def register():
         hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
 
         # Insert new user into the database
-        cursor.execute("INSERT INTO users (fullname, username, email, password) VALUES (%s, %s, %s, %s)", 
+        cursor.execute("INSERT INTO users (fullname, username, email, password) VALUES (%s, %s, %s, %s)",
                        (fullname, username, email, hashed_password))
         mysql.connection.commit()
+        new_user_id = cursor.lastrowid
         cursor.close()
+
+        seed_default_rooms(new_user_id)
 
         return redirect(url_for('login.login'))  # Redirect to login page after successful registration
 

@@ -12,83 +12,53 @@
   </head>
 
   <body>
-    <div class="header">
-      <div class="container">
-        <div class="header-content">
-          <div class="header-left">
-            <div class="header-icon">
-              <i class="fas fa-home"></i>
-            </div>
-            <div class="header-text">
-              <h1>Smart Home</h1>
-              <p>Control Panel</p>
-            </div>
-          </div>
-          <div class="connection-status" id="connectionStatus">
-            <i class="fas fa-wifi"></i>
-            <span>Connected</span>
-          </div>
-          <form action="/logout" method="POST">
-            <button type="submit" class="logout-button">Logout</button>
-          </form>
-        </div>
-      </div>
-    </div>
+    {% include 'partials/navbar.html' %}
 
     <div class="container">
       <!-- Sensor Data -->
       <div class="grid">
-        <!-- Living room -->
-        <div class="card" id="room-1" data-room-id="1" data-room-name="Living Room">
+        {% for room in rooms %}
+        <div class="card" id="room-{{ room.id }}" data-room-id="{{ room.id }}" data-room-name="{{ room.name }}">
           <div class="card-title">
-            <i class="fas fa-couch"></i>
-            Living Room
+            <i class="fas fa-{{ room.icon }}"></i>
+            {{ room.name }}
           </div>
 
           <div class="sensor-grid">
             <div class="sensor-card">
               <i class="fas fa-tint sensor-icon humidity-icon"></i>
               <div class="sensor-label">Humidity</div>
-              <div class="sensor-value" id="living-room-humidity">--%</div>
+              <div class="sensor-value" id="room-{{ room.id }}-humidity">--%</div>
             </div>
             <div class="sensor-card">
               <i class="fas fa-sun sensor-icon light-icon"></i>
               <div class="sensor-label">Light</div>
-              <div class="sensor-value" id="living-room-light-sensor">--</div>
+              <div class="sensor-value" id="room-{{ room.id }}-light-sensor">--</div>
             </div>
           </div>
 
-          <div class="device-grid" id="devices-1" style="margin-top: 20px">
+          <div class="device-grid" id="devices-{{ room.id }}" style="margin-top: 20px">
+            {% for device in room.devices %}
             <button
-              class="device-button light-off"
-              id="livingroom_light"
-              data-device-code="light"
-              data-command-base="livingroom_light"
-              onclick="toggleDevice('livingroom_light')"
+              class="device-button {{ 'fan' if device.device_code == 'fan' else 'light' }}-{{ 'on' if device.status == 'on' else 'off' }}"
+              id="device-{{ device.id }}"
+              data-device-code="{{ device.device_code }}"
+              data-command-base="{{ device.command_base }}"
+              onclick="toggleDevice('device-{{ device.id }}')"
             >
-              <i class="fas fa-lightbulb"></i>
-              Living room light
+              <i class="fas fa-{{ device.icon }}"></i>
+              {{ device.custom_name }}
             </button>
+            {% endfor %}
 
-            <button
-              class="device-button fan-off"
-              id="livingroom_fan"
-              data-device-code="fan"
-              data-command-base="livingroom_fan"
-              onclick="toggleDevice('livingroom_fan')"
-            >
-              <i class="fas fa-fan"></i>
-              Living room fan
-            </button>
-
-            <button class="add-device-tile" onclick="showAddDeviceForm(1)">
+            <button class="add-device-tile" onclick="showAddDeviceForm({{ room.id }})">
               <i class="fas fa-plus"></i>
               Add Device
             </button>
           </div>
 
-          <div class="inline-device-form" id="device-form-1">
-            <select id="device-type-1" class="input">
+          <div class="inline-device-form" id="device-form-{{ room.id }}">
+            <select id="device-type-{{ room.id }}" class="input">
               <option value="">Choose device</option>
               <option value="1" data-code="light" data-icon="lightbulb">Light</option>
               <option value="2" data-code="fan" data-icon="fan">Fan</option>
@@ -96,111 +66,37 @@
 
             <input
               type="text"
-              id="device-name-1"
+              id="device-name-{{ room.id }}"
               class="input"
               placeholder="Custom device name"
             />
 
             <div class="inline-device-actions">
-              <button class="small-add-button" onclick="addDeviceToRoom(1)">
+              <button class="small-add-button" onclick="addDeviceToRoom({{ room.id }})">
                 Add
               </button>
-              <button class="small-cancel-button" onclick="hideAddDeviceForm(1)">
+              <button class="small-cancel-button" onclick="hideAddDeviceForm({{ room.id }})">
                 Cancel
               </button>
             </div>
           </div>
         </div>
+        {% endfor %}
 
-        <!-- Bedroom -->
-        <div class="card" id="room-2" data-room-id="2" data-room-name="Bedroom">
+        <!-- Add Room -->
+        <div class="card add-room-card" id="addRoomCard">
           <div class="card-title">
-            <i class="fas fa-bed"></i>
-            Bedroom
+            <i class="fas fa-plus-circle"></i>
+            Add New Room
           </div>
 
-          <div class="sensor-grid">
-            <div class="sensor-card">
-              <i class="fas fa-tint sensor-icon humidity-icon"></i>
-              <div class="sensor-label">Humidity</div>
-              <div class="sensor-value" id="bedroom-humidity">--%</div>
-            </div>
-            <div class="sensor-card">
-              <i class="fas fa-sun sensor-icon light-icon"></i>
-              <div class="sensor-label">Light</div>
-              <div class="sensor-value" id="bedroom-light-sensor">--</div>
-            </div>
-          </div>
-
-          <div class="device-grid" id="devices-2" style="margin-top: 20px">
-            <button
-              class="device-button light-off"
-              id="bedroom_light"
-              data-device-code="light"
-              data-command-base="bedroom_light"
-              onclick="toggleDevice('bedroom_light')"
-            >
-              <i class="fas fa-lightbulb"></i>
-              Bedroom light
-            </button>
-
-            <button
-              class="device-button fan-off"
-              id="bedroom_fan"
-              data-device-code="fan"
-              data-command-base="bedroom_fan"
-              onclick="toggleDevice('bedroom_fan')"
-            >
-              <i class="fas fa-fan"></i>
-              Bedroom fan
-            </button>
-
-            <button class="add-device-tile" onclick="showAddDeviceForm(2)">
+          <div class="add-room-form">
+            <input type="text" id="roomName" class="input add-room-input" placeholder="Enter room name"/>
+            <button class="add-room-button" onclick="addRoom()">
               <i class="fas fa-plus"></i>
-              Add Device
+              Add Room
             </button>
           </div>
-
-          <div class="inline-device-form" id="device-form-2">
-            <select id="device-type-2" class="input">
-              <option value="">Choose device</option>
-              <option value="1" data-code="light" data-icon="lightbulb">Light</option>
-              <option value="2" data-code="fan" data-icon="fan">Fan</option>
-            </select>
-
-            <input
-              type="text"
-              id="device-name-2"
-              class="input"
-              placeholder="Custom device name"
-            />
-
-            <div class="inline-device-actions">
-              <button class="small-add-button" onclick="addDeviceToRoom(2)">
-                Add
-              </button>
-              <button class="small-cancel-button" onclick="hideAddDeviceForm(2)">
-                Cancel
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Add Room -->
-      <!-- Add Room -->
-      <div class="add-room-card">
-        <div class="card-title">
-          <i class="fas fa-plus-circle"></i>
-          Add New Room
-        </div>
-
-        <div class="add-room-form">
-          <input type="text" id="roomName" class="input add-room-input" placeholder="Enter room name"/>
-          <button class="add-room-button" onclick="addRoom()">
-            <i class="fas fa-plus"></i>
-            Add Room
-          </button>
         </div>
       </div>
 
@@ -214,6 +110,21 @@
           <i class="fas fa-microphone"></i>
           Start recording
         </button>
+
+        <div style="margin-top: 15px; display: flex; gap: 10px;">
+          <input
+            type="text"
+            id="textCommandInput"
+            class="input"
+            placeholder="Or type your question here..."
+            style="flex: 1; margin-bottom: 0;"
+            onkeydown="if (event.key === 'Enter') sendTextCommand();"
+          />
+          <button class="btn" id="textCommandBtn" onclick="sendTextCommand()" style="width: auto;">
+            <i class="fas fa-paper-plane"></i>
+            Send
+          </button>
+        </div>
 
         <div style="margin-top: 15px">
           <div style="margin-bottom: 8px; color: #b8b8d4">Recorded text:</div>
@@ -230,19 +141,32 @@
             No data available...
           </div>
         </div>
+
+        <div style="margin-top: 15px">
+          <div style="margin-bottom: 8px; color: #b8b8d4">Response:</div>
+          <div
+            id="voiceResponse"
+            style="
+              background: #0f3460;
+              border: 1px solid #2a2a3e;
+              border-radius: 12px;
+              padding: 14px;
+              min-height: 52px;
+              white-space: pre-wrap;
+            "
+          >
+            No data available...
+          </div>
+        </div>
       </div>
 
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script>
     <script>
-      // Device states
-      let deviceStates = {
-        livingroom_light: false,
-        livingroom_fan: false,
-        bedroom_light: false,
-        bedroom_fan: false,
-      };
+      // Device states, keyed by button id (e.g. "device-12"); populated as
+      // devices are toggled, defaulting to false via toggleDevice()'s fallback.
+      let deviceStates = {};
 
       // Initialize Socket.IO client
       var socket = io();
@@ -255,19 +179,6 @@
       socket.on('disconnect', function () {
         updateConnectionStatus(false);
       });
-
-      function updateConnectionStatus(connected) {
-        const statusEl = document.getElementById('connectionStatus');
-        if (connected) {
-          statusEl.innerHTML =
-            '<i class="fas fa-wifi"></i><span>Connected</span>';
-          statusEl.classList.remove('disconnected');
-        } else {
-          statusEl.innerHTML =
-            '<i class="fas fa-wifi-slash"></i><span>Disconnected</span>';
-          statusEl.classList.add('disconnected');
-        }
-      }
 
       // Send command function
       async function sendCommand(command) {
@@ -318,71 +229,72 @@
         }
       }
 
-      // Handle sensor data
+      // Handle sensor data - matches by room name against whichever rooms
+      // actually exist for this user, instead of two hardcoded room ids.
       socket.on('sensor_data', function (data) {
         console.log('Received sensor data:', data);
 
-        if (data.room === 'living room') {
-          document.getElementById('living-room-humidity').innerText =
-            data.humidity + '%';
-          document.getElementById('living-room-light-sensor').innerText =
-            data.light_level;
-        }
-
-        if (data.room === 'bedroom') {
-          document.getElementById('bedroom-humidity').innerText =
-            data.humidity + '%';
-          document.getElementById('bedroom-light-sensor').innerText =
-            data.light_level;
-        }
+        const roomCards = document.querySelectorAll('.grid .card[data-room-id]');
+        roomCards.forEach(function (card) {
+          if ((card.dataset.roomName || '').toLowerCase() !== (data.room || '').toLowerCase()) {
+            return;
+          }
+          const humidityEl = document.getElementById(`room-${card.dataset.roomId}-humidity`);
+          const lightEl = document.getElementById(`room-${card.dataset.roomId}-light-sensor`);
+          if (humidityEl) humidityEl.innerText = data.humidity + '%';
+          if (lightEl) lightEl.innerText = data.light_level;
+        });
       });
 
+      // Handle device status pushed from voice/MQTT commands - looks up the
+      // button by its data-command-base instead of a hardcoded list, so it
+      // works for any room/device, not just the original living room/bedroom.
       socket.on('device_status', function (data) {
         console.log('Received device status:', data);
-        const command = data.command;
 
-        if (command === 'livingroom_light_on') {
-          deviceStates.living_room_light = true;
-          updateDeviceUI('livingroom_light', true);
-        } else if (command === 'livingroom_light_off') {
-          deviceStates.living_room_light = false;
-          updateDeviceUI('livingroom_light', false);
-        }
+        const match = (data.command || '').match(/^(.*)_(on|off)$/);
+        if (!match) return;
 
-        if (command === 'livingroom_fan_on') {
-          deviceStates.living_room_fan = true;
-          updateDeviceUI('livingroom_fan', true);
-        } else if (command === 'livingroom_fan_off') {
-          deviceStates.living_room_fan = false;
-          updateDeviceUI('livingroom_fan', false);
-        }
+        const [, commandBase, state] = match;
+        const button = document.querySelector(`[data-command-base="${commandBase}"]`);
+        if (!button) return;
 
-        if (command === 'bedroom_light_on') {
-          deviceStates.bedroom_light = true;
-          updateDeviceUI('bedroom_light', true);
-        } else if (command === 'bedroom_light_off') {
-          deviceStates.bedroom_light = false;
-          updateDeviceUI('bedroom_light', false);
-        }
-
-        if (command === 'bedroom_fan_on') {
-          deviceStates.bedroom_fan = true;
-          updateDeviceUI('bedroom_fan', true);
-        } else if (command === 'bedroom_fan_off') {
-          deviceStates.bedroom_fan = false;
-          updateDeviceUI('bedroom_fan', false);
-        }
+        const isOn = state === 'on';
+        deviceStates[button.id] = isOn;
+        updateDeviceUI(button.id, isOn);
       });
+
+      // Renders a /start_voice or /process_text result into the shared
+      // "Recorded text" / "Response" boxes.
+      function displayCommandResult(data) {
+        const voiceText = document.getElementById('voiceText');
+        const voiceResponse = document.getElementById('voiceResponse');
+
+        if (data.status === 'success') {
+          voiceText.innerText = data.text || 'No content received.';
+
+          let responseText = data.response || 'No response received.';
+          if (data.health_topic) {
+            responseText = `[Health: ${data.health_topic}] ${responseText}`;
+          }
+          voiceResponse.innerText = responseText;
+        } else {
+          voiceText.innerText = data.message || 'An error occurred.';
+          voiceResponse.innerText = 'No data available...';
+        }
+      }
 
       // Voice recording
       async function startVoiceRecording() {
         const btn = document.getElementById('voiceBtn');
         const voiceText = document.getElementById('voiceText');
+        const voiceResponse = document.getElementById('voiceResponse');
 
         btn.disabled = true;
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Recording...';
         voiceText.innerText = 'Preparing to record...';
-        
+        voiceResponse.innerText = 'No data available...';
+
         setTimeout(() => {
           voiceText.innerText = 'Recording... Say something into the microphone!';
         }, 2000);
@@ -396,18 +308,49 @@
           });
 
           const data = await response.json();
-
-          if (data.status === 'success') {
-            voiceText.innerText = data.text || 'No content received.';
-          } else {
-            voiceText.innerText = data.message || 'An error occurred.';
-          }
+          displayCommandResult(data);
         } catch (error) {
           console.error('Voice recording error:', error);
           voiceText.innerText = 'Cannot connect to voice server.';
+          voiceResponse.innerText = 'No data available...';
         } finally {
           btn.disabled = false;
           btn.innerHTML = '<i class="fas fa-microphone"></i> Start Recording';
+        }
+      }
+
+      // Typed text command - useful when speech recognition misheard something
+      async function sendTextCommand() {
+        const input = document.getElementById('textCommandInput');
+        const btn = document.getElementById('textCommandBtn');
+        const voiceText = document.getElementById('voiceText');
+        const voiceResponse = document.getElementById('voiceResponse');
+
+        const text = input.value.trim();
+        if (!text) return;
+
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+        voiceText.innerText = 'Processing...';
+        voiceResponse.innerText = 'No data available...';
+
+        try {
+          const response = await fetch('/process_text', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ text: text }),
+          });
+
+          const data = await response.json();
+          displayCommandResult(data);
+          input.value = '';
+        } catch (error) {
+          console.error('Text command error:', error);
+          voiceText.innerText = 'Cannot connect to voice server.';
+          voiceResponse.innerText = 'No data available...';
+        } finally {
+          btn.disabled = false;
+          btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send';
         }
       }
 
@@ -433,11 +376,24 @@
       }
 
       //add room
+      // Mirrors room_icon() in app.py - keep in sync.
+      function getRoomIcon(roomName) {
+        const icons = {
+          bed: 'bed', bath: 'bath', kitchen: 'kitchen-set',
+          living: 'couch', garage: 'warehouse', office: 'briefcase',
+        };
+        const name = (roomName || '').toLowerCase();
+        for (const keyword in icons) {
+          if (name.includes(keyword)) return icons[keyword];
+        }
+        return 'house-chimney';
+      }
+
       function addRoomCard(roomId, roomName, devices) {
         const roomCardHTML = `
           <div class="card" id="room-${roomId}" data-room-id="${roomId}" data-room-name="${roomName}">
             <div class="card-title">
-              <i class="fas fa-couch"></i>
+              <i class="fas fa-${getRoomIcon(roomName)}"></i>
               ${roomName}
             </div>
 
@@ -502,9 +458,9 @@
           </div>
         `;
 
-        // Append the new room card to the container
-        const roomContainer = document.querySelector('.grid');
-        roomContainer.insertAdjacentHTML('beforeend', roomCardHTML);
+        // Insert the new room card before the "Add Room" tile, so it stays last
+        const addRoomCard = document.getElementById('addRoomCard');
+        addRoomCard.insertAdjacentHTML('beforebegin', roomCardHTML);
       }
 
       function addDevice() {

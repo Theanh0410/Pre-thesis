@@ -1,0 +1,109 @@
+{
+  "hot": {
+    "examples": [
+      "i'm hot",
+      "i am hot",
+      "it's hot",
+      "it is hot",
+      "i'm feeling hot",
+      "i feel hot",
+      "i'm too hot",
+      "i'm feeling too hot",
+      "it's too hot in here"
+    ],
+    "actions": [
+      { "device": "fan", "action": "turn on", "room": "living room" }
+    ]
+  },
+  "cold": {
+    "examples": [
+      "i'm cold",
+      "i am cold",
+      "it's cold",
+      "it is cold",
+      "i'm feeling cold",
+      "i feel cold",
+      "i'm freezing",
+      "it's freezing in here"
+    ],
+    "actions": [
+      { "device": "fan", "action": "turn off", "room": "living room" }
+    ]
+  },
+  "dark": {
+    "examples": [
+      "it's dark",
+      "it is dark",
+      "it's dark in here",
+      "i can't see anything",
+      "it's too dark in here"
+    ],
+    "actions": [
+      { "device": "light", "action": "turn on", "room": "living room" }
+    ]
+  },
+  "too_bright": {
+    "examples": [
+      "it's too bright",
+      "it's too bright in here",
+      "the light is too bright"
+    ],
+    "actions": [
+      { "device": "light", "action": "turn off", "room": "living room" }
+    ]
+  },
+  "comfortable": {
+    "examples": [
+      "i'm comfortable",
+      "i am comfortable",
+      "this feels comfortable"
+    ],
+    "actions": [
+      { "device": "light", "action": "turn off", "room": "living room" }
+    ]
+  },
+  "uncomfortable": {
+    "examples": [
+      "i'm uncomfortable",
+      "i am uncomfortable",
+      "this feels uncomfortable"
+    ],
+    "actions": [
+      { "device": "fan", "action": "turn on", "room": "living room" }
+    ]
+  },
+  "going_to_bed": {
+    "examples": [
+      "i want to go to bed",
+      "i'm going to bed",
+      "i'm going to sleep",
+      "i'm heading to bed",
+      "time for bed",
+      "let's go to sleep",
+      "i think i'll turn in for the night",
+      "i'm ready for bed",
+      "goodnight, i'm off to bed",
+      "i'm sleepy",
+      "i am sleepy",
+      "i'm so sleepy",
+      "i'm tired",
+      "i am tired",
+      "i'm feeling tired"
+    ],
+    "actions": [
+      { "device": "light", "action": "turn off", "room": "bedroom" },
+      { "device": "light", "action": "turn off", "room": "living room" }
+    ]
+  },
+  "waking_up": {
+    "examples": [
+      "i just woke up",
+      "i'm awake",
+      "i am awake",
+      "good morning, i'm up"
+    ],
+    "actions": [
+      { "device": "light", "action": "turn on", "room": "bedroom" }
+    ]
+  }
+}
