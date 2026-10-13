@@ -1,0 +1,14 @@
+{
+ "run_name": "llama32_3b",
+ "model": "unsloth/Llama-3.2-3B-Instruct",
+ "epochs": 2,
+ "n_train": 793,
+ "n_val": 134,
+ "train_minutes": 8.4,
+ "peak_reserved_gb": 3.051,
+ "train_loss": 0.17238808438647538,
+ "eval_losses": [
+  0.20356100797653198,
+  0.18812242150306702
+ ]
+}

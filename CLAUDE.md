@@ -24,10 +24,16 @@ inside the relevant subfolder for commands.
 ## Architecture / data flow
 
 Everything is coordinated through **one public MQTT broker** (`theanh0410.cloud.shiftr.io`, hardcoded
-in `LLM/server/app.py`, `web/app.py`, and `arduino/arduino/arduino.ino`), on two topics:
+in `LLM/server/app.py`, `web/app.py`, and `arduino/arduino/arduino.ino`), on three topics:
 
 - `home/control` — device commands, JSON payloads like `{"device": "fan", "action": "turn on", "room": "living room", "valid": true, "source": "..."}`
 - `home/sensors` — CSV payloads `"room,humidity,light_level"` (or legacy 2-field `"humidity,light_level"`, defaulted to living room) published by the Arduino
+- `home/health_log` — JSON `{condition_tag, question, answer, retrieved_docs, source, bp_status, bp_emergency}` published by `LLM/server` after every health consultation; `web/app.py` stores it in the `health_logs` table and re-emits it over SocketIO as `health_log`
+
+`LLM/server` and `web/` also talk over plain HTTP: `web/app.py` proxies `/start_voice` and
+`/process_text` to `LLM/server` (port 8000), and `LLM/server` reads the resident's body measurements
+from `web/app.py` at `GET /api/health_profile/default` (header `X-Internal-Key`; the key is hardcoded
+as `INTERNAL_API_KEY` in both files and must match).
 
 Flow: **voice/text input → `LLM/server` → MQTT `home/control`** ⇄ **`web/app.py` (subscribes,
 re-emits over SocketIO to the dashboard; also republishes commands the dashboard UI issues)** ⇄
@@ -68,6 +74,30 @@ contextual processor a new indirect phrase/intent (e.g. "I'm leaving the house")
 `smarthome/intents.json` (example phrases + target actions) — no code change needed unless the new
 intent needs logic beyond "match phrase → emit action(s)".
 
+### Health consultation pipeline (`LLM/server/app.py`, `process_text_input`)
+
+Runs *before* the smart-home steps above; a matched health question never reaches command extraction.
+
+1. `health_matcher` (`IntentMatcher` over `smarthome/health_intents.json`, threshold 0.6) tags the
+   utterance with a `condition`: `diabetes`, `hypertension`, `arthritis`, or `profile_lookup`. Add a
+   condition by adding an entry there plus a `documents/health/<condition>.txt` reference file.
+2. `profile_lookup` is answered by `handle_profile_lookup` straight from the stored profile — no LLM, so
+   numbers can't be altered.
+3. Other conditions retrieve the top 3 docs from `documents/health/` (a separate `BM25Retriever`, kept
+   apart from `documents/` so patient material doesn't dilute smart-home retrieval), fetch the profile
+   from `web/` (`fetch_health_profile`, best-effort — falls back to generic guidance if `web/` is down),
+   and prompt Ollama with a strict non-diagnostic instruction.
+4. For `hypertension`, `classify_blood_pressure()` (in `health_advice.py`) computes Low/Normal/High plus
+   an emergency flag in plain code; the result and canned advice are injected into the prompt and the
+   model is told not to recompute it. Keep threshold logic in code, not in the prompt.
+5. Each exchange is appended to `health_consultation_log.csv` and published to `home/health_log`.
+
+`web/` side: `/profile` (avatar + age/sex/BP/pulse/weight/height, stored in `health_profiles`) and
+`/health` (last 50 `health_logs`). Both tables are in `schema.sql`; an existing database needs
+`migrations/001_add_avatar_and_health_profile.sql` (and `health_logs` if it predates it). Because the
+voice server has no login, all consultations/profile reads are attributed to a single hardcoded
+`DEFAULT_RESIDENT_USER_ID` in `web/app.py` — it must be an existing `users.id` (FK).
+
 ### `web/app.py`
 
 Flask-SocketIO app with MySQL (`flask_mysqldb`) for users/rooms/devices, `login`/`register` Blueprints
@@ -76,6 +106,28 @@ JSON into the dashboard's internal command strings (e.g. `livingroom_light_on`);
 `room_device_map` there when adding rooms/devices. There is no `requirements.txt` for this component —
 dependencies (flask, flask-socketio, flask-mysqldb, paho-mqtt, bcrypt) must be installed manually into
 its `venv`.
+
+### Fine-tuning experiment (`LLM/finetune/`)
+
+Thesis experiment, separate from the running system: QLoRA-fine-tune several small models for blood-pressure advice and
+compare them. Nothing in `LLM/server` imports from here (the reverse is true: it reuses `LLM/server/health_advice.py`).
+
+- `make_bp_dataset.py` generates `data/bp/{train,val,test}.jsonl` (+ `*_meta.jsonl` ground-truth sidecars). Labels come
+  from `classify_blood_pressure`; splits are by *reading* (and topic), never per example, so a reading can't leak into test.
+  Output is deterministic for a given `--seed`. If you change a threshold in `health_advice.py`, regenerate the data.
+- `bp_finetune.ipynb` is the single Colab notebook (Unsloth) for every model/dataset; only its *Run config* cell changes
+  (`RUN_NAME` picks a preset). It merges MedQuAD (only ~38 usable blood-pressure rows) with the generated files. Built from
+  Unsloth's Llama 3.2 Conversational notebook; non-Llama presets are untested.
+- `evaluate_ollama.py` scores any Ollama model on `dataset/test_BPquestions100.csv` (BPQA100, evaluation only - never train
+  on it) and on the generated test set; `bp_eval.py` holds the pure scoring code, `make_table.py` builds the comparison table
+  from `results/*.json`. Metrics: BPQA100 accuracy / precision / recall / F1 (Yes class) / macro-F1, BP-status per-class F1,
+  emergency recall, doctor-referral rate. Always report macro-F1 and accuracy next to F1(Yes): a model that always says "Yes"
+  gets F1(Yes) = 0.667 on the balanced BPQA100.
+- BPQA100 is gated on Hugging Face and not git-ignored; check the repo's visibility before committing it. Its CSV column
+  names are misleading: `replaced_question` is the question *with* the reading plus a label like "(high)"; `without_bp` is
+  the redacted "s/d" version.
+- `LLM/server/documents/health/hypertension.txt` says to discuss readings "at or above 140/90", while
+  `classify_blood_pressure` labels 130/80+ as High. The generated data follows the classifier.
 
 ## Commands
 
@@ -91,9 +143,14 @@ python app.py                      # serves on port 8000, debug=True
 Requires a local Ollama server running the `llama3.2` model (`ollama serve`) and a Vosk model at
 `LLM/server/models/vosk-model-en-us-0.22/` (path is checked/prompted for at startup).
 
-`test_intent_matching.py`, `test_contextual_command_processor.py`, and `test_smarthome_intents_config.py`
-are real automated `unittest` suites (`python -m unittest discover -p "test_*.py"`) — they use a fake,
-injected `embed_fn` instead of the real model, so they run without the heavy ML deps installed.
+`test_intent_matching.py`, `test_contextual_command_processor.py`, `test_smarthome_intents_config.py`,
+`test_health_advice.py`, and `test_silence_detector.py` are real automated `unittest` suites — they use a
+fake, injected `embed_fn` instead of the real model, so they run without the heavy ML deps installed.
+Run them by name:
+`python -m unittest test_silence_detector test_health_advice test_intent_matching test_contextual_command_processor test_smarthome_intents_config`.
+Plain `unittest discover` also collects `test_contextual.py`, which fails to import without the ML stack.
+`app.py` itself can't be imported in tests (it loads Vosk and the embedding model at import time), so
+logic that needs unit tests belongs in a separate module, as `health_advice.py` does.
 `test_contextual.py` and `test.py` are standalone manual scripts requiring the real
 `sentence-transformers`/spaCy stack (run in the `llm` conda env, not a plain venv), used for
 eyeballing real-model behavior rather than as pass/fail checks. `mock_sensor_publisher.py` /
@@ -108,6 +165,16 @@ python app.py
 ```
 Needs a local MySQL database named `thesis` (see `MYSQL_*` config in `app.py`) with `rooms`/`devices`
 tables matching the queries in `app.py`/`login.py`/`register.py`.
+
+### `LLM/finetune/` (fine-tuning experiment)
+```bash
+cd LLM/finetune
+python make_bp_dataset.py                                   # regenerate data/bp/*.jsonl
+python -m unittest test_make_bp_dataset test_bp_eval        # stdlib only; no GPU, Ollama or ML packages needed
+python evaluate_ollama.py --model llama3.2 --tag llama32_3b-base --format-hint   # needs `ollama serve`
+python make_table.py                                        # thesis comparison table from results/*.json
+```
+Training itself happens in Google Colab (T4) with `bp_finetune.ipynb`; see the notebook's header cell.
 
 ### `LLM/client/` (Next.js, secondary UI)
 ```bash
@@ -134,7 +201,11 @@ the file and must be edited per deployment.
 
 - MQTT broker credentials and the MySQL password are hardcoded directly in `LLM/server/app.py`,
   `web/app.py`, and `arduino/arduino/arduino.ino` (same broker across all three) — when changing one,
-  check whether the other two need the same update.
+  check whether the other two need the same update. `INTERNAL_API_KEY` is duplicated in
+  `LLM/server/app.py` and `web/app.py` the same way.
+- `__pycache__/` and `*.pyc` are gitignored; don't re-add them.
+- `LLM/server/server/smarthome/test_*.json` are fixtures that `test.py` generates — not a stray copy of
+  `LLM/server/smarthome/`, and not read by `app.py`.
 - `LLM/server/smarthome/*.json`, `web/app.py`'s `room_device_map`, and `ROOM_ID_MAP` in
   `LLM/server/app.py` each independently encode the set of valid rooms/devices; a new room or device
   generally needs updates in all three places, not just one.

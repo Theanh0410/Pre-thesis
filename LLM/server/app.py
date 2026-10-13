@@ -10,6 +10,12 @@ from SmartHomeCommandExtractor import SmartHomeCommandExtractor
 from ContextualCommandProcessor import ContextualCommandProcessor, correct_voice_mishearing
 from intent_matching import IntentMatcher
 from RAG.bm25 import BM25Retriever
+from silence_detector import EndOfSpeechDetector
+from health_advice import (
+    BLOOD_PRESSURE_ADVICE,
+    BLOOD_PRESSURE_EMERGENCY_ADVICE,
+    classify_blood_pressure,
+)
 
 # Import speech to text functionality
 import wave
@@ -39,7 +45,6 @@ LOG_FILE = 'conversation_log.txt'
 TASK_FILE = os.path.join(os.path.dirname(__file__), "caregiver_command.csv")
 VOSK_MODEL_PATH = os.path.join(os.path.dirname(__file__), "models", "vosk-model-en-us-0.22")
 vosk_model = Model(VOSK_MODEL_PATH)
-# THINGSPEAK_API_KEY = "B8MGA7B6J96EXBG2"
 
 import paho.mqtt.client as mqtt
 import json
@@ -51,7 +56,7 @@ MQTT_PASSWORD = "eoCNam4gR2IWOA6d"
 MQTT_TOPIC = "home/control"
 MQTT_TOPIC_HEALTH_LOG = "home/health_log"
 
-mqtt_client = mqtt.Client()
+mqtt_client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1)
 mqtt_client.username_pw_set(MQTT_USERNAME, MQTT_PASSWORD)
 mqtt_client.connect(MQTT_BROKER, MQTT_PORT, 60)
 mqtt_client.loop_start()
@@ -104,54 +109,6 @@ def format_health_profile(profile):
 
     return "\n".join(lines)
 
-# Deterministic blood-pressure classification. Kept as plain code rather
-# than left to the LLM to infer, since asking the model to compare numbers
-# against a threshold it read in a document is unreliable and unverifiable -
-# this way the status is computed the same way every time and can be tested
-# directly. Thresholds are a simplified 3-tier reading of the standard AHA
-# categories (Normal / Elevated+Stage 1+2 collapsed to "High" / Hypotension).
-BLOOD_PRESSURE_ADVICE = {
-    "Low": (
-        "Your reading is on the low side. Sit or lie down if you feel dizzy "
-        "or lightheaded, stay hydrated, and stand up slowly from sitting or "
-        "lying down. If you feel faint, have chest pain, or this is a big "
-        "change from your usual reading, contact your doctor."
-    ),
-    "Normal": (
-        "Your reading is within a normal range. Keep up healthy habits: a "
-        "balanced low-salt diet, regular light exercise, and routine "
-        "monitoring."
-    ),
-    "High": (
-        "Your reading is elevated. Reduce salt intake, avoid caffeine and "
-        "alcohol for now, try to relax, and recheck it after resting. If "
-        "readings stay high across multiple checks, contact your doctor."
-    ),
-}
-
-BLOOD_PRESSURE_EMERGENCY_ADVICE = (
-    "This reading is dangerously high and may be a hypertensive emergency. "
-    "Please seek medical attention right away or call emergency services, "
-    "especially if you also have a severe headache, chest pain, shortness "
-    "of breath, or vision changes."
-)
-
-def classify_blood_pressure(systolic, diastolic):
-    """Returns {"status": "Low"|"Normal"|"High", "is_emergency": bool}, or
-    None if either reading is missing."""
-    if systolic is None or diastolic is None:
-        return None
-
-    is_emergency = systolic >= 180 or diastolic >= 120
-
-    if systolic < 90 or diastolic < 60:
-        status = "Low"
-    elif systolic >= 130 or diastolic >= 80:
-        status = "High"
-    else:
-        status = "Normal"
-
-    return {"status": status, "is_emergency": is_emergency}
 
 def handle_profile_lookup(prompt):
     """Answers "what are my measurements" style questions by reciting the
@@ -260,60 +217,45 @@ ROOM_ID_MAP = {
     "bathroom": 401
 }
 
-# === Speech to Text Function ===
-# def speech_to_text(timeout=6, sample_rate=16000):
-#     try:
-#         recognizer = KaldiRecognizer(vosk_model, sample_rate)
 
-#         print(f"Please say something that I can help you...")
-#         audio = sd.rec(int(timeout * sample_rate), samplerate=sample_rate, channels=1, dtype='int16')
-#         sd.wait()
+def speech_to_text(timeout=10, sample_rate=16000, silence_duration=1.5,
+                   silence_threshold=200, no_speech_timeout=5):
+    """Record from the microphone until the speaker stops, then transcribe.
 
-#         # Convert audio to bytes
-#         audio_data = audio.tobytes()
-
-#         # Speech recognition
-#         recognizer.AcceptWaveform(audio_data)
-#         result = json.loads(recognizer.Result())
-#         text = result.get("text", "")
-
-#         # Clean up memory
-#         del recognizer
-#         # del model
-#         import gc
-#         gc.collect()
-
-#         return text
-
-#     except Exception as e:
-#         print(f"Error in speech_to_text: {e}")
-#         return ""
-    
-def speech_to_text(timeout=6, sample_rate=16000, silence_threshold=1):
+    Recording ends `silence_duration` seconds after speech was last heard
+    (see silence_detector.EndOfSpeechDetector), or after `no_speech_timeout`
+    seconds if nobody speaks, or after `timeout` seconds in total. Raise
+    `silence_threshold` if background noise keeps it recording; lower it if
+    it cuts off quiet speakers."""
     try:
         recognizer = KaldiRecognizer(vosk_model, sample_rate)
-        
-        print(f"Please say something that I can help you...")
-        
-        audio_data = []
-        start_time = time.time()
+        detector = EndOfSpeechDetector(
+            sample_rate=sample_rate,
+            energy_threshold=silence_threshold,
+            silence_duration=silence_duration,
+            no_speech_timeout=no_speech_timeout,
+            max_duration=timeout,
+        )
 
-        # Continuously record and append audio data until silence is detected
-        while True:
-            audio = sd.rec(int(timeout * sample_rate), samplerate=sample_rate, channels=1, dtype='int16')
-            sd.wait()
+        print("Please say something that I can help you...")
 
-            # Convert audio to bytes and add to audio_data
-            audio_data.extend(audio.tobytes())
-            
-            # Check silence (if last chunk is silent for "silence_threshold" seconds)
-            if len(audio_data) > 0 and time.time() - start_time > silence_threshold:
-                break  # Stop recording after silence threshold
+        # Read 100ms chunks and feed them to Vosk as they arrive, so the
+        # transcript is nearly ready the moment the speaker stops.
+        chunk_size = sample_rate // 10
+        reason = None
+        with sd.InputStream(samplerate=sample_rate, channels=1, dtype='int16',
+                            blocksize=chunk_size) as stream:
+            while reason is None:
+                chunk, _overflowed = stream.read(chunk_size)
+                chunk = chunk.reshape(-1)
+                recognizer.AcceptWaveform(chunk.tobytes())
+                reason = detector.update(chunk)
 
-        # Process the accumulated audio data
-        recognizer.AcceptWaveform(bytes(audio_data))
-        result = json.loads(recognizer.Result())
-        text = result.get("text", "")
+        # Always ask Vosk, even after "no_speech": a quiet microphone can sit
+        # below the energy threshold and still be understood by the recognizer.
+        text = json.loads(recognizer.FinalResult()).get("text", "")
+        print(f"Recording stopped ({reason}); loudest level {detector.peak_energy:.0f} "
+              f"(speech threshold {silence_threshold}); heard: {text!r}")
 
         # Clean up memory
         del recognizer
@@ -326,22 +268,6 @@ def speech_to_text(timeout=6, sample_rate=16000, silence_threshold=1):
         print(f"Error in speech_to_text: {e}")
         return ""
 
-# === ThingSpeak Upload Function ===
-# def upload_to_thingspeak(thingspeak_data, api_key):
-#     object_map = {"light": 1, "fan": 2}  
-#     action_map = {"Turn on": 1, "Turn off": 0} 
-    
-#     object_value = object_map.get(thingspeak_data["device"], 0)
-#     action_value = action_map.get(thingspeak_data["action"], 0)
-    
-#     params = {
-#         "api_key": api_key,
-#         "field1": object_value,
-#         "field2": action_value,
-#     }
-#     response = requests.get("https://api.thingspeak.com/update", params=params)
-#     print(f"ThingSpeak response: {response.status_code}, {response.text}")
-#     return response.status_code == 200
 
 # Global context for voice assistant (when not using Flask session)
 VOICE_CONTEXT = ""
@@ -503,7 +429,7 @@ def is_device_control_command(results):
 def process_one_voice_command():
     """Record and process one voice input and return result for web/API use"""
     try:
-        prompt = speech_to_text(timeout=6)
+        prompt = speech_to_text()
 
         if not prompt.strip():
             return {
@@ -761,11 +687,6 @@ def process_voice_command():
 def home():
     return "Voice-enabled Smart Home Assistant is running."
 
-# @app.route("/start_voice", methods=["POST"])
-# def start_voice():
-#     """API endpoint to start voice processing"""
-#     threading.Thread(target=process_voice_command, daemon=True).start()
-#     return {"status": "Voice assistant started"}
 
 @app.route("/start_voice", methods=["POST"])
 def start_voice():
@@ -800,30 +721,6 @@ def process_text():
 
     return jsonify(result)
 
-# if __name__ == "__main__":
-#     # Initialize log file
-#     if not os.path.exists(LOG_FILE):
-#         with open(LOG_FILE, 'w', encoding='utf-8') as f:
-#             f.write("Conversation Log:\n" + "=" * 50 + "\n")
-    
-#     # print("Choose mode:")
-#     # print("1. Run Flask server (with /start_voice endpoint)")
-#     # print("2. Run voice assistant directly")
-    
-#     # choice = input("Enter choice (1 or 2): ").strip()
-    
-#     # if choice == "1":
-#     #     app.run(debug=True)
-#     # elif choice == "2":
-#         # Check if VOSK model path exists
-#     if not os.path.exists(VOSK_MODEL_PATH):
-#         print(f"Please update VOSK_MODEL_PATH to your actual Vosk model directory")
-#         print(f"Current path: {VOSK_MODEL_PATH}")
-#         VOSK_MODEL_PATH = input("Enter correct Vosk model path: ").strip()
-    
-#     process_voice_command()
-#     # else:
-#     #     print("Invalid choice. Exiting...")
 
 if __name__ == "__main__":
     # Initialize log file

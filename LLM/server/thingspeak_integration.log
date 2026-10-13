@@ -5302,3 +5302,142 @@
 2026-09-29 21:09:04,911 - INFO - 127.0.0.1 - - [29/Sep/2026 21:09:04] "POST /process_text HTTP/1.1" 200 -
 2026-09-29 21:09:36,227 - INFO - 127.0.0.1 - - [29/Sep/2026 21:09:36] "POST /process_text HTTP/1.1" 200 -
 2026-09-29 21:10:07,648 - INFO - 127.0.0.1 - - [29/Sep/2026 21:10:07] "POST /process_text HTTP/1.1" 200 -
+2026-10-13 13:44:01,647 - INFO - Use pytorch device_name: cpu
+2026-10-13 13:44:01,647 - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L12-v2
+2026-10-13 13:44:02,199 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:44:02,199 - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-13 13:44:02,264 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/modules.json "HTTP/1.1 200 OK"
+2026-10-13 13:44:02,577 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:44:02,643 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-10-13 13:44:02,947 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:44:03,011 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-10-13 13:44:03,346 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:44:03,411 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/README.md "HTTP/1.1 200 OK"
+2026-10-13 13:44:03,716 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:44:03,780 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/modules.json "HTTP/1.1 200 OK"
+2026-10-13 13:44:04,086 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:44:04,151 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-10-13 13:44:04,454 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-10-13 13:44:04,755 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:44:04,819 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/config.json "HTTP/1.1 200 OK"
+2026-10-13 13:44:05,320 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:44:05,383 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/config.json "HTTP/1.1 200 OK"
+2026-10-13 13:44:05,681 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:44:05,745 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-10-13 13:44:06,050 - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/paraphrase-MiniLM-L12-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-13 13:44:06,350 - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/paraphrase-MiniLM-L12-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-13 13:44:06,725 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:44:06,791 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-10-13 13:44:07,105 - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/paraphrase-MiniLM-L12-v2 "HTTP/1.1 200 OK"
+2026-10-13 13:44:08,155 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+2026-10-13 13:44:08,155 - INFO - [33mPress CTRL+C to quit[0m
+2026-10-13 13:44:08,157 - INFO -  * Restarting with stat
+2026-10-13 13:44:30,940 - INFO - Use pytorch device_name: cpu
+2026-10-13 13:44:30,940 - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L12-v2
+2026-10-13 13:44:31,313 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:44:31,313 - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-13 13:44:31,357 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/modules.json "HTTP/1.1 200 OK"
+2026-10-13 13:44:31,649 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:44:31,692 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-10-13 13:44:31,974 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:44:32,017 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-10-13 13:44:32,293 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:44:32,335 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/README.md "HTTP/1.1 200 OK"
+2026-10-13 13:44:32,613 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:44:32,656 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/modules.json "HTTP/1.1 200 OK"
+2026-10-13 13:44:32,916 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:44:32,959 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-10-13 13:44:33,233 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-10-13 13:44:33,514 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:44:33,558 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/config.json "HTTP/1.1 200 OK"
+2026-10-13 13:44:33,925 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:44:33,972 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/config.json "HTTP/1.1 200 OK"
+2026-10-13 13:44:34,255 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:44:34,298 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-10-13 13:44:34,585 - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/paraphrase-MiniLM-L12-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-13 13:44:34,865 - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/paraphrase-MiniLM-L12-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-13 13:44:35,179 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:44:35,222 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-10-13 13:44:35,494 - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/paraphrase-MiniLM-L12-v2 "HTTP/1.1 200 OK"
+2026-10-13 13:44:36,082 - WARNING -  * Debugger is active!
+2026-10-13 13:44:36,088 - INFO -  * Debugger PIN: 145-299-464
+2026-10-13 13:45:50,162 - INFO - 127.0.0.1 - - [13/Oct/2026 13:45:50] "POST /start_voice HTTP/1.1" 200 -
+2026-10-13 13:46:02,638 - INFO - 127.0.0.1 - - [13/Oct/2026 13:46:02] "[31m[1mPOST /start_voice HTTP/1.1[0m" 400 -
+2026-10-13 13:46:11,969 - INFO - 127.0.0.1 - - [13/Oct/2026 13:46:11] "POST /start_voice HTTP/1.1" 200 -
+2026-10-13 13:47:11,234 - INFO - 127.0.0.1 - - [13/Oct/2026 13:47:11] "[31m[1mPOST /start_voice HTTP/1.1[0m" 400 -
+2026-10-13 13:47:21,716 - INFO - 127.0.0.1 - - [13/Oct/2026 13:47:21] "[31m[1mPOST /start_voice HTTP/1.1[0m" 400 -
+2026-10-13 13:47:31,668 - INFO - 127.0.0.1 - - [13/Oct/2026 13:47:31] "[31m[1mPOST /start_voice HTTP/1.1[0m" 400 -
+2026-10-13 13:47:47,978 - INFO - 127.0.0.1 - - [13/Oct/2026 13:47:47] "[31m[1mPOST /start_voice HTTP/1.1[0m" 400 -
+2026-10-13 13:48:18,014 - INFO - 127.0.0.1 - - [13/Oct/2026 13:48:18] "POST /start_voice HTTP/1.1" 200 -
+2026-10-13 13:48:28,402 - INFO -  * Detected change in 'D:\\OneDrive\\IU\\Sem 8\\Pre-thesis\\Project\\Pre-thesis\\LLM\\server\\app.py', reloading
+2026-10-13 13:48:29,904 - INFO -  * Restarting with stat
+2026-10-13 13:50:24,865 - INFO - Use pytorch device_name: cpu
+2026-10-13 13:50:24,865 - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L12-v2
+2026-10-13 13:50:25,409 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:50:25,470 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/modules.json "HTTP/1.1 200 OK"
+2026-10-13 13:50:25,755 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:50:25,756 - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-13 13:50:25,815 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-10-13 13:50:26,111 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:50:26,173 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-10-13 13:50:26,470 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:50:26,531 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/README.md "HTTP/1.1 200 OK"
+2026-10-13 13:50:26,834 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:50:26,897 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/modules.json "HTTP/1.1 200 OK"
+2026-10-13 13:50:27,185 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:50:27,247 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-10-13 13:50:27,549 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-10-13 13:50:27,835 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:50:27,896 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/config.json "HTTP/1.1 200 OK"
+2026-10-13 13:50:28,385 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:50:28,447 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/config.json "HTTP/1.1 200 OK"
+2026-10-13 13:50:28,740 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:50:28,801 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-10-13 13:50:29,098 - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/paraphrase-MiniLM-L12-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-13 13:50:29,413 - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/paraphrase-MiniLM-L12-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-13 13:50:29,788 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:50:29,848 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-10-13 13:50:30,135 - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/paraphrase-MiniLM-L12-v2 "HTTP/1.1 200 OK"
+2026-10-13 13:50:31,084 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+2026-10-13 13:50:31,084 - INFO - [33mPress CTRL+C to quit[0m
+2026-10-13 13:50:31,086 - INFO -  * Restarting with stat
+2026-10-13 13:51:01,232 - INFO - Use pytorch device_name: cpu
+2026-10-13 13:51:01,233 - INFO - Load pretrained SentenceTransformer: paraphrase-MiniLM-L12-v2
+2026-10-13 13:51:01,660 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:51:01,660 - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-13 13:51:01,715 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/modules.json "HTTP/1.1 200 OK"
+2026-10-13 13:51:02,008 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:51:02,062 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-10-13 13:51:02,348 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:51:02,406 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-10-13 13:51:02,696 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:51:02,750 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/README.md "HTTP/1.1 200 OK"
+2026-10-13 13:51:03,036 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:51:03,093 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/modules.json "HTTP/1.1 200 OK"
+2026-10-13 13:51:03,378 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:51:03,432 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-10-13 13:51:03,725 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-10-13 13:51:04,012 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:51:04,065 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/config.json "HTTP/1.1 200 OK"
+2026-10-13 13:51:04,527 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:51:04,582 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/config.json "HTTP/1.1 200 OK"
+2026-10-13 13:51:04,882 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:51:04,936 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-10-13 13:51:05,220 - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/paraphrase-MiniLM-L12-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-13 13:51:05,509 - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/paraphrase-MiniLM-L12-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-13 13:51:05,865 - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L12-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-10-13 13:51:05,921 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/paraphrase-MiniLM-L12-v2/2b9058918c3d228389532ccf813578658e4af706/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-10-13 13:51:06,204 - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/paraphrase-MiniLM-L12-v2 "HTTP/1.1 200 OK"
+2026-10-13 13:51:07,198 - WARNING -  * Debugger is active!
+2026-10-13 13:51:07,208 - INFO -  * Debugger PIN: 145-299-464
+2026-10-13 13:51:16,130 - INFO - 127.0.0.1 - - [13/Oct/2026 13:51:16] "POST /start_voice HTTP/1.1" 200 -
+2026-10-13 13:51:34,972 - INFO - 127.0.0.1 - - [13/Oct/2026 13:51:34] "POST /start_voice HTTP/1.1" 200 -
+2026-10-13 13:51:52,614 - INFO - 127.0.0.1 - - [13/Oct/2026 13:51:52] "POST /start_voice HTTP/1.1" 200 -
+2026-10-13 13:52:12,765 - INFO - 127.0.0.1 - - [13/Oct/2026 13:52:12] "POST /start_voice HTTP/1.1" 200 -
+2026-10-13 13:52:39,775 - INFO - 127.0.0.1 - - [13/Oct/2026 13:52:39] "POST /start_voice HTTP/1.1" 200 -
+2026-10-13 13:52:51,043 - INFO - 127.0.0.1 - - [13/Oct/2026 13:52:51] "POST /start_voice HTTP/1.1" 200 -
+2026-10-13 13:53:19,576 - INFO - 127.0.0.1 - - [13/Oct/2026 13:53:19] "POST /start_voice HTTP/1.1" 200 -
+2026-10-13 13:53:45,002 - INFO - 127.0.0.1 - - [13/Oct/2026 13:53:45] "POST /start_voice HTTP/1.1" 200 -
+2026-10-13 14:29:37,780 - INFO - 127.0.0.1 - - [13/Oct/2026 14:29:37] "POST /process_text HTTP/1.1" 200 -

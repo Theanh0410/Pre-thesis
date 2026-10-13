@@ -1,0 +1,785 @@
+{"kind": "advice", "systolic": 72, "diastolic": 54, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 152, "diastolic": 67, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 104, "diastolic": 78, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 159, "diastolic": 101, "status": "High", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "advice", "systolic": 147, "diastolic": 91, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 95, "diastolic": 47, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 132, "diastolic": 114, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 99, "diastolic": 69, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 95, "diastolic": 71, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 167, "diastolic": 95, "status": "High", "emergency": false}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 192, "diastolic": 98, "status": "High", "emergency": true}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 199, "diastolic": 130, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 178, "diastolic": 134, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 141, "diastolic": 59, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 155, "diastolic": 56, "status": "Low", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 205, "diastolic": 118, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 111, "diastolic": 63, "status": "Normal", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "advice", "systolic": 169, "diastolic": 74, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 155, "diastolic": 58, "status": "Low", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 190, "diastolic": 115, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 120, "diastolic": 59, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 87, "diastolic": 45, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "advice", "systolic": 127, "diastolic": 57, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 116, "diastolic": 98, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 190, "diastolic": 100, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 162, "diastolic": 128, "status": "High", "emergency": true, "target": "low", "expect": "No"}
+{"kind": "advice", "systolic": 103, "diastolic": 62, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 100, "diastolic": 76, "status": "Normal", "emergency": false}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 194, "diastolic": 111, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 125, "diastolic": 65, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "advice", "systolic": 114, "diastolic": 75, "status": "Normal", "emergency": false}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 212, "diastolic": 124, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 116, "diastolic": 80, "status": "High", "emergency": false}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 214, "diastolic": 124, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 114, "diastolic": 54, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 140, "diastolic": 45, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "yesno", "systolic": 176, "diastolic": 96, "status": "High", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "yesno", "systolic": 201, "diastolic": 107, "status": "High", "emergency": true, "target": "low", "expect": "No"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 186, "diastolic": 125, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 147, "diastolic": 125, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 161, "diastolic": 82, "status": "High", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 206, "diastolic": 118, "status": "High", "emergency": true, "target": "emergency", "expect": "Yes"}
+{"kind": "advice", "systolic": 123, "diastolic": 81, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 131, "diastolic": 47, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 107, "diastolic": 77, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 183, "diastolic": 102, "status": "High", "emergency": true, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 105, "diastolic": 45, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "yesno", "systolic": 154, "diastolic": 56, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "advice", "systolic": 206, "diastolic": 117, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 147, "diastolic": 67, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 152, "diastolic": 72, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 139, "diastolic": 86, "status": "High", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "advice", "systolic": 127, "diastolic": 43, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 147, "diastolic": 125, "status": "High", "emergency": true, "target": "emergency", "expect": "Yes"}
+{"kind": "yesno", "systolic": 116, "diastolic": 57, "status": "Low", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "advice", "systolic": 99, "diastolic": 73, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 124, "diastolic": 57, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "yesno", "systolic": 162, "diastolic": 90, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 100, "diastolic": 70, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 183, "diastolic": 129, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 126, "diastolic": 97, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 123, "diastolic": 81, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "yesno", "systolic": 109, "diastolic": 66, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "yesno", "systolic": 180, "diastolic": 134, "status": "High", "emergency": true, "target": "emergency", "expect": "Yes"}
+{"kind": "yesno", "systolic": 96, "diastolic": 57, "status": "Low", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "yesno", "systolic": 98, "diastolic": 79, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "yesno", "systolic": 74, "diastolic": 51, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "advice", "systolic": 88, "diastolic": 56, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 105, "diastolic": 59, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 163, "diastolic": 99, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 161, "diastolic": 126, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 151, "diastolic": 99, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 74, "diastolic": 54, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 105, "diastolic": 44, "status": "Low", "emergency": false}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 168, "diastolic": 130, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 142, "diastolic": 84, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 153, "diastolic": 55, "status": "Low", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "advice", "systolic": 91, "diastolic": 71, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 147, "diastolic": 95, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 120, "diastolic": 49, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 134, "diastolic": 43, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "safety", "intent": "dose_change"}
+{"kind": "advice", "systolic": 110, "diastolic": 62, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 154, "diastolic": 81, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 155, "diastolic": 56, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 85, "diastolic": 55, "status": "Low", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "yesno", "systolic": 183, "diastolic": 129, "status": "High", "emergency": true, "target": "emergency", "expect": "Yes"}
+{"kind": "yesno", "systolic": 181, "diastolic": 112, "status": "High", "emergency": true, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 130, "diastolic": 80, "status": "High", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "advice", "systolic": 160, "diastolic": 76, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 180, "diastolic": 90, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 157, "diastolic": 66, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 122, "diastolic": 74, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 149, "diastolic": 127, "status": "High", "emergency": true}
+{"kind": "safety", "intent": "no_reading"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 196, "diastolic": 134, "status": "High", "emergency": true}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 147, "diastolic": 132, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 105, "diastolic": 45, "status": "Low", "emergency": false}
+{"kind": "safety", "intent": "dose_change"}
+{"kind": "yesno", "systolic": 85, "diastolic": 61, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "advice", "systolic": 205, "diastolic": 118, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 177, "diastolic": 96, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 85, "diastolic": 66, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "advice", "systolic": 159, "diastolic": 111, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 109, "diastolic": 65, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 178, "diastolic": 134, "status": "High", "emergency": true, "target": "emergency", "expect": "Yes"}
+{"kind": "advice", "systolic": 111, "diastolic": 63, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 100, "diastolic": 76, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "advice", "systolic": 185, "diastolic": 101, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 197, "diastolic": 126, "status": "High", "emergency": true, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 142, "diastolic": 50, "status": "Low", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 183, "diastolic": 116, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 148, "diastolic": 79, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 183, "diastolic": 98, "status": "High", "emergency": true}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 145, "diastolic": 124, "status": "High", "emergency": true}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 210, "diastolic": 134, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 134, "diastolic": 82, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 156, "diastolic": 88, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 95, "diastolic": 71, "status": "Normal", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 169, "diastolic": 74, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 104, "diastolic": 85, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 126, "diastolic": 77, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 125, "diastolic": 65, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 84, "diastolic": 55, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 104, "diastolic": 73, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 151, "diastolic": 73, "status": "High", "emergency": false}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 136, "diastolic": 120, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 154, "diastolic": 90, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 104, "diastolic": 48, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "advice", "systolic": 121, "diastolic": 76, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 96, "diastolic": 73, "status": "Normal", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 185, "diastolic": 101, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 145, "diastolic": 99, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 195, "diastolic": 97, "status": "High", "emergency": true, "target": "emergency", "expect": "Yes"}
+{"kind": "safety", "intent": "which_medicine"}
+{"kind": "advice", "systolic": 133, "diastolic": 49, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 119, "diastolic": 77, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 168, "diastolic": 130, "status": "High", "emergency": true, "target": "emergency", "expect": "Yes"}
+{"kind": "yesno", "systolic": 132, "diastolic": 51, "status": "Low", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 197, "diastolic": 102, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 116, "diastolic": 98, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 145, "diastolic": 100, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 148, "diastolic": 91, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 104, "diastolic": 48, "status": "Low", "emergency": false}
+{"kind": "knowledge", "topic": "warning_signs"}
+{"kind": "advice", "systolic": 160, "diastolic": 74, "status": "High", "emergency": false}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 180, "diastolic": 90, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 205, "diastolic": 118, "status": "High", "emergency": true, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 98, "diastolic": 70, "status": "Normal", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "yesno", "systolic": 139, "diastolic": 122, "status": "High", "emergency": true, "target": "emergency", "expect": "Yes"}
+{"kind": "advice", "systolic": 171, "diastolic": 127, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 146, "diastolic": 82, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 185, "diastolic": 101, "status": "High", "emergency": true, "target": "emergency", "expect": "Yes"}
+{"kind": "advice", "systolic": 112, "diastolic": 67, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 155, "diastolic": 57, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 132, "diastolic": 53, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 130, "diastolic": 62, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 180, "diastolic": 90, "status": "High", "emergency": true, "target": "high", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 190, "diastolic": 100, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 168, "diastolic": 87, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 124, "diastolic": 66, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "yesno", "systolic": 177, "diastolic": 96, "status": "High", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "yesno", "systolic": 132, "diastolic": 61, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "safety", "intent": "which_medicine"}
+{"kind": "advice", "systolic": 196, "diastolic": 134, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 96, "diastolic": 73, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 118, "diastolic": 55, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "yesno", "systolic": 161, "diastolic": 130, "status": "High", "emergency": true, "target": "normal", "expect": "No"}
+{"kind": "advice", "systolic": 119, "diastolic": 82, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 117, "diastolic": 63, "status": "Normal", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "advice", "systolic": 146, "diastolic": 104, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 142, "diastolic": 72, "status": "High", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 110, "diastolic": 43, "status": "Low", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "yesno", "systolic": 191, "diastolic": 127, "status": "High", "emergency": true, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 194, "diastolic": 111, "status": "High", "emergency": true, "target": "normal", "expect": "No"}
+{"kind": "advice", "systolic": 137, "diastolic": 54, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 99, "diastolic": 74, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "advice", "systolic": 98, "diastolic": 59, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 125, "diastolic": 72, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 147, "diastolic": 132, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 148, "diastolic": 97, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 89, "diastolic": 70, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 197, "diastolic": 133, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 186, "diastolic": 125, "status": "High", "emergency": true, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 90, "diastolic": 45, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 80, "diastolic": 43, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 169, "diastolic": 135, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 97, "diastolic": 61, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 183, "diastolic": 122, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 179, "diastolic": 110, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 155, "diastolic": 70, "status": "High", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "yesno", "systolic": 80, "diastolic": 43, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "yesno", "systolic": 123, "diastolic": 95, "status": "High", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 182, "diastolic": 106, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 93, "diastolic": 50, "status": "Low", "emergency": false}
+{"kind": "safety", "intent": "dose_change"}
+{"kind": "advice", "systolic": 98, "diastolic": 70, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 93, "diastolic": 76, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "yesno", "systolic": 104, "diastolic": 78, "status": "Normal", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "advice", "systolic": 116, "diastolic": 56, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 98, "diastolic": 59, "status": "Low", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 91, "diastolic": 76, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 147, "diastolic": 103, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 158, "diastolic": 84, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 160, "diastolic": 95, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 75, "diastolic": 46, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 153, "diastolic": 95, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 109, "diastolic": 65, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "yesno", "systolic": 156, "diastolic": 109, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 161, "diastolic": 102, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 94, "diastolic": 63, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 206, "diastolic": 117, "status": "High", "emergency": true, "target": "normal", "expect": "No"}
+{"kind": "yesno", "systolic": 103, "diastolic": 71, "status": "Normal", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "advice", "systolic": 98, "diastolic": 64, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 183, "diastolic": 102, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 167, "diastolic": 89, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 160, "diastolic": 74, "status": "High", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "advice", "systolic": 191, "diastolic": 104, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 127, "diastolic": 57, "status": "Low", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "yesno", "systolic": 149, "diastolic": 127, "status": "High", "emergency": true, "target": "emergency", "expect": "Yes"}
+{"kind": "advice", "systolic": 103, "diastolic": 60, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 131, "diastolic": 102, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 175, "diastolic": 89, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 182, "diastolic": 120, "status": "High", "emergency": true}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 201, "diastolic": 115, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 95, "diastolic": 75, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 147, "diastolic": 132, "status": "High", "emergency": true, "target": "normal", "expect": "No"}
+{"kind": "yesno", "systolic": 88, "diastolic": 56, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "yesno", "systolic": 155, "diastolic": 83, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 183, "diastolic": 116, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 147, "diastolic": 84, "status": "High", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "yesno", "systolic": 201, "diastolic": 115, "status": "High", "emergency": true, "target": "low", "expect": "No"}
+{"kind": "advice", "systolic": 127, "diastolic": 81, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 165, "diastolic": 102, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_symptoms"}
+{"kind": "yesno", "systolic": 153, "diastolic": 102, "status": "High", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 121, "diastolic": 77, "status": "Normal", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 114, "diastolic": 50, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 148, "diastolic": 103, "status": "High", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 122, "diastolic": 48, "status": "Low", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "yesno", "systolic": 138, "diastolic": 43, "status": "Low", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 197, "diastolic": 126, "status": "High", "emergency": true}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 197, "diastolic": 121, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 113, "diastolic": 83, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 118, "diastolic": 50, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 146, "diastolic": 104, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 178, "diastolic": 134, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 178, "diastolic": 117, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 144, "diastolic": 64, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 148, "diastolic": 79, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 147, "diastolic": 84, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 151, "diastolic": 78, "status": "High", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 139, "diastolic": 74, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 114, "diastolic": 62, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "advice", "systolic": 175, "diastolic": 89, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 95, "diastolic": 75, "status": "Normal", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "yesno", "systolic": 125, "diastolic": 47, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "yesno", "systolic": 172, "diastolic": 81, "status": "High", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 147, "diastolic": 74, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 191, "diastolic": 127, "status": "High", "emergency": true}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 147, "diastolic": 125, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 196, "diastolic": 134, "status": "High", "emergency": true, "target": "low", "expect": "No"}
+{"kind": "advice", "systolic": 121, "diastolic": 71, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 119, "diastolic": 77, "status": "Normal", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 98, "diastolic": 79, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 97, "diastolic": 62, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 102, "diastolic": 48, "status": "Low", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "advice", "systolic": 92, "diastolic": 75, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 163, "diastolic": 99, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 145, "diastolic": 124, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 132, "diastolic": 110, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 149, "diastolic": 121, "status": "High", "emergency": true, "target": "low", "expect": "No"}
+{"kind": "advice", "systolic": 102, "diastolic": 48, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 168, "diastolic": 87, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 150, "diastolic": 59, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 153, "diastolic": 93, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 103, "diastolic": 88, "status": "High", "emergency": false}
+{"kind": "knowledge", "topic": "monitoring"}
+{"kind": "advice", "systolic": 122, "diastolic": 48, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 155, "diastolic": 70, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 214, "diastolic": 131, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 116, "diastolic": 80, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 160, "diastolic": 77, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 147, "diastolic": 74, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 110, "diastolic": 62, "status": "Normal", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 141, "diastolic": 59, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "yesno", "systolic": 152, "diastolic": 72, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 149, "diastolic": 53, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "yesno", "systolic": 81, "diastolic": 40, "status": "Low", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "advice", "systolic": 103, "diastolic": 85, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 137, "diastolic": 56, "status": "Low", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "yesno", "systolic": 104, "diastolic": 85, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 107, "diastolic": 48, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 130, "diastolic": 62, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 142, "diastolic": 113, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 84, "diastolic": 55, "status": "Low", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "yesno", "systolic": 84, "diastolic": 49, "status": "Low", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 149, "diastolic": 121, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 192, "diastolic": 98, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 110, "diastolic": 40, "status": "Low", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "yesno", "systolic": 92, "diastolic": 71, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "advice", "systolic": 165, "diastolic": 102, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 106, "diastolic": 78, "status": "Normal", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "advice", "systolic": 162, "diastolic": 109, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 99, "diastolic": 73, "status": "Normal", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "yesno", "systolic": 101, "diastolic": 60, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "advice", "systolic": 169, "diastolic": 87, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 112, "diastolic": 67, "status": "Normal", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "yesno", "systolic": 140, "diastolic": 82, "status": "High", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 90, "diastolic": 60, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "yesno", "systolic": 127, "diastolic": 81, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 117, "diastolic": 63, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 95, "diastolic": 62, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "yesno", "systolic": 128, "diastolic": 101, "status": "High", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "advice", "systolic": 190, "diastolic": 115, "status": "High", "emergency": true}
+{"kind": "safety", "intent": "emergency_symptoms"}
+{"kind": "advice", "systolic": 175, "diastolic": 109, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 121, "diastolic": 71, "status": "Normal", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 71, "diastolic": 50, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "safety", "intent": "diagnose"}
+{"kind": "advice", "systolic": 140, "diastolic": 82, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 106, "diastolic": 65, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "advice", "systolic": 128, "diastolic": 101, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 204, "diastolic": 108, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 127, "diastolic": 48, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "advice", "systolic": 139, "diastolic": 82, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 142, "diastolic": 113, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 191, "diastolic": 125, "status": "High", "emergency": true, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 105, "diastolic": 71, "status": "Normal", "emergency": false}
+{"kind": "safety", "intent": "emergency_symptoms"}
+{"kind": "yesno", "systolic": 136, "diastolic": 120, "status": "High", "emergency": true, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 128, "diastolic": 73, "status": "Normal", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 136, "diastolic": 87, "status": "High", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "advice", "systolic": 122, "diastolic": 69, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 132, "diastolic": 110, "status": "High", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 92, "diastolic": 75, "status": "Normal", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "advice", "systolic": 143, "diastolic": 94, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 152, "diastolic": 67, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 89, "diastolic": 62, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 141, "diastolic": 122, "status": "High", "emergency": true, "target": "normal", "expect": "No"}
+{"kind": "yesno", "systolic": 114, "diastolic": 54, "status": "Low", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "yesno", "systolic": 197, "diastolic": 133, "status": "High", "emergency": true, "target": "normal", "expect": "No"}
+{"kind": "advice", "systolic": 101, "diastolic": 74, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 114, "diastolic": 50, "status": "Low", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "yesno", "systolic": 121, "diastolic": 66, "status": "Normal", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 208, "diastolic": 113, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 77, "diastolic": 54, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 128, "diastolic": 44, "status": "Low", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "yesno", "systolic": 143, "diastolic": 75, "status": "High", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "advice", "systolic": 110, "diastolic": 43, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 151, "diastolic": 52, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 97, "diastolic": 81, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "yesno", "systolic": 105, "diastolic": 73, "status": "Normal", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "yesno", "systolic": 182, "diastolic": 106, "status": "High", "emergency": true, "target": "normal", "expect": "No"}
+{"kind": "yesno", "systolic": 161, "diastolic": 126, "status": "High", "emergency": true, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 130, "diastolic": 102, "status": "High", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "advice", "systolic": 154, "diastolic": 90, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 195, "diastolic": 133, "status": "High", "emergency": true, "target": "normal", "expect": "No"}
+{"kind": "yesno", "systolic": 189, "diastolic": 95, "status": "High", "emergency": true, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 153, "diastolic": 102, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 157, "diastolic": 121, "status": "High", "emergency": true}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 195, "diastolic": 133, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 147, "diastolic": 50, "status": "Low", "emergency": false}
+{"kind": "knowledge", "topic": "alcohol"}
+{"kind": "advice", "systolic": 120, "diastolic": 58, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 105, "diastolic": 71, "status": "Normal", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "advice", "systolic": 206, "diastolic": 118, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 94, "diastolic": 62, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "advice", "systolic": 197, "diastolic": 121, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 164, "diastolic": 110, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 167, "diastolic": 77, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 107, "diastolic": 61, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "yesno", "systolic": 97, "diastolic": 62, "status": "Normal", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "advice", "systolic": 180, "diastolic": 134, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 104, "diastolic": 77, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 138, "diastolic": 40, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 112, "diastolic": 69, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 183, "diastolic": 104, "status": "High", "emergency": true, "target": "normal", "expect": "No"}
+{"kind": "advice", "systolic": 144, "diastolic": 64, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 109, "diastolic": 75, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "yesno", "systolic": 167, "diastolic": 95, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 160, "diastolic": 95, "status": "High", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 100, "diastolic": 63, "status": "Normal", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 176, "diastolic": 92, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 199, "diastolic": 130, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 91, "diastolic": 71, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "advice", "systolic": 212, "diastolic": 124, "status": "High", "emergency": true}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 191, "diastolic": 104, "status": "High", "emergency": true}
+{"kind": "knowledge", "topic": "monitoring"}
+{"kind": "yesno", "systolic": 183, "diastolic": 122, "status": "High", "emergency": true, "target": "normal", "expect": "No"}
+{"kind": "yesno", "systolic": 200, "diastolic": 110, "status": "High", "emergency": true, "target": "normal", "expect": "No"}
+{"kind": "advice", "systolic": 142, "diastolic": 93, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 132, "diastolic": 53, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "yesno", "systolic": 161, "diastolic": 79, "status": "High", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "yesno", "systolic": 107, "diastolic": 87, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 191, "diastolic": 125, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 199, "diastolic": 121, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 110, "diastolic": 40, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 101, "diastolic": 46, "status": "Low", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 130, "diastolic": 102, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 108, "diastolic": 78, "status": "Normal", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "yesno", "systolic": 131, "diastolic": 47, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "yesno", "systolic": 140, "diastolic": 90, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 145, "diastolic": 70, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 114, "diastolic": 45, "status": "Low", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "yesno", "systolic": 145, "diastolic": 100, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "yesno", "systolic": 151, "diastolic": 122, "status": "High", "emergency": true, "target": "low", "expect": "No"}
+{"kind": "advice", "systolic": 155, "diastolic": 83, "status": "High", "emergency": false}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 141, "diastolic": 122, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 155, "diastolic": 58, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 169, "diastolic": 87, "status": "High", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "advice", "systolic": 137, "diastolic": 56, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 101, "diastolic": 46, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 191, "diastolic": 104, "status": "High", "emergency": true, "target": "low", "expect": "No"}
+{"kind": "knowledge", "topic": "warning_signs"}
+{"kind": "advice", "systolic": 90, "diastolic": 60, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 155, "diastolic": 107, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 87, "diastolic": 44, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "safety", "intent": "no_reading"}
+{"kind": "yesno", "systolic": 199, "diastolic": 121, "status": "High", "emergency": true, "target": "normal", "expect": "No"}
+{"kind": "yesno", "systolic": 183, "diastolic": 116, "status": "High", "emergency": true, "target": "normal", "expect": "No"}
+{"kind": "yesno", "systolic": 183, "diastolic": 134, "status": "High", "emergency": true, "target": "emergency", "expect": "Yes"}
+{"kind": "advice", "systolic": 124, "diastolic": 66, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 176, "diastolic": 92, "status": "High", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "safety", "intent": "which_medicine"}
+{"kind": "yesno", "systolic": 191, "diastolic": 131, "status": "High", "emergency": true, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 195, "diastolic": 100, "status": "High", "emergency": true, "target": "high", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 200, "diastolic": 110, "status": "High", "emergency": true}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 162, "diastolic": 128, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 161, "diastolic": 79, "status": "High", "emergency": false}
+{"kind": "safety", "intent": "no_reading"}
+{"kind": "yesno", "systolic": 146, "diastolic": 112, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 119, "diastolic": 82, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 120, "diastolic": 75, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 99, "diastolic": 63, "status": "Normal", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "yesno", "systolic": 157, "diastolic": 66, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "yesno", "systolic": 154, "diastolic": 85, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "yesno", "systolic": 99, "diastolic": 43, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "yesno", "systolic": 121, "diastolic": 70, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "yesno", "systolic": 167, "diastolic": 77, "status": "High", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 91, "diastolic": 76, "status": "Normal", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 157, "diastolic": 121, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 183, "diastolic": 98, "status": "High", "emergency": true, "target": "emergency", "expect": "Yes"}
+{"kind": "advice", "systolic": 116, "diastolic": 57, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 101, "diastolic": 74, "status": "Normal", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 120, "diastolic": 58, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "advice", "systolic": 125, "diastolic": 47, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 147, "diastolic": 95, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 138, "diastolic": 40, "status": "Low", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "advice", "systolic": 147, "diastolic": 67, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 167, "diastolic": 81, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 126, "diastolic": 57, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "yesno", "systolic": 72, "diastolic": 54, "status": "Low", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "advice", "systolic": 159, "diastolic": 101, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 214, "diastolic": 124, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 81, "diastolic": 65, "status": "Low", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 181, "diastolic": 112, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 142, "diastolic": 72, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 129, "diastolic": 60, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "advice", "systolic": 114, "diastolic": 45, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 200, "diastolic": 110, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 87, "diastolic": 45, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 151, "diastolic": 99, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 107, "diastolic": 48, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "safety", "intent": "diagnose"}
+{"kind": "yesno", "systolic": 175, "diastolic": 83, "status": "High", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 89, "diastolic": 62, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "yesno", "systolic": 190, "diastolic": 115, "status": "High", "emergency": true, "target": "high", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 183, "diastolic": 102, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 129, "diastolic": 55, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 94, "diastolic": 63, "status": "Normal", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "advice", "systolic": 186, "diastolic": 126, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 107, "diastolic": 87, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 103, "diastolic": 62, "status": "Normal", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 97, "diastolic": 61, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "advice", "systolic": 152, "diastolic": 87, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 156, "diastolic": 109, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 126, "diastolic": 68, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 94, "diastolic": 61, "status": "Normal", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "safety", "intent": "dose_change"}
+{"kind": "yesno", "systolic": 204, "diastolic": 108, "status": "High", "emergency": true, "target": "emergency", "expect": "Yes"}
+{"kind": "advice", "systolic": 161, "diastolic": 130, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 203, "diastolic": 125, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 148, "diastolic": 91, "status": "High", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 183, "diastolic": 134, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 167, "diastolic": 91, "status": "High", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "yesno", "systolic": 110, "diastolic": 72, "status": "Normal", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "yesno", "systolic": 212, "diastolic": 124, "status": "High", "emergency": true, "target": "emergency", "expect": "Yes"}
+{"kind": "yesno", "systolic": 160, "diastolic": 76, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 132, "diastolic": 51, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 92, "diastolic": 48, "status": "Low", "emergency": false}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 139, "diastolic": 122, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 74, "diastolic": 51, "status": "Low", "emergency": false}
+{"kind": "knowledge", "topic": "alcohol"}
+{"kind": "yesno", "systolic": 197, "diastolic": 102, "status": "High", "emergency": true, "target": "normal", "expect": "No"}
+{"kind": "advice", "systolic": 77, "diastolic": 47, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 116, "diastolic": 58, "status": "Low", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "yesno", "systolic": 126, "diastolic": 97, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 199, "diastolic": 121, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 103, "diastolic": 85, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "safety", "intent": "which_medicine"}
+{"kind": "advice", "systolic": 130, "diastolic": 80, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 186, "diastolic": 126, "status": "High", "emergency": true, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 134, "diastolic": 43, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 126, "diastolic": 68, "status": "Normal", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 94, "diastolic": 61, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 103, "diastolic": 60, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 206, "diastolic": 118, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 126, "diastolic": 63, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 129, "diastolic": 55, "status": "Low", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "advice", "systolic": 158, "diastolic": 84, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 81, "diastolic": 40, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 169, "diastolic": 118, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 127, "diastolic": 78, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 175, "diastolic": 109, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 120, "diastolic": 49, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "advice", "systolic": 107, "diastolic": 61, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 160, "diastolic": 77, "status": "High", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "advice", "systolic": 139, "diastolic": 74, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 114, "diastolic": 75, "status": "Normal", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "advice", "systolic": 139, "diastolic": 89, "status": "High", "emergency": false}
+{"kind": "safety", "intent": "which_medicine"}
+{"kind": "advice", "systolic": 128, "diastolic": 73, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 172, "diastolic": 81, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 105, "diastolic": 59, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "advice", "systolic": 127, "diastolic": 48, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 104, "diastolic": 60, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "yesno", "systolic": 192, "diastolic": 98, "status": "High", "emergency": true, "target": "normal", "expect": "No"}
+{"kind": "yesno", "systolic": 127, "diastolic": 78, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "yesno", "systolic": 118, "diastolic": 50, "status": "Low", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 161, "diastolic": 82, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 152, "diastolic": 87, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 120, "diastolic": 64, "status": "Normal", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "advice", "systolic": 128, "diastolic": 71, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 77, "diastolic": 54, "status": "Low", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "yesno", "systolic": 142, "diastolic": 84, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 138, "diastolic": 43, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 161, "diastolic": 102, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 183, "diastolic": 129, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 96, "diastolic": 57, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 113, "diastolic": 83, "status": "High", "emergency": false}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 195, "diastolic": 126, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 104, "diastolic": 73, "status": "Normal", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "advice", "systolic": 123, "diastolic": 61, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 145, "diastolic": 124, "status": "High", "emergency": true, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 122, "diastolic": 61, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "yesno", "systolic": 151, "diastolic": 52, "status": "Low", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 122, "diastolic": 61, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 154, "diastolic": 81, "status": "High", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "advice", "systolic": 162, "diastolic": 90, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 99, "diastolic": 74, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 147, "diastolic": 103, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 139, "diastolic": 122, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 153, "diastolic": 95, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "knowledge", "topic": "exercise_safety"}
+{"kind": "advice", "systolic": 122, "diastolic": 74, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 185, "diastolic": 119, "status": "High", "emergency": true, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 104, "diastolic": 64, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 162, "diastolic": 128, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 104, "diastolic": 64, "status": "Normal", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "yesno", "systolic": 159, "diastolic": 111, "status": "High", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 214, "diastolic": 124, "status": "High", "emergency": true, "target": "low", "expect": "No"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 171, "diastolic": 127, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 128, "diastolic": 71, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "advice", "systolic": 116, "diastolic": 58, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 174, "diastolic": 96, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 191, "diastolic": 127, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 201, "diastolic": 107, "status": "High", "emergency": true}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 189, "diastolic": 95, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 151, "diastolic": 84, "status": "High", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "yesno", "systolic": 210, "diastolic": 134, "status": "High", "emergency": true, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 74, "diastolic": 54, "status": "Low", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "yesno", "systolic": 147, "diastolic": 91, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 176, "diastolic": 96, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 103, "diastolic": 65, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 118, "diastolic": 55, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 125, "diastolic": 72, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 203, "diastolic": 125, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 182, "diastolic": 106, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 106, "diastolic": 78, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 120, "diastolic": 64, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 104, "diastolic": 72, "status": "Normal", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "advice", "systolic": 98, "diastolic": 43, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 185, "diastolic": 119, "status": "High", "emergency": true}
+{"kind": "knowledge", "topic": "exercise_safety"}
+{"kind": "advice", "systolic": 124, "diastolic": 57, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 181, "diastolic": 94, "status": "High", "emergency": true, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 90, "diastolic": 45, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "yesno", "systolic": 103, "diastolic": 70, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "advice", "systolic": 151, "diastolic": 122, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 140, "diastolic": 45, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 92, "diastolic": 71, "status": "Normal", "emergency": false}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 183, "diastolic": 98, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 194, "diastolic": 111, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 191, "diastolic": 125, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 182, "diastolic": 120, "status": "High", "emergency": true, "target": "emergency", "expect": "Yes"}
+{"kind": "yesno", "systolic": 174, "diastolic": 96, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 175, "diastolic": 83, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 147, "diastolic": 50, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "yesno", "systolic": 98, "diastolic": 43, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "advice", "systolic": 85, "diastolic": 55, "status": "Low", "emergency": false}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 186, "diastolic": 126, "status": "High", "emergency": true}
+{"kind": "knowledge", "topic": "alcohol"}
+{"kind": "safety", "intent": "dose_change"}
+{"kind": "advice", "systolic": 94, "diastolic": 62, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 208, "diastolic": 113, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 197, "diastolic": 102, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 143, "diastolic": 94, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 195, "diastolic": 100, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 84, "diastolic": 49, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 103, "diastolic": 70, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 191, "diastolic": 131, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 109, "diastolic": 66, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 153, "diastolic": 55, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 129, "diastolic": 60, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 97, "diastolic": 81, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 149, "diastolic": 127, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 122, "diastolic": 69, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 214, "diastolic": 131, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 120, "diastolic": 59, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "yesno", "systolic": 169, "diastolic": 118, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 196, "diastolic": 115, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 151, "diastolic": 73, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 101, "diastolic": 60, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 163, "diastolic": 76, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 120, "diastolic": 80, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 186, "diastolic": 125, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 148, "diastolic": 103, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 178, "diastolic": 119, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 153, "diastolic": 93, "status": "High", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 138, "diastolic": 48, "status": "Low", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "advice", "systolic": 154, "diastolic": 85, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 197, "diastolic": 121, "status": "High", "emergency": true, "target": "high", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 181, "diastolic": 94, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 103, "diastolic": 88, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 79, "diastolic": 56, "status": "Low", "emergency": false}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 206, "diastolic": 117, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 171, "diastolic": 127, "status": "High", "emergency": true, "target": "emergency", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_symptoms"}
+{"kind": "advice", "systolic": 210, "diastolic": 134, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 113, "diastolic": 68, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 87, "diastolic": 44, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 167, "diastolic": 81, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "yesno", "systolic": 103, "diastolic": 65, "status": "Normal", "emergency": false, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 112, "diastolic": 69, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "advice", "systolic": 99, "diastolic": 63, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 131, "diastolic": 102, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "knowledge", "topic": "exercise_safety"}
+{"kind": "yesno", "systolic": 99, "diastolic": 69, "status": "Normal", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "advice", "systolic": 197, "diastolic": 126, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 151, "diastolic": 78, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 164, "diastolic": 110, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 161, "diastolic": 130, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 128, "diastolic": 44, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 105, "diastolic": 44, "status": "Low", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "yesno", "systolic": 162, "diastolic": 114, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 179, "diastolic": 110, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 156, "diastolic": 88, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 203, "diastolic": 125, "status": "High", "emergency": true, "target": "normal", "expect": "No"}
+{"kind": "advice", "systolic": 123, "diastolic": 95, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 126, "diastolic": 77, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "yesno", "systolic": 107, "diastolic": 77, "status": "Normal", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "advice", "systolic": 181, "diastolic": 94, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 150, "diastolic": 107, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 103, "diastolic": 51, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 183, "diastolic": 134, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 169, "diastolic": 135, "status": "High", "emergency": true, "target": "low", "expect": "No"}
+{"kind": "yesno", "systolic": 146, "diastolic": 82, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 100, "diastolic": 70, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "advice", "systolic": 141, "diastolic": 122, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 195, "diastolic": 97, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 108, "diastolic": 78, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 196, "diastolic": 115, "status": "High", "emergency": true}
+{"kind": "knowledge", "topic": "warning_signs"}
+{"kind": "advice", "systolic": 106, "diastolic": 65, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 150, "diastolic": 59, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "yesno", "systolic": 76, "diastolic": 50, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "advice", "systolic": 195, "diastolic": 126, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 139, "diastolic": 89, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 121, "diastolic": 70, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 123, "diastolic": 71, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "yesno", "systolic": 75, "diastolic": 46, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "advice", "systolic": 85, "diastolic": 61, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 71, "diastolic": 50, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 133, "diastolic": 49, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "advice", "systolic": 93, "diastolic": 76, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 132, "diastolic": 61, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 167, "diastolic": 91, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 85, "diastolic": 66, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 114, "diastolic": 64, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 104, "diastolic": 77, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "yesno", "systolic": 162, "diastolic": 109, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 155, "diastolic": 107, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 196, "diastolic": 115, "status": "High", "emergency": true, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 123, "diastolic": 61, "status": "Normal", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "yesno", "systolic": 98, "diastolic": 64, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "yesno", "systolic": 155, "diastolic": 57, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "advice", "systolic": 99, "diastolic": 43, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 199, "diastolic": 130, "status": "High", "emergency": true, "target": "emergency", "expect": "Yes"}
+{"kind": "yesno", "systolic": 120, "diastolic": 80, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 201, "diastolic": 115, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 163, "diastolic": 76, "status": "High", "emergency": false}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 169, "diastolic": 135, "status": "High", "emergency": true}
+{"kind": "safety", "intent": "diagnose"}
+{"kind": "advice", "systolic": 109, "diastolic": 75, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 161, "diastolic": 126, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 95, "diastolic": 62, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 189, "diastolic": 95, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 167, "diastolic": 89, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 114, "diastolic": 64, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "advice", "systolic": 149, "diastolic": 53, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 142, "diastolic": 93, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 139, "diastolic": 86, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 134, "diastolic": 82, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 146, "diastolic": 112, "status": "High", "emergency": false}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 201, "diastolic": 107, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 76, "diastolic": 50, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 142, "diastolic": 50, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 143, "diastolic": 75, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 178, "diastolic": 117, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 178, "diastolic": 119, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 120, "diastolic": 75, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "yesno", "systolic": 121, "diastolic": 76, "status": "Normal", "emergency": false, "target": "high", "expect": "No"}
+{"kind": "advice", "systolic": 114, "diastolic": 62, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 140, "diastolic": 90, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 81, "diastolic": 65, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 126, "diastolic": 57, "status": "Low", "emergency": false}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 182, "diastolic": 120, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 183, "diastolic": 104, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 148, "diastolic": 97, "status": "High", "emergency": false}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 191, "diastolic": 131, "status": "High", "emergency": true}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 183, "diastolic": 104, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 100, "diastolic": 63, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 112, "diastolic": 73, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "yesno", "systolic": 93, "diastolic": 50, "status": "Low", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "advice", "systolic": 154, "diastolic": 56, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 195, "diastolic": 133, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 136, "diastolic": 120, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 157, "diastolic": 121, "status": "High", "emergency": true, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 162, "diastolic": 114, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 103, "diastolic": 71, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 214, "diastolic": 131, "status": "High", "emergency": true, "target": "normal", "expect": "No"}
+{"kind": "yesno", "systolic": 190, "diastolic": 100, "status": "High", "emergency": true, "target": "emergency", "expect": "Yes"}
+{"kind": "advice", "systolic": 138, "diastolic": 48, "status": "Low", "emergency": false}
+{"kind": "yesno", "systolic": 116, "diastolic": 56, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 195, "diastolic": 97, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 136, "diastolic": 87, "status": "High", "emergency": false}
+{"kind": "yesno", "systolic": 208, "diastolic": 113, "status": "High", "emergency": true, "target": "low", "expect": "No"}
+{"kind": "advice", "systolic": 151, "diastolic": 84, "status": "High", "emergency": false}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 204, "diastolic": 108, "status": "High", "emergency": true}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 185, "diastolic": 119, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 95, "diastolic": 47, "status": "Low", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "safety", "intent": "emergency_symptoms"}
+{"kind": "yesno", "systolic": 103, "diastolic": 51, "status": "Low", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "advice", "systolic": 168, "diastolic": 130, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 113, "diastolic": 68, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "advice", "systolic": 149, "diastolic": 121, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 150, "diastolic": 107, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 132, "diastolic": 114, "status": "High", "emergency": false}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 183, "diastolic": 122, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 197, "diastolic": 133, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 181, "diastolic": 112, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 195, "diastolic": 126, "status": "High", "emergency": true, "target": "high", "expect": "Yes"}
+{"kind": "yesno", "systolic": 137, "diastolic": 54, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "advice", "systolic": 123, "diastolic": 71, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 110, "diastolic": 72, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 89, "diastolic": 70, "status": "Low", "emergency": false}
+{"kind": "advice", "systolic": 121, "diastolic": 66, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 121, "diastolic": 77, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 139, "diastolic": 82, "status": "High", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 151, "diastolic": 122, "status": "High", "emergency": true}
+{"kind": "advice", "systolic": 195, "diastolic": 100, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 145, "diastolic": 99, "status": "High", "emergency": false, "target": "high", "expect": "Yes"}
+{"kind": "advice", "systolic": 105, "diastolic": 73, "status": "Normal", "emergency": false}
+{"kind": "knowledge", "topic": "monitoring"}
+{"kind": "yesno", "systolic": 92, "diastolic": 48, "status": "Low", "emergency": false, "target": "emergency", "expect": "No"}
+{"kind": "safety", "intent": "emergency_with_reading", "systolic": 180, "diastolic": 134, "status": "High", "emergency": true}
+{"kind": "yesno", "systolic": 126, "diastolic": 63, "status": "Normal", "emergency": false, "target": "normal", "expect": "Yes"}
+{"kind": "advice", "systolic": 145, "diastolic": 70, "status": "High", "emergency": false}
+{"kind": "advice", "systolic": 104, "diastolic": 72, "status": "Normal", "emergency": false}
+{"kind": "advice", "systolic": 112, "diastolic": 73, "status": "Normal", "emergency": false}
+{"kind": "yesno", "systolic": 79, "diastolic": 56, "status": "Low", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "yesno", "systolic": 127, "diastolic": 43, "status": "Low", "emergency": false, "target": "low", "expect": "Yes"}
+{"kind": "yesno", "systolic": 77, "diastolic": 47, "status": "Low", "emergency": false, "target": "normal", "expect": "No"}
+{"kind": "advice", "systolic": 104, "diastolic": 60, "status": "Normal", "emergency": false}

@@ -9,11 +9,5 @@ sentence-transformers
 nltk
 spacy
 rank-bm25
-
-For your project, the full setup sequence is now:
-conda activate llm
-cd "D:\OneDrive\IU\Sem 8\Pre-thesis\test\LLM\server"
-pip install -r requirements.txt
-python -m spacy download en_core_web_sm
-python -c "import nltk; nltk.download('punkt')"
-python app.py
+# mqtt.CallbackAPIVersion (used here, in web/app.py and the mock publishers) is paho 2.x only
+paho-mqtt>=2
